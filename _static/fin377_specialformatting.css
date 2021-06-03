@@ -1,0 +1,71 @@
+/*
+
+*/
+ 
+/* make the logo taller */
+ 
+div.navbar-brand-box a.navbar-brand img {
+    max-height: 18vh !important;
+} 
+ 
+/* change the color scheme
+first, set the lehigh light on dark scheme for the sidenav
+via the body css
+
+	Lehigh colors:
+	#ffffff; white
+	#502d0e; // newly added brown
+	#FBDD40; // newly added, yellow  
+	
+and then undo it in the main area (a child of the body)
+*/ 
+body {
+	background-color: #502d0e;
+    color: white;
+}
+
+main {
+	background-color: #fff;
+    color: #333;	
+} 	
+
+/* other text in nav bar that should be white: */
+.bd-sidebar nav ul.nav li a, .bd-sidebar nav ul.nav ul li a {
+    color: white;
+}
+
+/* yellow: active pages in nav, nav pages hovered over, site title */
+.bd-sidebar nav ul.nav a:hover, .bd-sidebar nav ul.nav li.active > a, .bd-sidebar nav ul.nav li.active > a:hover, .bd-sidebar h1.site-logo  {
+    color: #FBDD40;
+}
+
+/* search bar text brown */
+.form-control, .form-control::placeholder, .bd-search .icon {
+	color: #502d0e;
+}	
+
+/* shift left nav to left (more page space)   */
+.container-xl {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 20px;
+}
+
+/* fix uneven right gutter border*/
+.row {
+    margin-right: -40px;
+}
+
+/* topbar covers part of side nav - make transparent */
+.topbar {
+	background-color: transparent;
+}	
+
+/* The side nab should be collapsed except the part you're in */
+
+ul.sidenav_l1:not(.current) {
+	display: none;
+}
+
+.tocsection.onthispage
