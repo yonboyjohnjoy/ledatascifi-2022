@@ -1,11 +1,18 @@
 # Course outcomes
 
-## Outcomes &rightarrow; Value you'll get from this course
+## Value you'll get from this course
 
-1. Use all methods and skills listed in the [Objectives](Objectives) in one project that can be on your resume +  teaches peers/myself something + demonstrates accumulated finance knowledge + shows off ability to deliver reports/work product that bosses love
+1. The final project 
+    - uses all methods and skills from our [objectives](objectives) 
+    - can be on your resume 
+    - teaches peers/myself something 
+    - demonstrates accumulated finance knowledge 
+    shows off ability to deliver reports/work product that bosses love
 2. Your resume can now list several new skills employers pay $$$ for
 3. Your resume can now list a completed project showing off those skills (which employers pay $$$ for)
 4. Experience you can take to interviews (see below!)
+
+If you haven't already, I **STRONGLY** encourage you to visit and use the tips, help, and resources in the [Finance Department's job hunt coursesite page](https://coursesite.lehigh.edu/course/view.php?id=176769). If you can't access that page, let me know, and I'll give you the secret handshake to get in.
 
 ## What previous students say
 

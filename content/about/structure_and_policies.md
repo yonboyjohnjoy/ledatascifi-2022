@@ -4,10 +4,6 @@
 This page is important - please read it all!
 ```
 
-```{note}
-Structure and policies aren't fixed. This is only the second year of the class, so my approach to the class can change and shift as I learn what works and doesn't. And also... it's a pandemic. So we might need to adapt for reasons outside our control. 
-```
-
 ### Github, or: How I learned to ignore Coursesite (for FIN377)
 
 The whole class is run off this website and GitHub. GitHub is how we'll submit assignments, provide feedback, receive grades, etc.  You'll learn how this works as the semester proceeds. Coursesite will _**only**_ be used to post links I don't want public. Announcements will be made verbally in class and/or on Github. 
@@ -37,6 +33,8 @@ In addition, you will have as resources this website, your peers via a github di
 #### Policy on recording classes
 
 _Update for next year! For 2021, I did end up recording lectures._
+
+_.record all lectures and keep posted all semester, just incentivize live watching directly._
 
 I'm not sure if I will record any sessions, but if I do, they will be available on our coursesite. I do know that even if I do, some sessions (and/or parts of some sessions), will not be recorded or posted for privacy concerns. So don't make assumptions about what will be available! Also, **any recordings I post will be deleted within 2 weeks, so don't fall behind!** 
 

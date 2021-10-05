@@ -9,39 +9,11 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 #################################################
-# next year
-#
-# rename About the class --> Syllabus 
-#
-# add the coursesite job hunting resource 
-#
-# see comments below for tweaks and additions
-# more exercises for sure
-#
-# remove most (all) survey links, very little feedback received
-#
-# record all lectures and keep posted all semester, just incentivize live watching directly
-#
-# pre-class 
-#    set up video for anaconda et al 
-#    send some python tutorial 
-#
-# add 5.5: finance applications. 
-# should have pages with "canonical asset pricing", a loan pricing model
-#
-# new data ideas:
-# lending club data?
-# ESG - ???
-# GUSTAFSON ET AL SEA RISE - environmental 
-# night lights/parking lot photos
-# crypto something? robo advising? 
-# 
-#################################################
 
 - file: content/frontpage # the index must be a single file, no way around it!
 
 
-- part: About the class
+- part: Syllabus
   chapters:
   - file: content/about/objectives
   - file: content/about/outcomes
@@ -52,25 +24,26 @@
   - file: content/about/gradeoverview
   - file: content/about/acknowledgments
   
-# - part: Schedule, tips, resources
-  # chapters:
-  # - file: content/about/schedule
-    # title: "Dashboard, key links, schedule"
-  # - file: content/about/resources
-    # title: "Help + resources"
-  # - file: content/about/tips
+- part: Schedule, tips, resources
+  chapters:
+  - file: content/about/schedule
+    title: "Dashboard, key links, schedule"
+  - file: content/about/help
+    title: "Help"
+  - file: content/about/resources
+    title: "Resources"
+  - file: content/about/tips
 
-
-# - part: Assignments and participation  
-  # chapters:
-  # - file: content/assignments/howto_do
-    # title: "How to start and turn in assignments"
-  # - file: content/assignments/howto_review 
-    # title: "How to do your peer reviews"
-  # - file: content/assignments/asgn_5 
-    # title: "ASGN 5: Our first full data science assignment"
-  # - file: content/assignments/project 
-    # title: "Final projects"
+- part: Assignments and participation  
+  chapters:
+  - file: content/assignments/howto_do
+    title: "How to start and turn in assignments"
+  - file: content/assignments/howto_review 
+    title: "How to do your peer reviews"
+  - file: content/assignments/asgn_5 
+    title: "ASGN 5: Our first full data science assignment"
+  - file: content/assignments/project 
+    title: "Final projects"
 
 # This MD files can be copied into repo, but remove the dropdowns. And link to the website. 
 # PROPOSAL DUE APR 21 5pm. STATUS REPORT DUE APR 28. 

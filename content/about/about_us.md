@@ -2,7 +2,7 @@
  
 ````{panels}
 <p style="font-size:18px; line-height:24px; color:#666666; margin:0 0 10px;">  <!-- makes it like H3 -->
-    <b>Professor Donald Bowen  </b>
+    <b>Professor - Donald Bowen  </b>
 </p>   
 ^^^
 ```{image} img/don2.jpg
@@ -16,15 +16,15 @@ Somehow, I am still a Lions fan, even though stints in AZ, CA, PA, NY, TX, and F
 ---
 
 <p style="font-size:18px; line-height:24px; color:#666666; margin:0 0 10px;">  <!-- makes it like H3 -->
- <b> TA - Jason Dinh  </b>
+ <b> TA - Mystery!  </b>
 </p>
 ^^^
-```{image} img/jason.jpg
-:alt: jason
+```{image} img/mystery-person.jpg
+:alt: mystery
 ```
 <br>
-Email: jtd221  <br>
-GitHub: tdinhjason  <br> 
+Email: tbd  <br>
+GitHub: tbd  <br> 
 <br>
 I took this class last semester and highly recommend. It's helped me tons with finding a job. Outside of school I like to do yoga, hike, and generally just be outside!
 ````
@@ -35,7 +35,7 @@ Aka "Office Hours".
 
 ```{note}  
 **I suspect that the initial learning curve will be steep, so we have posted a lot of office hours. Around Valentines Day, we will reduce our explicit office hours. Remember, when you get stuck, _especially_ on installation and set up issues,**
-- post a question in our [classmates team](https://github.com/orgs/LeDataSciFi/teams/classmates)
+- post a question in our [classmates team](https://github.com/orgs/LeDataSciFi/teams/classmates-2022)
 - check out the resources in the [Resources and Help tab](resources).**
 
 **Office hour schedules are subject to change, so please check back!** 
