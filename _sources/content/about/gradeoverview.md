@@ -37,8 +37,10 @@ From most important to slightly less important:
 [^sharecode]: Obviously, don't share code used on assignments
 
 ```{tabbed} Assignments (40%)
+~8 assignments
+
 A few notes:
-- Later assignments will receive larger grade components
+- Later assignments will receive slightly larger weights
 - Each assignment grade will come from an average of two peer reviews (adjusted for objective errors in reviews and large subjective ones)
 - Unless explicitly noted, all assignments must be completed individually. 
 ```
@@ -51,7 +53,7 @@ You should aspire to
 ```
 
 ```{tabbed}  Final Project (20%)
-It's going to be fun!
+It's going to be fun! See the [project description page](../assignments/project) for more. 
 
 ```
 ````
