@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fixing our bad fake project project folder &#8212; LeDataSciFi-2022</title>
+    <title>2.5. Fixing our bad fake project project folder &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,6 +56,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.6. File references should work on any computer!" href="10_Golden_7.html" />
+    <link rel="prev" title="2.4. When to write functions" href="10_Golden_5.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -181,7 +183,7 @@
   Textbook
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../01/00_Getting_Started.html">
    1. Motivation and Getting Started
@@ -235,6 +237,55 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../01/09_gitignore.html">
      1.10. Gitignore Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="10_Golden_1.html">
+   2. Good Analysis Practices
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_2.html">
+     2.1. A case study of bad research
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_3.html">
+     2.2. The golden rules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_4.html">
+     2.3. Good data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5.html">
+     2.4. When to write functions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.5. Reorganizing the bad research folder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_7.html">
+     2.6. File references should work on any computer!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_7.html#credits">
+     2.7. Credits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_7.html#how-was-this-chapter">
+     2.8. How was this chapter?
     </a>
    </li>
   </ul>
@@ -349,12 +400,12 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#folders-separated-by-function-part-1">
-   Folders separated by function - part 1
+   2.5.1. Folders separated by function - part 1
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#folders-separated-by-function-part-2">
-   Folders separated by function - part 2
+   2.5.2. Folders separated by function - part 2
   </a>
  </li>
 </ul>
@@ -369,16 +420,16 @@
               <div>
                 
   <div class="section" id="fixing-our-bad-fake-project-project-folder">
-<h1>Fixing our bad fake project project folder<a class="headerlink" href="#fixing-our-bad-fake-project-project-folder" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.5. </span>Fixing our bad fake project project folder<a class="headerlink" href="#fixing-our-bad-fake-project-project-folder" title="Permalink to this headline">¶</a></h1>
 <p>Let’s apply those rules to our <a class="reference internal" href="10_Golden_2.html"><span class="doc std std-doc">cursed analysis</span></a> of character death in Game of Thrones and see if this makes the project easier to replicate (in terms of accuracy and time required).</p>
 <p><em>(Note, there are other ways to efficiently divide up analysis than what I propose here that have merit! Do not take this <strong>exact</strong> scheme as “gospel”.)</em></p>
 <div class="section" id="folders-separated-by-function-part-1">
-<h2>Folders separated by function - part 1<a class="headerlink" href="#folders-separated-by-function-part-1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.1. </span>Folders separated by function - part 1<a class="headerlink" href="#folders-separated-by-function-part-1" title="Permalink to this headline">¶</a></h2>
 <p>In the picture below, I’ve split the project into two sub-directories: “build” (whose function is to build the sample from the raw data inputs) and “analysis”. These are two-sub tasks of any data project, and here, I’ve chosen to treat them as different functions and thus they get different folders (<strong>Rule 3.A</strong>).</p>
 <p><img alt="" src="../../_images/dir-top.png" /></p>
 </div>
 <div class="section" id="folders-separated-by-function-part-2">
-<h2>Folders separated by function - part 2<a class="headerlink" href="#folders-separated-by-function-part-2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.2. </span>Folders separated by function - part 2<a class="headerlink" href="#folders-separated-by-function-part-2" title="Permalink to this headline">¶</a></h2>
 <p>The build folder takes “inputs”, which are processed by files inside “code”, and places the analysis sample (now explicitly created!) in “output”. Notice the inputs and outputs are clearly separated! (<strong>Rule 3.B</strong>) Temp files are created along the way, but are not “output”.</p>
 <p><img alt="" src="../../_images/dir-build.png" /></p>
 <p><strong>Also, notice the new file <code class="docutils literal notranslate"><span class="pre">run_directory.py</span></code>.</strong> It very quickly and plainly documents how to run the entire code in the “build” project (<strong>Rule 1.B</strong>), and makes it easy to do so every time (<strong>Rule 2.B</strong>) before you push it back to the master repo on GitHub (<strong>Rule 2.A</strong>). <code class="docutils literal notranslate"><span class="pre">run_directory.py</span></code> is so simple, it is self-documenting (<strong>Rule 6.C</strong>).</p>
@@ -420,6 +471,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="10_Golden_5.html" title="previous page"><span class="section-number">2.4. </span>When to write functions</a>
+    <a class='right-next' id="next-link" href="10_Golden_7.html" title="next page"><span class="section-number">2.6. </span>File references should work on any computer!</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
