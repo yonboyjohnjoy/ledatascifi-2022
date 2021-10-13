@@ -231,7 +231,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="08_libraries.html">
-     1.9. Installing libraries
+     1.9. Libraries/Packages
     </a>
    </li>
    <li class="toctree-l2">
@@ -445,7 +445,8 @@
 <p class="admonition-title">Tip</p>
 <p><a class="reference external" href="https://www.tutorialsteacher.com/python/error-types-in-python">This website-tutorialsteacher</a> has a nice page listing the most common error types. If you get an error and aren’t sure what it means, refer to this link as a starting point.</p>
 </div>
-<p>Really, they tend to be informative! You can google them for more info, but even without Google, they often point directly at the issue <em>and</em> location.</p>
+<p>Really, error codes tend to be informative! You can google them for more info, but even without Google, they often point directly at the issue <em>and</em> location.</p>
+<p>I created a short <a class="reference internal" href="07a_errors.html"><span class="doc std std-doc">walkthrough of the types of errors here.</span></a></p>
 </div>
 <div class="section" id="debug">
 <h3><span class="section-number">1.7.1.2. </span><code class="docutils literal notranslate"><span class="pre">%debug</span></code><a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h3>
@@ -551,11 +552,17 @@ hey
 <div class="section" id="seriously-print-your-data-and-objects-often">
 <h2><span class="section-number">1.7.2. </span>Seriously… print your data and objects OFTEN!<a class="headerlink" href="#seriously-print-your-data-and-objects-often" title="Permalink to this headline">¶</a></h2>
 <p><strong>Suppose you have a large dataset you want to explore. What can you do to look at it?</strong></p>
-<p>Here are some</p>
+<p>Here are some options:</p>
 <ol class="simple">
 <li><p>Print parts of it in Jupyter, along with many summary stats.</p></li>
+<li><p>Look at the dataset using <a class="reference external" href="05_jupyterlab#my-jupyter-lab-set-up">variableInspector</a>.</p>
+<ul class="simple">
+<li><p>Warning: If your dataset is large enough, using variableInspector can significantly slow down your computer and force you to do a hard reset.</p></li>
+<li><p>Workaround: Copy a smaller slice of the data to a new, smaller variable, and then look at that slice using variableInspector.</p></li>
+</ul>
+</li>
 <li><p>Output to a csv file and open in Excel.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">spyder</span></code> program that came with Anaconda. Spyder has a UI that is more like Matlab or Stata, and so you can view and scroll through objects in memory like they are in Excel <em>as you build your code</em>. This can be very, very useful for developing code. In fact, Spyder is how most of my own research code is written. Spyder currently does not allow you to use Markdown.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">spyder</span></code> program that came with Anaconda. Spyder has a UI that is more like Matlab or Stata, and so you can view and scroll through objects in memory. This can be very, very useful for developing code. In fact, Spyder is how most of my own research code is written.</p></li>
 </ol>
 <p>If you have a dataset in Jupyter you want to open in Spyder, you can either</p>
 <ul class="simple">
@@ -583,14 +590,24 @@ hey
 </div>
 <div class="section" id="clear-output-and-rerun-from-the-start">
 <h2><span class="section-number">1.7.4. </span>Clear output and rerun from the start!<a class="headerlink" href="#clear-output-and-rerun-from-the-start" title="Permalink to this headline">¶</a></h2>
-<p>Code must run from beginning to end and produce the same thing every time</p>
-<ul class="simple">
-<li><p>Restart the kernal and clear output</p></li>
-<li><p>Run all cells</p></li>
-</ul>
+<p><em>(Yes, I’m copying this from the prior page. It’s important!)</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I can NOT emphasize this enough: The point of code is to make things reproducible. So code must run from beginning to end and produce the same thing every time.</p>
+</div>
+<p>The nature of developing code is that you’ll run some lines of code, then write more code, then go back and change something above (and run that part again), and then go back down and keep writing and running new code. When you’re done, your code will be broken!</p>
+<div class="tip admonition">
+<p class="admonition-title"><strong>A golden rule</strong></p>
+<ol class="simple">
+<li><p>Always look to see if the first executed code block is “[1]” and that all the subsequent code blocks are numbered consecutively. <a class="reference internal" href="out_of_order1.html"><span class="doc std std-doc">Click on this link to see an example.</span></a></p></li>
+<li><p>If the code you’re looking at doesn’t meet those two rules, I click “Run” &gt; “Restart Kernel and Run All Cells”.</p></li>
+<li><p>This applies to your own code! Restart and run from scratch regularly.</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="did-you-follow-these-tips-and-fix-your-code">
 <h2><span class="section-number">1.7.5. </span>Did you follow these tips and fix your code?<a class="headerlink" href="#did-you-follow-these-tips-and-fix-your-code" title="Permalink to this headline">¶</a></h2>
+<p>Congrats!</p>
 <p><img alt="" src="https://media.giphy.com/media/5tov263RmYEpPYmcuB/giphy.gif" /></p>
 </div>
 </div>

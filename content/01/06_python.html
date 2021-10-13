@@ -231,7 +231,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="08_libraries.html">
-     1.9. Installing libraries
+     1.9. Libraries/Packages
     </a>
    </li>
    <li class="toctree-l2">
@@ -427,31 +427,14 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#popular-nay-essential-packages">
-   1.6.3. Popular, nay, essential packages
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clear-output-and-rerun-from-the-start">
-   1.6.4. Clear output and rerun from the start!
+   1.6.3. Clear output and rerun from the start!
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-i">
-   1.6.5. How do I…?
+  <a class="reference internal nav-link" href="#stuck-on-syntax-issues-for-a-function">
+   1.6.4. Stuck on syntax issues for a function?
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stuck-on-syntax-issues-for-a-function">
-     1.6.5.1. Stuck on syntax issues for a function?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-chunks-of-lecture-files-into-my-own-code">
-     1.6.5.2. Copy chunks of lecture files into my own code?
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -493,7 +476,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Copy all of these code blocks to your own notebook file inside your notes folder and try to run them. Make sure Jupyter Lab calls the cells “code” cells instead of markdown cells, and then use <kbd> CTRL </kbd> + <kbd> ENTER </kbd> to run them.</p>
-<p><strong>HINT:</strong> You can copy <em>code</em> cells on this website by clicking the “copy” symbol in the upper-right corner of code blocks. If you want to copy chunks of files that includes sections of Markdown, watch <a class="reference internal" href="#content-chunkcopy"><span class="std std-ref">this video</span></a>.</p>
+<p><strong>HINT:</strong> You can copy <em>code</em> cells on this website by clicking the “copy” symbol in the upper-right corner of code blocks. If you want to copy chunks of files that includes sections of Markdown, watch <span class="xref myst">this video</span>.</p>
 </div>
 <div class="section" id="comments">
 <h3><span class="section-number">1.6.2.1. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
@@ -1023,36 +1006,8 @@ f(x, a=1, b=1)
 </div>
 </div>
 </div>
-<div class="section" id="popular-nay-essential-packages">
-<h2><span class="section-number">1.6.3. </span>Popular, nay, essential packages<a class="headerlink" href="#popular-nay-essential-packages" title="Permalink to this headline">¶</a></h2>
-<p>As the semester proceeds, you will surely need to learn (to some degree) the following packages. <strong>For each, you might note the most common and useful functions, and copy “cookbook” uses of the packages which you can paste into new programs.</strong> (E.g. how to open a csv file.)</p>
-<p><em>Note: I do not personally, nor do many programmers, commit to memory many functions of many packages. We simply <strong>know what can be done</strong> and when needed, we search (tab completion/google/stack overflow) for the command/recipe for that function.</em></p>
-<ul class="simple">
-<li><p>Built-in packages:<code class="docutils literal notranslate"><span class="pre">os</span></code> <code class="docutils literal notranslate"><span class="pre">sys</span></code> <code class="docutils literal notranslate"><span class="pre">itertools</span></code> <code class="docutils literal notranslate"><span class="pre">re</span></code> <code class="docutils literal notranslate"><span class="pre">datetime</span></code> <code class="docutils literal notranslate"><span class="pre">csv</span></code></p></li>
-<li><p>Datasci packages (Anaconda installs these for you!), note the aliases here aren’t strictly needed, but by convention, virtually everyone uses the shorter names</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">seaborn</span> <span class="pre">as</span> <span class="pre">sns</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span> <span class="pre">as</span> <span class="pre">mpl</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statsmodels.api</span> <span class="pre">as</span> <span class="pre">sm</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sklearn</span></code></p></li>
-</ul>
-</li>
-<li><p>Web crawling</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code>, <code class="docutils literal notranslate"><span class="pre">requests_html</span></code>, <code class="docutils literal notranslate"><span class="pre">urllib</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> and <code class="docutils literal notranslate"><span class="pre">tdqm</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">beautifulsoup4</span> <span class="pre">as</span> <span class="pre">bs4</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">html5lib</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selenium</span></code></p></li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="section" id="clear-output-and-rerun-from-the-start">
-<h2><span class="section-number">1.6.4. </span>Clear output and rerun from the start!<a class="headerlink" href="#clear-output-and-rerun-from-the-start" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6.3. </span>Clear output and rerun from the start!<a class="headerlink" href="#clear-output-and-rerun-from-the-start" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>I can NOT emphasize this enough: The point of code is to make things reproducible. So code must run from beginning to end and produce the same thing every time.</p>
@@ -1067,29 +1022,9 @@ f(x, a=1, b=1)
 </ol>
 </div>
 </div>
-<div class="section" id="how-do-i">
-<h2><span class="section-number">1.6.5. </span>How do I…?<a class="headerlink" href="#how-do-i" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="stuck-on-syntax-issues-for-a-function">
-<h3><span class="section-number">1.6.5.1. </span>Stuck on syntax issues for a function?<a class="headerlink" href="#stuck-on-syntax-issues-for-a-function" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">1.6.4. </span>Stuck on syntax issues for a function?<a class="headerlink" href="#stuck-on-syntax-issues-for-a-function" title="Permalink to this headline">¶</a></h2>
 <p>See the tips in the <a class="reference external" href="05_jupyterlab#resources">Jupyter Lab</a> page.</p>
-</div>
-<div class="section" id="copy-chunks-of-lecture-files-into-my-own-code">
-<span id="content-chunkcopy"></span><h3><span class="section-number">1.6.5.2. </span>Copy chunks of lecture files into my own code?<a class="headerlink" href="#copy-chunks-of-lecture-files-into-my-own-code" title="Permalink to this headline">¶</a></h3>
-<p>I think this is the easiest way:</p>
-<ol class="simple">
-<li><p>Clone the lecture repo to your computer.</p></li>
-<li><p>Open the code you’re working on in Jupyter Lab.</p></li>
-<li><p>Open the lecture code you’re working on in Jupyter Lab in a new tab.</p></li>
-<li><p>Drag the lecture code to the right until it snaps into a new panel.</p></li>
-<li><p>Click and hold to the <strong>left</strong> of the block you want to drag into your code and drag it into your code.</p></li>
-</ol>
-<div class="tip admonition">
-<p class="admonition-title">Pro Tip</p>
-<p>You can select a bunch of code blocks and drag them all at once. To do that, click to the left of a cell you want, hold the shift button, and then click up or down until all the cells you want are highlighted. Then do step 5 above.</p>
-</div>
-<p>Want another amateur youtube video? Here’s one of me showing those steps!</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0XtS-pI9tR8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 </div>
 </div>
 
