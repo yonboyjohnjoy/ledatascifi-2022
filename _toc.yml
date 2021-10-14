@@ -132,65 +132,65 @@
       - file: "content/03/05c_missingdata"
       - file: "content/03/05d_outliers"
      
-  # - file: "content/04/00_World_Wide_Data"
-    # title: "Accessing the World of Data"
-    # sections:
-    # - file: "content/04/01_Intro_to_scraping"
-      # title: "Getting Data off the Web"
-    # - file: "content/04/01a_openingAndParsing"
-    # - file: "content/04/01b_spiders"
-      # title: "Building a spider" 
-    # - file: "content/04/02_strings"
-      # sections:
-        # - file: "content/04/02a_Python Strings"
-        # - file: "content/04/02b_regex"
-        # - file: "content/04/02c_developing a regex"
-        # - file: "content/04/02d_RegexApplication"
+  - file: "content/04/00_World_Wide_Data"
+    title: "Accessing the World of Data"
+    sections:
+    - file: "content/04/01_Intro_to_scraping"
+      title: "Getting Data off the Web"
+    - file: "content/04/01a_openingAndParsing"
+    - file: "content/04/01b_spiders"
+      title: "Building a spider" 
+    - file: "content/04/02_strings"
+      sections:
+      - file: "content/04/02a_Python Strings"
+      - file: "content/04/02b_regex"
+      - file: "content/04/02c_developing a regex"
+      - file: "content/04/02d_RegexApplication"
 # now that they can scrape, a new world opens up: https://sec-edgar-downloader.readthedocs.io/en/latest/#quick-start        
 
-  # - file: "content/05/00_intro"
-    # title: "Data Science for Finance"    
-    # sections:
-    # - file: "content/05/01_bigpicture"
-      # sections:
-        # - file: "content/05/01a_MLgonewrong"    
-        # - file: "content/05/01b_model_process"
-        # - file: "content/05/01c_teams"
-        # - file: "content/05/01d_sharingBigFiles"
-    # - file: "content/05/02_reg"
-      # sections:
-        # - file: "content/05/02a_basics"    
-        # - file: "content/05/02b_mechanics"
-        # - file: "content/05/02c_goodnessOfFit"      
-        # - file: "content/05/02d_interpretingCoefs" 
-        # - file: "content/05/02e_statisticalSig"     
-        # # (opt, future?) selection, measurement, omitted variables (HIGH level)
-        # # (opt, future?) exercises (and answers)
-        # - file: "content/05/02g_summary"           
-    # - file: "content/05/03_ML"
-      # sections:
-        # - file: "content/05/03a_ML_obj_and_tradeoff"    
-        # - file: "content/05/03c_ModelEval" 
-        # - file: "content/05/03c1_OOS"  
-        # - file: "content/05/03d_whatToMax"   # need auc/roc
-        # - file: "content/05/03e_whichModel"  # need lots more!   
-        # - file: "content/05/03f_leakage"  
-    # - file: "content/05/04a_SKLearn"        
-      # sections:
-        # - file: "content/05/04b_best_practices" # add extra section for best practices
-          # title: "Best Practice Pseudo Code"        
-        # - file: "content/05/04c_onemodel"
-          # title: "SKLearn Intro"                             
-        # - file: "content/05/04d_crossval"
-          # title: "Cross-Validation"
-        # - file: "content/05/04e_pipelines"
-          # title: "Pipelines"
-        # - file: "content/05/04e1_preprocessing"
-          # title: "Preprocessing"  
-        # - file: "content/05/04f_optimizing_a_model"
-          # title: "Optimizing a Model"            
-        # - file: "content/05/04h_putting_together"
-          # title: "Many Models" 
+  - file: "content/05/00_intro"
+    title: "Data Science for Finance"    
+    sections:
+    - file: "content/05/01_bigpicture"
+      sections:
+      - file: "content/05/01a_MLgonewrong"    
+      - file: "content/05/01b_model_process"
+      - file: "content/05/01c_teams"
+      - file: "content/05/01d_sharingBigFiles"
+    - file: "content/05/02_reg"
+      sections:
+        - file: "content/05/02a_basics"    
+        - file: "content/05/02b_mechanics"
+        - file: "content/05/02c_goodnessOfFit"      
+        - file: "content/05/02d_interpretingCoefs" 
+        - file: "content/05/02e_statisticalSig"     
+        # (opt, future?) selection, measurement, omitted variables (HIGH level)
+        # (opt, future?) exercises (and answers)
+        - file: "content/05/02g_summary"           
+    - file: "content/05/03_ML"
+      sections:
+      - file: "content/05/03a_ML_obj_and_tradeoff"    
+      - file: "content/05/03c_ModelEval" 
+      - file: "content/05/03c1_OOS"  
+      - file: "content/05/03d_whatToMax"   # need auc/roc
+      - file: "content/05/03e_whichModel"  # need lots more!   
+      - file: "content/05/03f_leakage"  
+    - file: "content/05/04a_SKLearn"        
+      sections:
+      - file: "content/05/04b_best_practices" # add extra section for best practices
+        title: "Best Practice Pseudo Code"        
+      - file: "content/05/04c_onemodel"
+        title: "SKLearn Intro"                             
+      - file: "content/05/04d_crossval"
+        title: "Cross-Validation"
+      - file: "content/05/04e_pipelines"
+        title: "Pipelines"
+      - file: "content/05/04e1_preprocessing"
+        title: "Preprocessing"  
+      - file: "content/05/04f_optimizing_a_model"
+        title: "Optimizing a Model"            
+      - file: "content/05/04h_putting_together"
+        title: "Many Models" 
 # import smattering? (from below)
 # gradient booksting from L24 2020
     # - file: "content/05/05_thefuture"              
