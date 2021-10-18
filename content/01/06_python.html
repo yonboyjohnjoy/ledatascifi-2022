@@ -910,7 +910,9 @@
 <h3><span class="section-number">1.6.2.2. </span>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOU: TYPE ALL OF THESE OUT ON YOUR OTHER PARTICIPATION SHEET... YOU CAN OMIT THE COMMENTS IF YOU WANT</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Note: these cells aren&#39;t showing the answers on the website on purpose! </span>
+
+<span class="c1"># YOU: TYPE ALL OF THESE OUT ON YOUR OTHER PARTICIPATION SHEET... YOU CAN OMIT THE COMMENTS IF YOU WANT</span>
 <span class="c1"># YOU: TRY VARIATIONS TOO...</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># addition</span>
@@ -1090,7 +1092,7 @@ False
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">str</span></code>. There are built-in functions that work on strings directly</p>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code>. There are built-in functions that work on strings directly. Let’s look at a few:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;some string&#39;</span> <span class="c1"># a = &quot;some string&quot; is the same. </span>
@@ -1361,7 +1363,7 @@ f(x, a=1, b=1)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-7-4bfe94fa827f&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;C:\Users\DONSLA~1\AppData\Local\Temp/ipykernel_6932/3182615729.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
                 <span class="o">^</span>
 <span class="ne">SyntaxError</span>: positional argument follows keyword argument
@@ -1373,6 +1375,7 @@ f(x, a=1, b=1)
 <div class="section" id="scope">
 <h3><span class="section-number">1.6.2.13. </span>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h3>
 <p>I want you to be generally aware of the concept of “global” and “local” scope. Generally, python objects are available only within the region they are defined and subregions therein. Put differently, objects are available downstream, but not upstream.</p>
+<p>Here is an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
@@ -1399,7 +1402,7 @@ f(x, a=1, b=1)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">e4e4f48ed516</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">C</span>:\Users\DONSLA~1\AppData\Local\Temp/ipykernel_6932/3825219627.py in &lt;module&gt;
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>   <span class="c1"># variables defined INSIDE a function are NOT visible OUTSIDE the func</span>
 
 <span class="ne">NameError</span>: name &#39;xyz&#39; is not defined
@@ -1407,6 +1410,7 @@ f(x, a=1, b=1)
 </div>
 </div>
 </div>
+<p>Here is a second example to show that changing the downstream variable <em>inside the function</em> won’t change the variable’s value outside the function!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>

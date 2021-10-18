@@ -842,6 +842,7 @@
 <p><strong>Let’s explore if Game of Thrones changed how babies are named!</strong><a class="footnote-reference brackets" href="#inspo" id="id1">1</a></p>
 <div class="section" id="step-1-download-the-data">
 <h2><span class="section-number">3.2.6.1. </span>Step 1: Download the data<a class="headerlink" href="#step-1-download-the-data" title="Permalink to this headline">¶</a></h2>
+<p>In this example, we use a <span class="xref myst">data.world</span>’s function to download their data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#TO USE datadotworld PACKAGE:</span>
@@ -855,13 +856,13 @@
 <span class="c1">#3. in terminal/powershell: dw configure          </span>
 <span class="c1">#3a. copy in API token from data.world (get from settings &gt; advanced)</span>
 
-<span class="kn">import</span> <span class="nn">datadotworld</span> <span class="k">as</span> <span class="nn">dw</span>
+<span class="kn">import</span> <span class="nn">datadotworld</span> <span class="k">as</span> <span class="nn">dw</span> <span class="c1"># to download data from data.world</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">baby_names</span> <span class="o">=</span> <span class="n">dw</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;nkrishnaswami/us-ssa-baby-names-national&#39;</span><span class="p">)</span>
+<span class="n">baby_names</span> <span class="o">=</span> <span class="n">dw</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;nkrishnaswami/us-ssa-baby-names-national&#39;</span><span class="p">,</span><span class="n">auto_update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">baby_names</span> <span class="o">=</span> <span class="n">baby_names</span><span class="o">.</span><span class="n">dataframes</span><span class="p">[</span><span class="s1">&#39;names_ranks_counts&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -870,7 +871,7 @@
 </div>
 <div class="section" id="step-2-eda">
 <h2><span class="section-number">3.2.6.2. </span>Step 2: EDA<a class="headerlink" href="#step-2-eda" title="Permalink to this headline">¶</a></h2>
-<p>Just because this code is skipping EDA doesn’t mean you should! <a class="reference internal" href="02e_eda_golden.html"><span class="doc std std-doc">Follow the best practices!</span></a> In fact, I did do EDA on the dataset, which I why I knew to combine boy/girl names.</p>
+<p>Just because this code is skipping EDA doesn’t mean you should! <a class="reference internal" href="02e_eda_golden.html"><span class="doc std std-doc">Follow the best practices!</span></a> In fact, I did do EDA on the dataset, which I why I know to combine boy/girl names below.</p>
 </div>
 <div class="section" id="step-3-analysis-using-chains">
 <h2><span class="section-number">3.2.6.3. </span>Step 3: Analysis using Chains<a class="headerlink" href="#step-3-analysis-using-chains" title="Permalink to this headline">¶</a></h2>
@@ -881,8 +882,8 @@
 <li><p>save the dataset and then call a plot function</p></li>
 </ol>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4ce57b2e-2bf9-4cbe-873b-ebc9dc119b7c" name="72ba4a06-3bab-467d-896e-a62bbc120826" type="radio">
-</input><label class="tabbed-label" for="4ce57b2e-2bf9-4cbe-873b-ebc9dc119b7c">
+<input checked="checked" id="2bfbf3a5-b444-4d93-bd17-b01b09e63443" name="bb2ead87-f049-4e64-a259-8772975d5c50" type="radio">
+</input><label class="tabbed-label" for="2bfbf3a5-b444-4d93-bd17-b01b09e63443">
 v0.1 Without chains</label><div class="tabbed-content docutils">
 <p>On one hand, this is only 4 lines of code. On the other hand, this is as readable as I could make it!</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># STEP 1: restrict by name and only keep years after 2000</span>
@@ -913,8 +914,8 @@ v0.1 Without chains</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="bbc6e5b2-5a6a-4698-9ed6-c1526b1f32ae" name="72ba4a06-3bab-467d-896e-a62bbc120826" type="radio">
-</input><label class="tabbed-label" for="bbc6e5b2-5a6a-4698-9ed6-c1526b1f32ae">
+<input id="69a4ccd4-3126-4600-8f76-1341ded0aaab" name="bb2ead87-f049-4e64-a259-8772975d5c50" type="radio">
+</input><label class="tabbed-label" for="69a4ccd4-3126-4600-8f76-1341ded0aaab">
 v0.2 No chains but better</label><div class="tabbed-content docutils">
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -931,8 +932,8 @@ v0.2 No chains but better</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="f584c10b-1732-4468-a65e-13d962338116" name="72ba4a06-3bab-467d-896e-a62bbc120826" type="radio">
-</input><label class="tabbed-label" for="f584c10b-1732-4468-a65e-13d962338116">
+<input id="22959380-b68a-4601-9fa2-e308dc53dca9" name="bb2ead87-f049-4e64-a259-8772975d5c50" type="radio">
+</input><label class="tabbed-label" for="22959380-b68a-4601-9fa2-e308dc53dca9">
 v1.0 - Using chains instead</label><div class="tabbed-content docutils">
 <p><strong>Method chaining:</strong> Call the object (<code class="docutils literal notranslate"><span class="pre">baby_names</span></code>) and then keep calling one method on it after another.</p>
 <ul class="simple">
@@ -961,8 +962,8 @@ The code below produces a plot identical to V1 and V2, <strong>but it is unreada
 </pre></div>
 </div>
 </div>
-<input id="f05a913e-dd56-48dc-9365-70a146f48a5c" name="72ba4a06-3bab-467d-896e-a62bbc120826" type="radio">
-</input><label class="tabbed-label" for="f05a913e-dd56-48dc-9365-70a146f48a5c">
+<input id="5f384509-fcba-4093-b872-cce6f2c3e55b" name="bb2ead87-f049-4e64-a259-8772975d5c50" type="radio">
+</input><label class="tabbed-label" for="5f384509-fcba-4093-b872-cce6f2c3e55b">
 v1.1 Pretty Chains</label><div class="tabbed-content docutils">
 <p>To make this readable, we write a parentheses over multiple lines</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
@@ -987,7 +988,7 @@ v1.1 Pretty Chains</label><div class="tabbed-content docutils">
 </div>
 <div class="section" id="analysis-output">
 <h2><span class="section-number">3.2.6.4. </span>Analysis output<a class="headerlink" href="#analysis-output" title="Permalink to this headline">¶</a></h2>
-<p>All versions of the code produce this graph:</p>
+<p>All versions of the code above produce the exact same graph:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../../_images/02f_chains_9_0.png" src="../../_images/02f_chains_9_0.png" />
