@@ -16,18 +16,18 @@ Somehow, I am still a Lions fan, even though stints in AZ, CA, PA, NY, TX, and F
 ---
 
 <p style="font-size:18px; line-height:24px; color:#666666; margin:0 0 10px;">  <!-- makes it like H3 -->
- <b> TA - Mystery!  </b>
+ <b> TA - Julio Veracruz  </b>
 </p>
 ^^^
-```{image} img/mystery-person.jpg
+```{image} img/julio.jpg
 :alt: mystery
 ```
 <br>
-Linkedin: tbd <br>
-Email: tbd  <br>
-GitHub: tbd  <br> 
+Personal website: [https://julioveracruz.github.io](https://julioveracruz.github.io) <br>
+Email: juv222  <br>
+GitHub: julioveracruz  <br> 
 <br>
-Personal factoid tbd
+I'm currenty a senior studying finance. Outside of classes, I love watching basketball (let's go Mavs!), listening to music, and trying to nail the perfect cold brew coffee recipe. 
 ````
 
 ### Drop-in Hours are on [coursesite](https://coursesite.lehigh.edu/course/view.php?id=193947)
