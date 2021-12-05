@@ -8,4 +8,4 @@
 
 Just a heads up: This website is (always) under construction. 
 
-LaDataSciFi is listed as FIN377 within the College of Business at Lehigh University.
+LaDataSciFi is listed as FIN377 and GBUS421 within the College of Business at Lehigh University.
