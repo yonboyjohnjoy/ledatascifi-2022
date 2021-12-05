@@ -23,7 +23,7 @@ Somehow, I am still a Lions fan, even though stints in AZ, CA, PA, NY, TX, and F
 :alt: mystery
 ```
 <br>
-Personal website:  [https://julioveracruz.github.io/](https://julioveracruz.github.io/)  <br>
+Personal website:  <a href="https://julioveracruz.github.io/">https://julioveracruz.github.io/</a> <br>
 Email: juv222  <br>
 GitHub: julioveracruz  <br> 
 <br>
