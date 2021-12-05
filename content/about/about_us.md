@@ -23,14 +23,14 @@ Somehow, I am still a Lions fan, even though stints in AZ, CA, PA, NY, TX, and F
 :alt: mystery
 ```
 <br>
-Personal website: [https://julioveracruz.github.io/](https://julioveracruz.github.io/) <br>
+Personal website:  [https://julioveracruz.github.io/](https://julioveracruz.github.io/)  <br>
 Email: juv222  <br>
 GitHub: julioveracruz  <br> 
 <br>
 I'm currenty a senior studying finance. Outside of classes, I love watching basketball (let's go Mavs!), listening to music, and trying to nail the perfect cold brew coffee recipe. 
 ````
 
-### Drop-in Hours are on [coursesite](https://coursesite.lehigh.edu/course/view.php?id=193947)
+### Drop-in Hours are on [coursesite](https://coursesite.lehigh.edu/course/view.php?id=236371)
 
 Aka "Office Hours". 
 
