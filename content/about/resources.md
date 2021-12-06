@@ -18,7 +18,7 @@ If you have any favorite resources you like, or found helpful, please let me kno
 - **Essential:** [datacamp.com](https://www.datacamp.com/) has many self guided lessons
 - Lessons 3 and 5 of the [official documentation](https://docs.python.org/3/tutorial/introduction.html)
 - [Dive Into Python](https://diveinto.org/python3/table-of-contents.html)
-- [This has to be the best list of Python resources on the internet](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md#python). 
+- [This has to be the best list of Python resources on the internet](https://github.com/EbookFoundation/free-programming-books/blob/main/free-programming-books.md#python). 
 ```
 
 ```{dropdown} Data Science 
@@ -42,7 +42,7 @@ If you have any favorite resources you like, or found helpful, please let me kno
 ```
 
 ```{dropdown} Data/ML
-- [Scikit (python package) can read in some data](https://scikit-learn.org/stable/datasets/index.html), which has data on Boston real estate, wine, a larger california housing dataset 
+- [Scikit (python package) can read in some data](https://scikit-learn.org/stable/datasets.html#datasets), which has data on Boston real estate, wine, a larger california housing dataset 
 - **Essential:** [Pandas can read in a LOT of useful data!](https://pandas-datareader.readthedocs.io/en/latest/readers/index.html) Data providers include: Federal Reserve ("FRED"), Ken French, NASDAQ, OECD, Qunadl, TSP, World Bank, and more!
 - [ML competitions with serious prizes at drivendata.org](https://www.drivendata.org/competitions/54/machine-learning-with-a-heart/)
   - [This comp was interesting](https://www.drivendata.org/competitions/50/worldbank-poverty-prediction/page/99/). You could start trying [to analyze it here](http://drivendata.co/blog/worldbank-poverty-benchmark/). This has a good example of the process you might follow. After you're done, you can see [the winner's code and discussion of the winning approach](https://github.com/drivendataorg/pover-t-tests/tree/9a1918856c5e6ee537caed103eb80dabefb2fe44)  
@@ -61,6 +61,6 @@ If you have any favorite resources you like, or found helpful, please let me kno
 ```{dropdown} Books
 - [Signal and the Noise, by Nate Silver](https://www.amazon.com/gp/product/159420411X)
 - [Range, by David Epstein](https://www.amazon.com/Range-Generalists-Triumph-Specialized-World/dp/0735214484) is a very interesting book generally, and it touches on prediction skill too
-- [Superforecasters](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718). Here is a decent [free summary](https://medium.com/west-stringfellow/superforecasting-the-art-and-science-of-prediction-review-and-summary-e075be35a936)
+- [Superforecasters](https://www.amazon.com/Superforecasting-Science-Prediction-Philip-Tetlock/dp/0804136718). Here is a decent [free summary](https://jaknguyen.medium.com/superforecasting-the-art-and-science-of-prediction-summary-7d2bb0eea2e1)
 ```
 
