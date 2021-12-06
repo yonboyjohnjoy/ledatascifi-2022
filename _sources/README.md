@@ -1,23 +1,29 @@
 # LeDataSciFi-2022
 
+This readme is meant for myself and TAs, not students. 
+
 This repo is the 2022 edition of LeDataSciFi. The [ledatascifi.github.io](https://ledatascifi.github.io) repo hosts the website, but simply redirects to the cover page for _**this**_ repo. In future years, make a new years' website as a new repo by cloning this one (don't forget the GH action that deploys it!), and alter the redirect from the ledatascifi.github.io to the new website. 
 
-- Greatly simplified course/website structure - now everything is in one book (this repo!), which can be ported from year to year with simpler updates. The only portion of class _**outside**_ this repo is
-    - the org's has teams for discussion and many repos for assignments, etc
+This repo contains the textbook, course details, data, and lecture files, making it simpler to move from year to year. The only portion of class _**outside**_ this repo is
+    - the org has teams for discussion and many repos for assignments, etc
     - coursesite to send out assignment links, Zoom links, and schedule office hours appointments from within the Lehigh "gates"
     - the schedule and weekly tasks that are embedded in the dashboard page are an excel file on my computer
-- Now using `jupyter-book` 0.8.3 instead of 0.6.4, which are incompatible.
-    - **As of fall 2021, `jupyter-book` is on 0.11. This might change a lot of behavior. 😨**
-- To build the book for _**local**_ viewing (quicker dev cycles than waiting for website to refresh):
-    - `cd <>/ledatascifi-2022` 
-    - (Recommended) Remove the existing `LeDataSciFi-2022/_build/` directory
-    - `jupyter-book build ./`
-    - A fully-rendered HTML version of the book will be built in the `_build/html/` folder.
-- To update website: Simply push or pull the main branch of the repo. A GitHub actions workflow (`.github/workflows/deploy.yml`) automatically builds and pushes the book in the `gh-pages` branch, and GitHub pages will update the website in <5 minutes. 
-- Book formatting is controlled by
+
+## Updating the website 
+
+**To update the website, simply push any change in the main branch of the repo.** After a push, a GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically builds and pushes the book in the `gh-pages` branch, and GitHub pages will update the website in <5 minutes. 
+
+_Note for myself: `requirements.txt` contains the packages GitHub uses to build the website. The most "important" req is `sphinx-book-theme=0.0.39`, which implies that we are using `jupyter-book<=0.10.1`. The reason for this is that later versions use pydata themes which completely change TOC behavior. (Updating it and then reproducing the collapsing behavior and coloring would require updates to the css files, if the new pydata theme even allows collapsing.)_
+
+## Adding new web pages, formatting changes, etc.
+
+- **See the instructions in `building_this_site.yml`**, which tells how to build the book for _**local**_ viewing (quicker dev cycles than waiting for website to refresh)
+- Typical task: After creating a new textbook page, to get this on the left navigation bar/TOC, you'll need to add that to the `_toc.yml` file. _**NOTE: The TOC uses formatting from jupyter-book 0.10.1!**_ 
+- Overall website formatting is controlled by
     - `_config.yml` for most settings
     - `_toc.yml` lays out the book table of contents, ie the left nav bar
     - `_static/*` - any css or js I want to add to modify the base styling goes here
+	- Be careful: jupyterbook settings and behavior are locked at v0.10.1!
 
 ## Credits
 

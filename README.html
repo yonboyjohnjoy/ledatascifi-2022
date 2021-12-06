@@ -747,6 +747,16 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#updating-the-website">
+   Updating the website
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-new-web-pages-formatting-changes-etc">
+   Adding new web pages, formatting changes, etc.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#credits">
    Credits
   </a>
@@ -764,37 +774,32 @@
                 
   <div class="section" id="ledatascifi-2022">
 <h1>LeDataSciFi-2022<a class="headerlink" href="#ledatascifi-2022" title="Permalink to this headline">¶</a></h1>
+<p>This readme is meant for myself and TAs, not students.</p>
 <p>This repo is the 2022 edition of LeDataSciFi. The <a class="reference external" href="https://ledatascifi.github.io">ledatascifi.github.io</a> repo hosts the website, but simply redirects to the cover page for <em><strong>this</strong></em> repo. In future years, make a new years’ website as a new repo by cloning this one (don’t forget the GH action that deploys it!), and alter the redirect from the <a class="reference external" href="http://ledatascifi.github.io">ledatascifi.github.io</a> to the new website.</p>
+<p>This repo contains the textbook, course details, data, and lecture files, making it simpler to move from year to year. The only portion of class <em><strong>outside</strong></em> this repo is
+- the org has teams for discussion and many repos for assignments, etc
+- coursesite to send out assignment links, Zoom links, and schedule office hours appointments from within the Lehigh “gates”
+- the schedule and weekly tasks that are embedded in the dashboard page are an excel file on my computer</p>
+<div class="section" id="updating-the-website">
+<h2>Updating the website<a class="headerlink" href="#updating-the-website" title="Permalink to this headline">¶</a></h2>
+<p><strong>To update the website, simply push any change in the main branch of the repo.</strong> After a push, a GitHub Actions workflow (<code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code>) automatically builds and pushes the book in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch, and GitHub pages will update the website in &lt;5 minutes.</p>
+<p><em>Note for myself: <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> contains the packages GitHub uses to build the website. The most “important” req is <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme=0.0.39</span></code>, which implies that we are using <code class="docutils literal notranslate"><span class="pre">jupyter-book&lt;=0.10.1</span></code>. The reason for this is that later versions use pydata themes which completely change TOC behavior. (Updating it and then reproducing the collapsing behavior and coloring would require updates to the css files, if the new pydata theme even allows collapsing.)</em></p>
+</div>
+<div class="section" id="adding-new-web-pages-formatting-changes-etc">
+<h2>Adding new web pages, formatting changes, etc.<a class="headerlink" href="#adding-new-web-pages-formatting-changes-etc" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Greatly simplified course/website structure - now everything is in one book (this repo!), which can be ported from year to year with simpler updates. The only portion of class <em><strong>outside</strong></em> this repo is</p>
-<ul>
-<li><p>the org’s has teams for discussion and many repos for assignments, etc</p></li>
-<li><p>coursesite to send out assignment links, Zoom links, and schedule office hours appointments from within the Lehigh “gates”</p></li>
-<li><p>the schedule and weekly tasks that are embedded in the dashboard page are an excel file on my computer</p></li>
-</ul>
-</li>
-<li><p>Now using <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> 0.8.3 instead of 0.6.4, which are incompatible.</p>
-<ul>
-<li><p><strong>As of fall 2021, <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> is on 0.11. This might change a lot of behavior. 😨</strong></p></li>
-</ul>
-</li>
-<li><p>To build the book for <em><strong>local</strong></em> viewing (quicker dev cycles than waiting for website to refresh):</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&lt;&gt;/ledatascifi-2022</span></code></p></li>
-<li><p>(Recommended) Remove the existing <code class="docutils literal notranslate"><span class="pre">LeDataSciFi-2022/_build/</span></code> directory</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">./</span></code></p></li>
-<li><p>A fully-rendered HTML version of the book will be built in the <code class="docutils literal notranslate"><span class="pre">_build/html/</span></code> folder.</p></li>
-</ul>
-</li>
-<li><p>To update website: Simply push or pull the main branch of the repo. A GitHub actions workflow (<code class="docutils literal notranslate"><span class="pre">.github/workflows/deploy.yml</span></code>) automatically builds and pushes the book in the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch, and GitHub pages will update the website in &lt;5 minutes.</p></li>
-<li><p>Book formatting is controlled by</p>
+<li><p><strong>See the instructions in <code class="docutils literal notranslate"><span class="pre">building_this_site.yml</span></code></strong>, which tells how to build the book for <em><strong>local</strong></em> viewing (quicker dev cycles than waiting for website to refresh)</p></li>
+<li><p>Typical task: After creating a new textbook page, to get this on the left navigation bar/TOC, you’ll need to add that to the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. <em><strong>NOTE: The TOC uses formatting from jupyter-book 0.10.1!</strong></em></p></li>
+<li><p>Overall website formatting is controlled by</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> for most settings</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> lays out the book table of contents, ie the left nav bar</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">_static/*</span></code> - any css or js I want to add to modify the base styling goes here</p></li>
+<li><p>Be careful: jupyterbook settings and behavior are locked at v0.10.1!</p></li>
 </ul>
 </li>
 </ul>
+</div>
 <div class="section" id="credits">
 <h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
 <p>This project is created using the excellent open source <a class="reference external" href="https://jupyterbook.org/">Jupyter Book project</a> and the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">executablebooks/cookiecutter-jupyter-book template</a>.</p>

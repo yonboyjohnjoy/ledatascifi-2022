@@ -133,7 +133,7 @@ The biggies:
 
 ```{dropdown}  **TIP #6:** Make your work product (especially tables and figures) pretty. 
 - Use good design concepts that we discuss early in the semester for figures and tables.
-- I google "markdown cheat sheet" often (sometimes with "github" or "jupyter" added to it depending on what I'm writing). [This is a good start cheat sheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf) and there is so much good stuff online. 
+- I google "markdown cheat sheet" often (sometimes with "github" or "jupyter" added to it depending on what I'm writing). [This is a good start cheat sheet](https://www.markdownguide.org/cheat-sheet/) and there is so much good stuff online. 
 ```
 
 
