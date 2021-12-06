@@ -36,7 +36,6 @@ If you have any favorite resources you like, or found helpful, please let me kno
 
 ```{dropdown} Github, Git, and Version control
 - [Getting started on GitHub](https://guides.github.com/activities/hello-world/) and a twitter length [description of how a project flows](https://help.github.com/en/articles/github-glossary) 
-- [https://try.github.io/](https://try.github.io/) is awesome if you ever want or need to use Git (just plain "Git"). It has a cheatsheet and some very nice visual walkthroughs, including the "branching" link.
 - [Jenny Bryan on version control](https://pdfs.semanticscholar.org/2575/6e04f126da30e26b447801a5e2d3e51e3154.pdf)
 - Again... [Coding best practices, and project management](https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml)
 - [The most thorough yet simple walkthrough of Git and Github use on the web](https://happygitwithr.com). Applies to python use for the most part. 
