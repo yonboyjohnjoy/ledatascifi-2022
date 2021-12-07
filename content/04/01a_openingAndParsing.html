@@ -468,7 +468,7 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="02_strings.html">
-     4.4. Strings
+     4.4. The Power of Textual Data
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
@@ -833,13 +833,22 @@
 <h2><span class="section-number">4.2.1. </span>Skill 1: Retrieving URLs and sending manual API queries<a class="headerlink" href="#skill-1-retrieving-urls-and-sending-manual-api-queries" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Notice how, when you google something, the URL of the resulting search has the information about the search?</p>
-<p>For example: <a class="reference external" href="https://www.google.com/search?client=firefox-b-1-d&amp;q=gme+stock_price">https://www.google.com/search?client=firefox-b-1-d&amp;q=gme+stock_price</a></p>
-<p>We can leverage websites that do that to programmatically run searches and collect data!</p>
+<p>Have you ever noticed how, when you google something, the URL of the resulting search has the information about the search?</p>
+<p>For example, suppose I Google “gme stock price” (without the quotes). The resulting URL might be: <a class="reference external" href="https://www.google.com/search?client=firefox-b-1-d&amp;q=gme+stock+price">https://www.google.com/search?client=firefox-b-1-d&amp;q=gme+stock+price</a></p>
+<p>This URL has several parts:</p>
+<ol class="simple">
+<li><p>The stem, ending in a question mark: <a class="reference external" href="https://www.google.com/search">https://www.google.com/search</a>?</p></li>
+<li><p>Everything after the stem is the parameters of the search</p></li>
+<li><p>A search can contain many parameters, and they will be separated by “&amp;”</p></li>
+<li><p>Each parameter is structured like: <parameter name>=<parameter value></p></li>
+<li><p>Parameter 1: My browser client is a version of firefox</p></li>
+<li><p>Parameter 2: My query (“q”) is gme+stock+price (spaces aren’t allowed in URLs)</p></li>
+</ol>
+<p>We can leverage websites that do this - putting the search query in the URL - to programmatically run searches and collect data!</p>
 </div>
 <div class="section" id="walkthrough">
 <h3><span class="section-number">4.2.1.1. </span>Walkthrough<a class="headerlink" href="#walkthrough" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://nbviewer.jupyter.org/github/nealcaren/ScrapingData/blob/master/Notebooks/5_APIs.ipynb">Go through the Neal Caren “First API” example</a></p>
+<p><a class="reference external" href="https://nbviewer.jupyter.org/github/nealcaren/ScrapingData/blob/master/Notebooks/5_APIs.ipynb">Let’s go through the Neal Caren “First API” example. Some notes as we start:</a></p>
 <ul class="simple">
 <li><p><strong>JSON is just a data storage structure, and in python it’s a dictionary.</strong></p></li>
 <li><p>In this example, we make the search give us JSON because it can be easier to extract data from JSON than HTML sometimes.</p></li>
@@ -850,10 +859,6 @@
 </ul>
 </li>
 </ul>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<p><em>For your reference: Sometimes a webpage is “hiding” the way to run queries like this API. You run a search and the URL doesn’t look obviously like a search. But often, inside that page is a “backdoor” to an API you can search just like the above example. <a class="reference external" href="https://nbviewer.jupyter.org/github/nealcaren/ScrapingData/blob/master/Notebooks/Bonus_Undocument_APIs.ipynb">This</a> tutorial shows one example of this and more importantly, how the author found the API.</em></p>
-</div>
 </div>
 <div class="section" id="practice-exchange-rates">
 <h3><span class="section-number">4.2.1.2. </span>Practice: Exchange rates<a class="headerlink" href="#practice-exchange-rates" title="Permalink to this headline">¶</a></h3>

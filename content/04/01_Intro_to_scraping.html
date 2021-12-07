@@ -468,7 +468,7 @@
    </li>
    <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="02_strings.html">
-     4.4. Strings
+     4.4. The Power of Textual Data
     </a>
     <ul class="collapse-ul">
      <li class="toctree-l3">
@@ -839,7 +839,7 @@
 <p class="card-text">Did you know? Pandas can often directly read tables on webpages!</p>
 <ul class="simple">
 <li><p class="card-text">Try <code class="docutils literal notranslate"><span class="pre">pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')</span></code></p></li>
-<li><p class="card-text">Very easy and fast! You don’t even need to save the webapge to your hard drive.</p></li>
+<li><p class="card-text">Very easy and fast! You don’t even need to save the webpage to your hard drive.</p></li>
 <li><p class="card-text">Notes on <code class="docutils literal notranslate"><span class="pre">read_html</span></code>:</p>
 <ol class="simple">
 <li><p class="card-text">It can only handle basic HTML tables encoded directly in the page (no Javascript, e.g.) and <strong>only grabs displayed text – embedded URLs are lost.</strong></p></li>
@@ -879,6 +879,12 @@
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Many sites have an API port of some kind serving up the data they show visitors.</p>
+<p class="card-text">The next few website pages and lectures will cover this. If you can see your search query in the URL, like “<a class="reference external" href="https://www.google.com/search?q=gme+stock+price">https://www.google.com/search?q=gme+stock+price</a>”, then you can run the searches manually and get the data after opening the page using one of two approaches:</p>
+<ol class="simple">
+<li><p class="card-text">If the data is in the HTML code, you can scrape it using the approaches we will discuss. You can look at the HTML code for any webpage by right clicking and then selecting “View Page Source” (or similar, depends on the browser). After opening the HTML code, CTRL+F to look for some of the data. If the data is in the page, you can scrape it various ways, which we will cover.</p></li>
+<li><p class="card-text">If you can see the data on the webpage, but the data isn’t in the HTML code when you CTRL+F for it, you’re in luck! You’ll need to do a few tricks with your browser to find where the API is hidden and how to use it, but after that, you will be able to download the data without doing any HTML scraping! <a class="reference external" href="http://www.gregreda.com/2015/02/15/web-scraping-finding-the-api/">See this example.</a></p></li>
+<li><p class="card-text">And sometimes a webpage is “hiding” the way to run queries like this API. You run a search and the URL doesn’t look obviously like a search. But often, inside that page is a “backdoor” to an API you can search just like the above example. <a class="reference external" href="https://nbviewer.jupyter.org/github/nealcaren/ScrapingData/blob/master/Notebooks/Bonus_Undocument_APIs.ipynb">This</a> tutorial shows one example of this and more importantly, how the author found the API.</p></li>
+</ol>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">

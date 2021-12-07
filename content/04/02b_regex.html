@@ -468,7 +468,7 @@
    </li>
    <li class="toctree-l2 current active collapsible-parent">
     <a class="reference internal" href="02_strings.html">
-     4.4. Strings
+     4.4. The Power of Textual Data
     </a>
     <ul class="current collapse-ul">
      <li class="toctree-l3">
@@ -804,25 +804,30 @@
 <p class="admonition-title">Tip</p>
 <p>The best ways to learn and use regex are:</p>
 <ol class="simple">
-<li><p>[<a class="reference external" href="https://regexone.com/">https://regexone.com/</a>}(<a class="reference external" href="https://regexone.com">https://regexone.com</a>) is so good, I’m loath to add anything else to this page.</p></li>
+<li><p><a class="reference external" href="https://regexone.com">https://regexone.com/</a> is so good, I’m loath to add anything else to this page.</p></li>
 <li><p>The <a class="reference external" href="https://docs.python.org/3/library/re.html">official python documentation</a> and its <a class="reference external" href="https://docs.python.org/3/howto/regex.html">HOWTO page</a></p></li>
-<li><p>Google+stackoverflow. “Has someone done something similar? Yes? Great!”</p></li>
+<li><p>Google+stackoverflow. If someone has done something similar, and found a solution, great!</p></li>
 </ol>
 </div>
 <p>Imagine you have a webpage or document which includes (buried in the text) a bunch of numbers. How can you collect all the phone numbers?</p>
 <p>A: Look for all the instances of this pattern: (###) ###-####.</p>
 <p>Your eyeballs can easily do that, but once the job involves enough enough numbers, it makes sense to let your computer do it for you.</p>
-<p><strong>Regex is how you tell a computer to search for any pattern within a string.</strong></p>
+<div class="admonition-regex-is-how-you-tell-a-computer-to-search-for-any-pattern-within-a-string admonition">
+<p class="admonition-title"><strong>Regex is how you tell a computer to search for any pattern within a string.</strong></p>
 <ul class="simple">
 <li><p>Phone numbers</p></li>
 <li><p>Emails (regex is why people don’t spell out their emails “correctly” online)</p></li>
 <li><p>Addresses</p></li>
 <li><p>Certain words/topics (like assignment 5!)</p></li>
 </ul>
+</div>
 <div class="section" id="regex-in-python">
 <h2><span class="section-number">4.4.2.1. </span>Regex in Python<a class="headerlink" href="#regex-in-python" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>Regex is a skill that works in all programming languages, so this lesson is portable - you can use regex in R or whatever your language of choice is.</p>
-<p>But obviously, we’re going to use python. <strong>Run <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">re</span></code> to load the regex package.</strong></p>
+</div>
+<p>But obviously, we’re going to use python. <strong>Add <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">re</span></code> to the top of your code to load the regex package.</strong></p>
 <div class="section" id="common-functions">
 <h3><span class="section-number">4.4.2.1.1. </span>Common functions:<a class="headerlink" href="#common-functions" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://docs.python.org/3/library/re.html#module-contents">The full list of functions is here</a>.</p>
@@ -994,7 +999,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">\</span></code></p></td>
-<td class="text-align:left"><p>1. escapes special characters <code class="docutils literal notranslate"><span class="pre">\*</span></code> will actuallye search for an asterisk. <br><br> 2. or signals a “special sequence”</p></td>
+<td class="text-align:left"><p>1. escapes special characters <code class="docutils literal notranslate"><span class="pre">\*</span></code> will actually search for an asterisk. <br><br> 2. or signals a “special sequence”</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">[]</span></code></p></td>
 <td class="text-align:left"><p>Indicates a set of characters. In a set: <code class="docutils literal notranslate"><span class="pre">[amk]</span></code> will match ‘a’, ‘m’, or ‘k’. <br> <br> Common ranges: <code class="docutils literal notranslate"><span class="pre">[a-z]</span></code>, <code class="docutils literal notranslate"><span class="pre">[A-Z]</span></code>,  <code class="docutils literal notranslate"><span class="pre">[0-9]</span></code>. You can combine ranges: <code class="docutils literal notranslate"><span class="pre">[A-Za-z0-9]</span></code>. <br> <br> Special characters lose their special meaning inside sets. For example, <code class="docutils literal notranslate"><span class="pre">[(+*)]</span></code> will match any of the literal characters <code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, or <code class="docutils literal notranslate"><span class="pre">)</span></code>.</p></td>
@@ -1007,7 +1012,7 @@
 <p>There is SO MANY more special characters. If you can imagine a “feature” in the pattern of a string, there is probably a special character. <code class="docutils literal notranslate"><span class="pre">\b</span></code> matches word boundaries, <code class="docutils literal notranslate"><span class="pre">\d</span> <span class="pre">for</span> <span class="pre">digits,</span> </code>\s` for whitespace, and more.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Most “regex” in practice is just Googling for someone who has done a similar thing.</p>
+<p>In practice, most “regex” is just Googling to see if someone has done a similar thing.</p>
 </div>
 <p>A few pointers:</p>
 <ul class="simple">
