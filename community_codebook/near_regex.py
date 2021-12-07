@@ -53,8 +53,8 @@ def NEAR_regex(list_of_words,max_words_between=5,partial=False,cases_matter=Fals
     
     3. Optionally ignore line breaks. 
     
-    4. Make it maximally greedy (unclear ~exactly~ what that means: in the last example,
-    the "correct" answer is probably 2, but one ~could~ argue it is 4.)
+    4. Optionally make it lazy (in the last example, 
+    the "correct" answer is probably 2, but it gives 1.)
     
         
     Unsure about speed
@@ -158,9 +158,8 @@ test  = 'hey jimmy                      hey james'
 words = ['hey','(jimmy|james)']             # search for one word near EITHER of two others
 rgx = NEAR_regex(words,max_words_between=1)
 print(len(re.findall(rgx,test)))            # both matches are caught
+[m.group(0) for m in re.finditer(rgx,texts)]
 
 rgx = NEAR_regex(words,max_words_between=2)
-print(len(re.findall(rgx,test)))            # but note that the regex isn't greedy - it misses inner matches!
-
-rgx = NEAR_regex(words,max_words_between=1)
+print(len(re.findall(rgx,test)))            # but note that the regex is greedy - it grabs the largest chunks and thus misses inner matches!
 [m.group(0) for m in re.finditer(rgx,test)]

@@ -39,10 +39,22 @@ def NEAR_regex(list_of_words,max_words_between=5,partial=False,cases_matter=Fals
         
         The default is True.
      
-        
-    Warning / Feature
+    Warning
     -------
-    This WILL NOT ... (missing documentation!)
+    See the last example. The regex is minimally greedy. 
+    
+       
+    Feature Requests (participation credit available)
+    -------
+    1. A wrapper that takes the above inputs, the string to search, and a variable=count|text, and
+    returns either the number of hits or the text of the matching elements. (See the examples below.)
+    
+    2. Optionally clean the string before the regex stuff happens.
+    
+    3. Optionally ignore line breaks. 
+    
+    4. Optionally make it lazy (in the last example, 
+    the "correct" answer is probably 2, but it gives 1.)
     
         
     Unsure about speed
@@ -52,18 +64,20 @@ def NEAR_regex(list_of_words,max_words_between=5,partial=False,cases_matter=Fals
     
     Suggested use
     -------
-    a_string_you_have = 'Jack and Jill went up the hill'
+    # clean your starting string 
+    a_string_you_have = 'jack and jill went up the hill'
     
     # 1. define words and set up the regex
     words = ['jack','hill']                         
     rgx = NEAR_regex(words)                       
     
-    # 2. convert the string to lowercase before searching!
-    a_string_you_have = a_string_you_have.lower()   
+    # 2a. count the number of times the word groups are in the text near each other
+    count = len(re.findall(rgx,a_string_you_have))              
+    print(count)  
     
-    # 3. len+findall+rgx = counts the number of times the word groups are close
-    count = len(re.findall(rgx,test))              
-    print(count)                                 
+    # 2b. print the actual text matches <-- great for checking!
+    text_of_matches = [m.group(0) for m in re.finditer(rgx,a_string_you_have)]
+    print(text_of_matches)
 
     
     Returns
@@ -95,4 +109,6 @@ def NEAR_regex(list_of_words,max_words_between=5,partial=False,cases_matter=Fals
             regex_list.append(start+gap.join(lowerpermu)+end)
     
     return '|'.join(regex_list)
+
+
 
