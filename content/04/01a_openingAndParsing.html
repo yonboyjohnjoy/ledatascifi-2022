@@ -837,12 +837,12 @@
 <p>For example, suppose I Google “gme stock price” (without the quotes). The resulting URL might be: <a class="reference external" href="https://www.google.com/search?client=firefox-b-1-d&amp;q=gme+stock+price">https://www.google.com/search?client=firefox-b-1-d&amp;q=gme+stock+price</a></p>
 <p>This URL has several parts:</p>
 <ol class="simple">
-<li><p>The stem, ending in a question mark: <a class="reference external" href="https://www.google.com/search">https://www.google.com/search</a>?</p></li>
+<li><p>The stem, ending in a question mark: “<a class="reference external" href="https://www.google.com/search?%22">https://www.google.com/search?”</a></p></li>
 <li><p>Everything after the stem is the parameters of the search</p></li>
 <li><p>A search can contain many parameters, and they will be separated by “&amp;”</p></li>
-<li><p>Each parameter is structured like: <parameter name>=<parameter value></p></li>
+<li><p>Each parameter is structured like: &lt;parameter name&gt;=&lt;parameter value&gt;</p></li>
 <li><p>Parameter 1: My browser client is a version of firefox</p></li>
-<li><p>Parameter 2: My query (“q”) is gme+stock+price (spaces aren’t allowed in URLs)</p></li>
+<li><p>Parameter 2: My query (“q”) is gme+stock+price (plus signs because spaces aren’t allowed in URLs)</p></li>
 </ol>
 <p>We can leverage websites that do this - putting the search query in the URL - to programmatically run searches and collect data!</p>
 </div>
