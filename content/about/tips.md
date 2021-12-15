@@ -10,8 +10,8 @@ I'm collecting some tips from around the site here. This is not comprehensive. I
     - Depending on the nature of the question, you can tag me (@donbowen) and/or your classmates (@classmates-2022) to get their attention. 
     - I recommend tagging classmates in most cases - you'll get more answers, improve the discourse in the class, and often, answering your question will probably help other students. 
     - [How to ask for help to get the best answers](help.html#how-to-ask-for-help-in-a-way-that-gets-the-best-answers)
-1. If you spot errors, typos, have a suggestion to clarify a lesson: Click on the GH icon in the upper right, and then "suggest edit". Edit the pages as you would, describe the changes, and commit! I'll probably incorporate it, and you'll get participation credit! 
-1. If you have a new idea for a webpage, tutorial, example... just go ahead and make it and send it to me. You'll notice parts of the textbook draw heavily on past students. :)
+1. If you spot errors, typos, have a suggestion to clarify a lesson: Click on the GH icon in the upper right, and then "suggest edit". Edit the pages as you would, describe the changes, and commit! I'll probably incorporate it, and you'll get extra credit! 
+1. If you have a new idea for a webpage, tutorial, example... just go ahead and make it and send it to me. Parts of the textbook draw heavily on or were written by past students. 
 ```
 
 ```{dropdown}  How to improve your zoom life, our class, and your grades 
@@ -51,7 +51,7 @@ The [community codebook](https://github.com/LeDataSciFi/ledatascifi-2022/tree/ma
 
 You'll build your own codebook, a list of "recipes" you use repeatedly, as the semester goes on. But community codebook will help you get started!
 
-Please submit ideas for new entries if you recognize us using code repeated! It counts as participation credit &#11088; &#11088; &#11088;
+Please submit ideas for new entries if you recognize us using code repeatedly! It counts as extra credit &#11088; &#11088; &#11088;
 
 ```
 
