@@ -788,8 +788,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#covariances-relationships-between-variables">
-   3.3.4.4. Covariances/relationships between variables
+  <a class="reference internal nav-link" href="#covariances-and-relationships-between-variables">
+   3.3.4.4. Covariances and relationships between variables
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -844,7 +844,7 @@
 <div class="section" id="eda-on-a-classic-firm-financial-dataset">
 <h2><span class="section-number">3.3.4.1. </span>EDA on a classic firm financial dataset<a class="headerlink" href="#eda-on-a-classic-firm-financial-dataset" title="Permalink to this headline">¶</a></h2>
 <p>In <a class="reference internal" href="02e_eda_golden.html"><span class="doc std std-doc">the Pandas EDA</span></a> page, I explored Compustat by producing summary stats to get a sense of the variables involved, look for missing values, and look for problematic outliers. We noted that some variables, like <span class="math notranslate nohighlight">\(delaycon\)</span>, had a lot of missing values and decided we’d look into it.</p>
-<p>Let’s continue exploring that dataset. First, let’s download our slice of it. The variables are listed and described in a csv file in the <a class="reference external" href="https://github.com/LeDataSciFi/ledatascifi-2021/tree/main/data">repo’s data folder.</a></p>
+<p>Let’s continue exploring that dataset. First, let’s download our slice of it. The variables are listed and described in a csv file in the <a class="reference external" href="https://github.com/LeDataSciFi/ledatascifi-2022/tree/main/data">repo’s data folder.</a></p>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -856,7 +856,7 @@
 <span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
 <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/LeDataSciFi/ledatascifi-2021/blob/main/data/CCM_cleaned_for_class.zip?raw=true&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/LeDataSciFi/ledatascifi-2022/blob/main/data/CCM_cleaned_for_class.zip?raw=true&#39;</span>
 
 <span class="c1">#firms = pd.read_stata(url)   </span>
 <span class="c1"># &lt;-- that code would work, but GH said it was too big and</span>
@@ -1083,8 +1083,8 @@
 </div>
 <p>But <code class="docutils literal notranslate"><span class="pre">sns.catplot</span></code> is a really useful function to look at other distributional statistics for different groups!</p>
 </div>
-<div class="section" id="covariances-relationships-between-variables">
-<h2><span class="section-number">3.3.4.4. </span>Covariances/relationships between variables<a class="headerlink" href="#covariances-relationships-between-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="covariances-and-relationships-between-variables">
+<h2><span class="section-number">3.3.4.4. </span>Covariances and relationships between variables<a class="headerlink" href="#covariances-and-relationships-between-variables" title="Permalink to this headline">¶</a></h2>
 <p>To get a quick sense of relationships, I like to use I like to use <code class="docutils literal notranslate"><span class="pre">pairplot</span></code> and <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> to get a quick since of relationships.</p>
 <div class="section" id="getting-the-big-picture-with-pairplot">
 <h3><span class="section-number">3.3.4.4.1. </span>Getting the big picture with <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.pairplot.html"><strong>Pairplot</strong></a><a class="headerlink" href="#getting-the-big-picture-with-pairplot" title="Permalink to this headline">¶</a></h3>

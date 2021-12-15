@@ -1162,27 +1162,27 @@
 <li><p>rare earth elements</p></li>
 <li><p>supply chains, import tariffs</p></li>
 </ol>
-<p>I strongly suggest approaching this by using two terms.</p>
-<ul class="simple">
-<li><p>You might need to have multiple words in each term.</p></li>
+<p>I strongly suggest approaching this by using two terms.  You might need to have multiple words in each term.</p>
+<ol class="simple">
 <li><p>Print out the text of the hits!</p></li>
 <li><p>Play around with partial and the max parameters. Specifically look for when changing them gives you BAD results: Either way too many non-results are included, or your search to returns too few results because a single hit encompasses several hits that should be separately counted</p></li>
 <li><p>Try to get the “most accurate” sense of</p>
-<ul>
+<ol class="simple">
 <li><p>Does the document discuss each issue at all? Is the number of hits 0, or &gt;0?</p></li>
 <li><p>How much does the document discuss the issue? How many hits?</p></li>
-</ul>
+</ol>
 </li>
 <li><p>Does the number of hits reflect the scale of the issue? Why or why not?</p></li>
 <li><p>If not, is there a way to transform the number of hits to reflect the scale? Some ideas:</p>
-<ul>
+<ul class="simple">
 <li><p>Going from 1 to 2 hits is probably more informative that from 99 hits to 100</p></li>
-<li><p>If you use Log(hits), Log(2)-Log(1) is more than Log(100)-Log(99)</p></li>
+<li><p>If you use ln(hits), ln(2)-ln(1) is more than ln(100)-ln(99)</p></li>
+<li><p>Try to use ln(hits) and see if you spot a problem! What’s a fix you can use?</p></li>
 <li><p>Binning: no discussion (hits=0), some discussion (hits&lt;=#), lots of discussion (hits&gt;#)</p></li>
 <li><p>How many bins and how you set the cutoffs is ad hoc and depends on the documents and topics!</p></li>
 </ul>
 </li>
-</ul>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
