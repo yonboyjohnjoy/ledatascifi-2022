@@ -72,7 +72,7 @@ ul.sidenav_l1:not(.current) {
 
 /* tables on the site have excessive spacing */
 
-table.table. { 
+table.table { 
 	line-height: 0.5em
 }	
 
