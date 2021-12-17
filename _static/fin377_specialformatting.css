@@ -71,11 +71,9 @@ ul.sidenav_l1:not(.current) {
 .tocsection.onthispage
 
 /* tables on the site have excessive spacing */
-
-table.table { 
-	line-height: 0.5em
-}	
+/* tried in vain to reduce row padding (via tr, td, p) */
 
 table p {
 	margin-bottom: 0
 }
+
