@@ -260,32 +260,32 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_4.html">
-     2.3. Good data
+     2.3. Storing data smartly
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_5.html">
-     2.4. When to write functions
+    <a class="reference internal" href="10_Golden_5a.html">
+     2.4. Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5b.html">
+     2.5. Writing good code comments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.5. Reorganizing the bad research folder
+     2.6. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.6. File references should work on any computer!
+     2.7. File references should work on any computer!
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html#credits">
-     2.7. Credits
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_7.html#how-was-this-chapter">
-     2.8. How was this chapter?
+     2.8. Credits
     </a>
    </li>
   </ul>
@@ -789,7 +789,7 @@
 <td class="text-align:left"><p>A. “Pseudo code” is writing out the broad steps in plain language. I often (almost always for complicated tasks) do this on paper, then translate it to code as an outline (in the code’s comments). <br> <br> Maybe planning sounds boring and like a waste of time. I get it; I also want to <a class="reference external" href="https://youtu.be/la7uuFsCIrg?t=43">shoot first</a> like <a class="reference external" href="https://youtu.be/YtoqDF8EnsA">Han did…</a>  but coders like Han often <a class="reference external" href="https://youtu.be/mLyOj_QD4a4?t=67">end up looking like this guy</a>…</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Break the problem into chunks/smaller problems. This dovetails with rule 5.B below nicely.</p></td>
+<td class="text-align:left"><p>B. Break the problem into chunks/smaller problems. This dovetails with rule 3.A and 5.B below nicely.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>1. Automation</p></td>
 <td class="text-align:left"><p>A. Automate everything that can be automated, don’t do point-and-click analysis!</p></td>
@@ -803,43 +803,43 @@
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. <strong>Before checking the directory back in, clear all outputs and temp files and then run the whole directory!</strong> (Check: Did it work right?)</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>3.  <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Directories/folders</span></a></p></td>
-<td class="text-align:left"><p>A. Separate directories/folders by function</p></td>
+<tr class="row-even"><td class="text-align:left"><p>3.  <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Organizing folders</span></a></p></td>
+<td class="text-align:left"><p>A. Separate  folders/directories by function</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Put input files into an input folder and outputs into a different one</p></td>
+<td class="text-align:left"><p>B. Put input files into an input folder and outputs into a different folder</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>A + B = your folders and files will be largely self documenting</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>C. Make directories portable - they should run on any computer, or if you move them to another place on your computer</p></td>
+<td class="text-align:left"><p>C. Make directories portable - they should run on any computer, or if you move them to another place on your computer. See the next rule.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>D <a class="reference internal" href="10_Golden_7.html"><span class="doc std std-doc"><strong>Use RELATIVE FILE PATHS, not absolute file paths</strong></span></a>  ⭐ ⭐</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>4. Keys / Units</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>4. <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc">Data</span></a></p></td>
 <td class="text-align:left"><p>A. Store cleaned data in tables with unique, non-missing “keys”</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Keep data <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc"><strong>normalized</strong></span></a> as far into your code pipeline as you can</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>5. Abstraction - fncs/classes</p></td>
-<td class="text-align:left"><p>A. Abstract to eliminate redundancy</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>5. <a class="reference internal" href="10_Golden_5a.html"><span class="doc std std-doc">Functions</span></a></p></td>
+<td class="text-align:left"><p>A. Write functions to eliminate redundancy</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Abstract to improve clarity</p></td>
+<td class="text-align:left"><p>B. Write functions to improve clarity</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>C. Otherwise, don’t abstract</p></td>
+<td class="text-align:left"><p>C. Otherwise, don’t write functions</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>D. <strong>Unit test your functions!</strong></p></td>
+<td class="text-align:left"><p>D. <strong>Test your functions!</strong> Use small examples where you know the right answers, and try variations to see if the function breaks in some cases.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>E. Don’t use magic numbers, define once as variables and refer as needed</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>6. Documentation</p></td>
+<tr class="row-even"><td class="text-align:left"><p>6. <a class="reference internal" href="10_Golden_5b.html"><span class="doc std std-doc">Documentation and comments</span></a></p></td>
 <td class="text-align:left"><p>A. Is good… to a point</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
@@ -850,6 +850,9 @@
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>7. Look at your data/objects</p></td>
 <td class="text-align:left"><p>As discussed <a class="reference external" href="../01/07_debugging.html#seriously-print-your-data-and-objects-often">here</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>ABCD = Always Be Checking your Data!</p></td>
 </tr>
 </tbody>
 </table>

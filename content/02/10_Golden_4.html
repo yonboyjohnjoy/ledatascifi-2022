@@ -56,7 +56,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.4. When to write functions" href="10_Golden_5.html" />
+    <link rel="next" title="2.4. Functions" href="10_Golden_5a.html" />
     <link rel="prev" title="2.2. THE GOLDEN RULES" href="10_Golden_3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -260,32 +260,32 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.3. Good data
+     2.3. Storing data smartly
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_5.html">
-     2.4. When to write functions
+    <a class="reference internal" href="10_Golden_5a.html">
+     2.4. Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5b.html">
+     2.5. Writing good code comments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.5. Reorganizing the bad research folder
+     2.6. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.6. File references should work on any computer!
+     2.7. File references should work on any computer!
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html#credits">
-     2.7. Credits
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_7.html#how-was-this-chapter">
-     2.8. How was this chapter?
+     2.8. Credits
     </a>
    </li>
   </ul>
@@ -771,8 +771,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-bad-and-good-data">
-   2.3.1. Example: Bad and Good Data
+  <a class="reference internal nav-link" href="#rules-for-storing-data">
+   2.3.1. Rules for storing data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalized-data-in-practice">
+   2.3.2. Normalized data in practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-fixing-non-normalized-data">
+   2.3.3. Example: Fixing non-normalized data
   </a>
  </li>
 </ul>
@@ -788,41 +798,65 @@
                 
   <div class="section" id="good-data-is-normalized">
 <h1><span class="section-number">2.3. </span>Good Data is Normalized<a class="headerlink" href="#good-data-is-normalized" title="Permalink to this headline">¶</a></h1>
-<p><strong>Normalized data means the dataset has distinct “Keys” + variables in the dataset are the Key’s Unit-Level</strong></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Normalized data means</p>
+<ol class="simple">
+<li><p>The dataset has distinct “Keys”</p></li>
+<li><p>Variables in the dataset are at the key’s unit-Level</p></li>
+</ol>
+<p>Storing normalized data means your data will be easier to understand and it will be harder to make costly mistakes.</p>
+</div>
 <hr class="docutils" />
 <p>There are multi-billion dollar firms whose entire business model depends on storing and accessing data. Therefore we should apply our rule and see how they store data:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <blockquote>
 <div><p><strong>Long ago, smart people figured out a fundamental principle of database design: that the physical structure of a database should communicate its logical structure.</strong></p>
 </div></blockquote>
-<p>How does that work?</p>
+</div>
+<p>Let’s put that into practice. First we need to agree on three things:</p>
 <ol class="simple">
-<li><p>Every database contains “elements” or “observations” (rows) and “variables” (columns).</p></li>
-<li><p>The “key” is the variable(s) that identifies a row in the table.</p>
+<li><p>Every database contains “elements” or “observations” (the rows) and “variables” (the columns).</p></li>
+<li><p>Definition: <strong>The “key” is the variable(s) that uniquely identifies a row in the table.</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">GM</span></code> is the key for the observation about General Motors in a dataset whose unit is a firm.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(GM,</span> <span class="pre">2000)</span></code> is the key for the observation for GM in 2000 in a firm-year dataset.</p></li>
-<li><p><strong>Keys should never be missing!</strong> (<strong>Rule 4.A</strong>) If one is, how can you say what that row is?</p></li>
-<li><p><strong>Keys should never be duplicated</strong>. If one is, your database won’t have a logical structure any more.</p></li>
+<li><p>If your dataset is about different firms and has one observation per firm, <code class="docutils literal notranslate"><span class="pre">GM</span></code> is the key for the observation about General Motors.</p></li>
+<li><p>If your dataset contains info about firms over multiple years (a “firm-year” dataset), <code class="docutils literal notranslate"><span class="pre">(GM,</span> <span class="pre">2000)</span></code> is the key for the observation for GM in 2000.</p></li>
+<li><p>Notice that the “key” can be multiple variables, like the firm and the year in the prior sentence.</p></li>
 </ul>
 </li>
-<li><p>Closely related to “keys” is the idea of “units”, refers to the level of aggregation in the dataset.</p>
+<li><p>Definition: <strong>The “unit” of a dataset refers the level of aggregation of variables in the dataset.</strong> Examples:</p>
 <ul class="simple">
-<li><p>Variables in the dataset should apply as properties of the “unit” of the “key”. In other words: <strong>variables are attributes of the key.</strong></p></li>
-<li><p>County population is a property of a county, so it lives in the county database, not the state database. State population is a property of a state, so it cannot live in the county table.</p></li>
-<li><p>**Implication: You need one dataset for each unit level. For example:</p>
-<ul>
-<li><p>One firm-level dataset and one firm-year dataset.</p></li>
-<li><p>One county dataset and one state dataset.</p></li>
-</ul>
-</li>
+<li><p>Firm-level data: Industry of a firm</p></li>
+<li><p>Firm-year data: Profits</p></li>
+<li><p>Firm-day data: Firm returns</p></li>
+<li><p>Daily-data (or any time interval): Market returns</p></li>
+<li><p>Country-year: GDP</p></li>
+<li><p>Country-level data: Continent</p></li>
 </ul>
 </li>
 </ol>
-<p>If you have distinct keys in your dataset, and all variables apply to the unit of the key, your dataset is said to be <em>“normalized”</em>. Storing normalized data means your data will be easier to understand and it will be harder to make costly mistakes. (See the example below)</p>
-<p>I doubt you will ever run a serious regression or analysis on completely normalized data. So at some point you will combine the datasets. Do your best to delay that (<strong>4.B</strong>).</p>
-<div class="section" id="example-bad-and-good-data">
-<h2><span class="section-number">2.3.1. </span>Example: Bad and Good Data<a class="headerlink" href="#example-bad-and-good-data" title="Permalink to this headline">¶</a></h2>
-<p>So, as a trivial example, here is a bad firm-year dataset:</p>
+<div class="section" id="rules-for-storing-data">
+<h2><span class="section-number">2.3.1. </span>Rules for storing data<a class="headerlink" href="#rules-for-storing-data" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Rule: <strong>Keys should never be missing!</strong> (<strong>Rule 4.A</strong>) If one is, how can you say what that row is about?</p></li>
+<li><p>Rule: <strong>Keys should never be duplicated</strong>. If any keys are duplicated, there is a problem with your dataset or you misunderstand what the unit is and what variable(s) constitute the key.</p></li>
+<li><p>Rule: <strong>Variables in a normalized dataset are at the unit level of the dataset, and not other unit levels.</strong></p></li>
+</ol>
+<hr class="docutils" />
+<p>Rule 3 means that if the key is a county, and the unit is the county in 2010 (a cross section at a single point in time), then the variables you can have in that dataset are attributes of the county as of 2010.</p>
+<p>If you have variables about state populations, they should be in a different database (the state database).</p>
+<p>If you have variables about the county at many points in time (county GDP for each year), those should be in a different database (the county-year database).</p>
+</div>
+<div class="section" id="normalized-data-in-practice">
+<h2><span class="section-number">2.3.2. </span>Normalized data in practice<a class="headerlink" href="#normalized-data-in-practice" title="Permalink to this headline">¶</a></h2>
+<p>Try to create and store data that is normalized. But notice how <a class="reference internal" href="10_Golden_3.html"><span class="doc std std-doc">Golden rule 4.B</span></a> is phrased: “Keep data normalized as far into your code pipeline <em>as you can.”</em></p>
+<p>I doubt you will ever run a serious regression or analysis on completely normalized data. For example, asset pricing tests require the firm’s return that day (which is a variable whose unit is a firm-day) and the market return (which is a variable whose unit is a day).</p>
+<p>So at some point you will combine datasets with different unit levels. Do your best to delay that (<strong>4.B</strong>) until the beginning of the analysis.</p>
+</div>
+<div class="section" id="example-fixing-non-normalized-data">
+<h2><span class="section-number">2.3.3. </span>Example: Fixing non-normalized data<a class="headerlink" href="#example-fixing-non-normalized-data" title="Permalink to this headline">¶</a></h2>
+<p>So, as a little example, here is a bad firm-year dataset:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Firm</p></th>
@@ -885,8 +919,23 @@
 </tr>
 </tbody>
 </table>
-<p>What a mess! What is the last observation about? How is GM missing a “first year” in one observation? GM and Ford are in the same sub-industry, but different industries? You’ll have to keep track of what <code class="docutils literal notranslate"><span class="pre">Profits</span></code> and <code class="docutils literal notranslate"><span class="pre">Profits_Ind</span></code> mean. (And which industry level are profits at?)</p>
-<p>The main issue is that this dataset conflates firm-year variables (profits in a given year) with firm-level variables (the first year of the firm. You can fix this by keeping three datasets, one firm-year dataset:</p>
+<p>What a mess!</p>
+<ul class="simple">
+<li><p>What is the last observation about?</p></li>
+<li><p>How is GM missing a “first year” in one observation? GM and Ford are in the same sub-industry, but different industries?</p></li>
+<li><p>You’ll have to keep track of what <code class="docutils literal notranslate"><span class="pre">Profits</span></code> and <code class="docutils literal notranslate"><span class="pre">Profits_Ind</span></code> mean. (And which industry level are profits at?)</p></li>
+</ul>
+<p>Beyond those problems, this dataset has variables at THREE unit levels:</p>
+<ol class="simple">
+<li><p>Firm-year variables (profits in a given year for a given firm)</p></li>
+<li><p>Firm-level variables (first year the firm existed)</p></li>
+<li><p>Industry-year variables (industry profits)</p></li>
+</ol>
+<p>To save this data in a normalized form, we need to save three datasets. Check out how I did that:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="2022e601-3223-4b9b-bffa-7332a8bd2b1c" name="07331a85-66ad-41c3-a457-ed35654cbe24" type="radio">
+</input><label class="tabbed-label" for="2022e601-3223-4b9b-bffa-7332a8bd2b1c">
+Firm-year variables</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Firm</p></th>
@@ -917,7 +966,10 @@
 </tr>
 </tbody>
 </table>
-<p>… and a firm-level dataset:</p>
+</div>
+<input id="189db9cd-c7b7-427b-a276-eb2f7040856c" name="07331a85-66ad-41c3-a457-ed35654cbe24" type="radio">
+</input><label class="tabbed-label" for="189db9cd-c7b7-427b-a276-eb2f7040856c">
+Firm-level variables</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Firm</p></th>
@@ -939,7 +991,10 @@
 </tr>
 </tbody>
 </table>
-<p>… and an industry-year dataset:</p>
+</div>
+<input id="469b0a1a-4731-4f58-afda-a0c1787be4f8" name="07331a85-66ad-41c3-a457-ed35654cbe24" type="radio">
+</input><label class="tabbed-label" for="469b0a1a-4731-4f58-afda-a0c1787be4f8">
+Industry-year variables</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>IndustryDef</p></th>
@@ -962,7 +1017,9 @@
 </tr>
 </tbody>
 </table>
-<p>Now, the physical structure of each dataset communicates its logical structure: Every firm-year has a profit level, and each firm has a founding year. <strong>In fact, these databases are self-documenting! (Rule 6.C) Isn’t that nice!?</strong></p>
+</div>
+</div>
+<p>Now, the physical structure of each dataset communicates its logical structure: Every firm-year has a profit level, and each firm has a founding year. <strong>In fact, these three databases are self-documenting! (Rule 6.C) Isn’t that nice!?</strong></p>
 </div>
 </div>
 
@@ -995,7 +1052,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="10_Golden_3.html" title="previous page"><span class="section-number">2.2. </span>THE GOLDEN RULES</a>
-    <a class='right-next' id="next-link" href="10_Golden_5.html" title="next page"><span class="section-number">2.4. </span>When to write functions</a>
+    <a class='right-next' id="next-link" href="10_Golden_5a.html" title="next page"><span class="section-number">2.4. </span>Functions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
