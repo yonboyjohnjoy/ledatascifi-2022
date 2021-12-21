@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.2. THE GOLDEN RULES &#8212; LeDataSciFi-2022</title>
+    <title>2.1.2. THE GOLDEN RULES &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3. Good Data is Normalized" href="10_Golden_4.html" />
-    <link rel="prev" title="2.1. A case study in bad research" href="10_Golden_2.html" />
+    <link rel="next" title="2.1.3. Organizing your projects" href="10_Golden_6.html" />
+    <link rel="prev" title="2.1.1. A case study in bad research" href="10_Golden_2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -250,42 +250,42 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_2.html">
-     2.1. A case study of bad research
+     2.1.1. A case study of bad research
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.2. The golden rules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_4.html">
-     2.3. Storing data smartly
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_5a.html">
-     2.4. Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_5b.html">
-     2.5. Writing good code comments
+     2.1.2. The golden rules
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.6. Organizing your projects
+     2.1.3. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.7. File references should work on any computer!
+     2.1.4. Filepaths
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_7.html#credits">
-     2.8. Credits
+    <a class="reference internal" href="10_Golden_4.html">
+     2.1.5. Storing data smartly
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5a.html">
+     2.1.6. Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5b.html">
+     2.1.7. Writing good code comments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_8.html">
+     2.1.8. Writing good code
     </a>
    </li>
   </ul>
@@ -773,7 +773,8 @@
               <div>
                 
   <div class="section" id="the-golden-rules">
-<h1><span class="section-number">2.2. </span>THE GOLDEN RULES<a class="headerlink" href="#the-golden-rules" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.1.2. </span>THE GOLDEN RULES<a class="headerlink" href="#the-golden-rules" title="Permalink to this headline">¶</a></h1>
+<p>Following these GOLDEN RULES will save you hours and hours of time.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The rules below are really golden. How about you copy this page into your class notes repo someplace you can reference them?</p>
@@ -789,55 +790,55 @@
 <td class="text-align:left"><p>A. “Pseudo code” is writing out the broad steps in plain language. I often (almost always for complicated tasks) do this on paper, then translate it to code as an outline (in the code’s comments). <br> <br> Maybe planning sounds boring and like a waste of time. I get it; I also want to <a class="reference external" href="https://youtu.be/la7uuFsCIrg?t=43">shoot first</a> like <a class="reference external" href="https://youtu.be/YtoqDF8EnsA">Han did…</a>  but coders like Han often <a class="reference external" href="https://youtu.be/mLyOj_QD4a4?t=67">end up looking like this guy</a>…</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Break the problem into chunks/smaller problems. This dovetails with rule 3.A and 5.B below nicely.</p></td>
+<td class="text-align:left"><p>B. Break the problem into chunks/smaller problems. Large chunks should be in different script files. Within an individual file that is doing one thing, try to break it down. See rule 3.A and 5.B below too.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>1. Automation</p></td>
 <td class="text-align:left"><p>A. Automate everything that can be automated, don’t do point-and-click analysis!</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Write a single script that executes all code from beginning to end</p></td>
+<td class="text-align:left"><p>B. Write a single script that executes all code from beginning to end.</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>2. Version control</p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>C.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>2. Version control</p></td>
 <td class="text-align:left"><p>A. Store code and data under version control.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. <strong>Before checking the directory back in, clear all outputs and temp files and then run the whole directory!</strong> (Check: Did it work right?)</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>3.  <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Organizing folders</span></a></p></td>
-<td class="text-align:left"><p>A. Separate  folders/directories by function</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>3.  <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Organizing folders</span></a></p></td>
+<td class="text-align:left"><p>A. Separate  folders/directories and files by function</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Put input files into an input folder and outputs into a different folder</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>A + B = your folders and files will be largely self documenting</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Make directories portable - they should run on any computer, or if you move them to another place on your computer. See the next rule.</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>D <a class="reference internal" href="10_Golden_7.html"><span class="doc std std-doc"><strong>Use RELATIVE FILE PATHS, not absolute file paths</strong></span></a>  ⭐ ⭐</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>4. <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc">Data</span></a></p></td>
+<tr class="row-even"><td class="text-align:left"><p>4. <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc">Data</span></a></p></td>
 <td class="text-align:left"><p>A. Store cleaned data in tables with unique, non-missing “keys”</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Keep data <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc"><strong>normalized</strong></span></a> as far into your code pipeline as you can</p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>B. Keep data normalized as far into your code pipeline as you can</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>5. <a class="reference internal" href="10_Golden_5a.html"><span class="doc std std-doc">Functions</span></a></p></td>
+<tr class="row-even"><td class="text-align:left"><p>5. <a class="reference internal" href="10_Golden_5a.html"><span class="doc std std-doc">Functions</span></a></p></td>
 <td class="text-align:left"><p>A. Write functions to eliminate redundancy</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Write functions to improve clarity</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Otherwise, don’t write functions</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>D. <strong>Test your functions!</strong> Use small examples where you know the right answers, and try variations to see if the function breaks in some cases.</p></td>
-</tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>E. Don’t use magic numbers, define once as variables and refer as needed</p></td>
+<td class="text-align:left"><p>D. <strong>Test your functions!</strong> Use small examples where you know the right answers, and try variations to see if the function breaks in some cases.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>6. <a class="reference internal" href="10_Golden_5b.html"><span class="doc std std-doc">Documentation and comments</span></a></p></td>
 <td class="text-align:left"><p>A. Is good… to a point</p></td>
@@ -848,7 +849,19 @@
 <tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Code is better off when it is self-documenting</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>7. Look at your data/objects</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>7. <a class="reference internal" href="10_Golden_8.html"><span class="doc std std-doc">Writing code</span></a></p></td>
+<td class="text-align:left"><p>A. Don’t use magic numbers, define once as variables and refer as needed</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>B. Write DRY code: Don’t Repeat Yourself! See rule 5.A.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>C. Premature optimization (for speed) is the root of all evil.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>D. Use self-documenting variable and function names.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>8. Look at your data/objects</p></td>
 <td class="text-align:left"><p>As discussed <a class="reference external" href="../01/07_debugging.html#seriously-print-your-data-and-objects-often">here</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p></p></td>
@@ -886,8 +899,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="10_Golden_2.html" title="previous page"><span class="section-number">2.1. </span>A case study in bad research</a>
-    <a class='right-next' id="next-link" href="10_Golden_4.html" title="next page"><span class="section-number">2.3. </span>Good Data is Normalized</a>
+    <a class='left-prev' id="prev-link" href="10_Golden_2.html" title="previous page"><span class="section-number">2.1.1. </span>A case study in bad research</a>
+    <a class='right-next' id="next-link" href="10_Golden_6.html" title="next page"><span class="section-number">2.1.3. </span>Organizing your projects</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

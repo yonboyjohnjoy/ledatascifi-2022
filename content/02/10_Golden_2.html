@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1. A case study in bad research &#8212; LeDataSciFi-2022</title>
+    <title>2.1.1. A case study in bad research &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,7 +56,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2. THE GOLDEN RULES" href="10_Golden_3.html" />
+    <link rel="next" title="2.1.2. THE GOLDEN RULES" href="10_Golden_3.html" />
     <link rel="prev" title="2. Golden Rules (for Projects and Programs)" href="10_Golden_1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -250,42 +250,42 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.1. A case study of bad research
+     2.1.1. A case study of bad research
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_3.html">
-     2.2. The golden rules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_4.html">
-     2.3. Storing data smartly
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_5a.html">
-     2.4. Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_5b.html">
-     2.5. Writing good code comments
+     2.1.2. The golden rules
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.6. Organizing your projects
+     2.1.3. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.7. File references should work on any computer!
+     2.1.4. Filepaths
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="10_Golden_7.html#credits">
-     2.8. Credits
+    <a class="reference internal" href="10_Golden_4.html">
+     2.1.5. Storing data smartly
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5a.html">
+     2.1.6. Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_5b.html">
+     2.1.7. Writing good code comments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10_Golden_8.html">
+     2.1.8. Writing good code
     </a>
    </li>
   </ul>
@@ -772,12 +772,12 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#one-folder-a-common-data-science-project">
-   2.1.1. One folder: A “common” data science project
+   2.1.1.1. One folder: A “common” data science project
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-are-the-possible-issues-with-this">
-   2.1.2. What are the possible issues with this?
+   2.1.1.2. What are the possible issues with this?
   </a>
  </li>
 </ul>
@@ -792,10 +792,10 @@
               <div>
                 
   <div class="section" id="a-case-study-in-bad-research">
-<h1><span class="section-number">2.1. </span>A case study in bad research<a class="headerlink" href="#a-case-study-in-bad-research" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.1.1. </span>A case study in bad research<a class="headerlink" href="#a-case-study-in-bad-research" title="Permalink to this headline">¶</a></h1>
 <p>To illustrate the value of the golden rules, let’s pretend we are investigating an absolutely essential question: <strong>Are characters in Game of Thrones more likely to die when they head north or south?</strong></p>
 <div class="section" id="one-folder-a-common-data-science-project">
-<h2><span class="section-number">2.1.1. </span>One folder: A “common” data science project<a class="headerlink" href="#one-folder-a-common-data-science-project" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.1.1. </span>One folder: A “common” data science project<a class="headerlink" href="#one-folder-a-common-data-science-project" title="Permalink to this headline">¶</a></h2>
 <p>So pretend I collected the text of the Game of Thrones books (currently 5, COME ON GEORGE). I <em>also</em> collected data on the names of characters so I can identify them in the text. I <em>also</em> collected data that maps the names of places to latitudes on the map. I have just about everything I need. I put these files in a folder, write some code to deal with data, and some code to produce output.</p>
 <p><em>There were definitely intermediate steps, but I don’t remember exactly.</em> Luckily, this project wasn’t “interactive, point-and-click in Excel” analysis. It was written in code! So it’s oooooobviously reproducible.</p>
 <p>Let’s all look at the folder and try to figure it out? <strong>What do you think each file is, and how is the analysis conducted  from data-to-draft?</strong></p>
@@ -803,7 +803,7 @@
 <p>And no, this isn’t a joke - I’ve definitely seen “professional” researchers with project organized like this in one way or another.</p>
 </div>
 <div class="section" id="what-are-the-possible-issues-with-this">
-<h2><span class="section-number">2.1.2. </span>What are the possible issues with this?<a class="headerlink" href="#what-are-the-possible-issues-with-this" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.1.2. </span>What are the possible issues with this?<a class="headerlink" href="#what-are-the-possible-issues-with-this" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Which data file(s) are the real input?</p></li>
 <li><p>Do we run <code class="docutils literal notranslate"><span class="pre">clean_data.py</span></code> or <code class="docutils literal notranslate"><span class="pre">merge_data.py</span></code> first to build the analysis sample?</p></li>
@@ -846,7 +846,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="10_Golden_1.html" title="previous page"><span class="section-number">2. </span>Golden Rules (for Projects and Programs)</a>
-    <a class='right-next' id="next-link" href="10_Golden_3.html" title="next page"><span class="section-number">2.2. </span>THE GOLDEN RULES</a>
+    <a class='right-next' id="next-link" href="10_Golden_3.html" title="next page"><span class="section-number">2.1.2. </span>THE GOLDEN RULES</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
