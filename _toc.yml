@@ -55,6 +55,7 @@
       title: "Motivation"
     - file: "content/01/02_Setup"
     - file: "content/01/03_github"
+    - file: "content/01/03a_githubworkflow"
     - file: "content/01/04_Markdown"
     - file: "content/01/05_jupyterlab"
       title: "Jupyter Lab Basics"    

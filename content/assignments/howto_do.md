@@ -7,53 +7,13 @@
 2. Clone the repo to your local machine using GitHub desktop and follow the instructions. 
 
 ## Working on assignments / projects / taking notes 
+ 
+[Use the Github workflow!](../01/03a_githubworkflow)
 
 ```{tip} 
 **Fetch early, commit frequently, push often!**
 
 This habit will help you avoid disasters, so that you get the positive features of Github without the headaches.
-
-```
-
-````{dropdown} 1. Make your coffee, open Github Desktop, and **FETCH** the project you'll work on. 
-1. Change the "current repository" to the assignment you want to work on (or project, or your notes repo, etc.)
-1. Click "Fetch origin" to download any changes from the master repo on the Github servers. This is important, because if someone else changed the files while you were sleeping, you'll get the most updated files to work on. 
-1. Start your work on your computer. 
-
-![](https://media.giphy.com/media/xUOrwpPFzqDh48XEek/giphy.gif)
-
-```{warning}
-If you don't "fetch" before you start, it's becomes easier to change a file someone else changed differently, creating a conflict. When this happens, you have to resolve the conflicting files before moving on. 
-```
-
-````
-
-````{dropdown} 2. **"COMMIT" FREQUENTLY** (say every 30 minutes or so, but depends on the team/task): 
-- Save the files you're working on. (Just like you would while working on a Powerpoint or Word document.) 
-- When you save the file, Github Desktop (GHD) will notice it has been changed. 
-- Go to GDH. Notice that your file is listed as a "changed" file. 
-- **Describe those changes in the "Summary" and (optionally) "Description" boxes, and click the blue "Commit" button**. 
-- Try to do this every time you save your files! It will make rolling back changes easier. 
-- **Do this early and often**
-
-```{panels}
-![](https://media.giphy.com/media/l4KhSYN6hQ7Y0FZS0/giphy.gif)
----
-![](https://media.giphy.com/media/dxITs87fTAxTncZ6WL/giphy.gif)
-```
-````
-
-```{dropdown} 3. **"PUSH" OFTEN, but probably less than you commit** (say every 60-90 minutes or so, but depends on the team/task): 
-- Push your changes to the cloud by clicking the blue "push" button in GHD. 
-- Now, you've got an up-to-date backup and teammates can see the changes and work with the latest files.
-- GHD will warn you if someone else made a change in the meantime. If this happens, click "fetch" to download what they did. If there is a conflict between your work and your teammate's, you'll have to resolve it. 
-
-![](https://i.imgflip.com/4m0jf6.jpg)
-
-```
-
-```{tip} 
-**I call these three steps our "GitHub workflow".**
 ```
 
 ## Submitting assignments 
@@ -71,9 +31,6 @@ Shortly after the deadline, GitHub will automatically stop you from pushing edit
 Your graders will download your repo on their computer, try to run your code, and evaluate it for accuracy and quality, based on the rubric (each assignment has a different rubric). 
 
 ## Tips for better grades (+ workproduct + repos)
-
-```{admonition} TODO prof - this is too long. simplify
-```
 
 ```{dropdown}  **TIP #1:** Check out the rubric for the assignment
 Each assignment has different grading criterion, which you'll see in the rubric within each assignment's repo.  
