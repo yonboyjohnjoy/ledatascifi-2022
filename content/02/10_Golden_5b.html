@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1.7. Comments and Documentation &#8212; LeDataSciFi-2022</title>
+    <title>2.7. Comments and Documentation &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.1.8. Writing good code" href="10_Golden_8.html" />
-    <link rel="prev" title="2.1.6. Functions" href="10_Golden_5a.html" />
+    <link rel="next" title="2.8. Writing good code" href="10_Golden_8.html" />
+    <link rel="prev" title="2.6. Functions" href="10_Golden_5a.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -255,42 +255,42 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_2.html">
-     2.1.1. A case study of bad research
+     2.1. A case study of bad research
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_3.html">
-     2.1.2. The golden rules
+     2.2. The golden rules
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.1.3. Organizing your projects
+     2.3. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.1.4. Filepaths
+     2.4. Filepaths
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_4.html">
-     2.1.5. Storing data smartly
+     2.5. Storing data smartly
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_5a.html">
-     2.1.6. Functions
+     2.6. Functions
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.1.7. Writing good code comments
+     2.7. Writing good code comments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_8.html">
-     2.1.8. Writing good code
+     2.8. Writing good code
     </a>
    </li>
   </ul>
@@ -777,22 +777,22 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-1-redundant-comments">
-   2.1.7.1. Example 1: Redundant comments
+   2.7.1. Example 1: Redundant comments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-2-excessive-comments">
-   2.1.7.2. Example 2: Excessive comments
+   2.7.2. Example 2: Excessive comments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-3-self-documenting-code">
-   2.1.7.3. Example 3: Self-documenting code
+   2.7.3. Example 3: Self-documenting code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-write-self-documenting-code">
-   2.1.7.4. How to write self-documenting code
+   2.7.4. How to write self-documenting code
   </a>
  </li>
 </ul>
@@ -807,14 +807,14 @@
               <div>
                 
   <div class="section" id="comments-and-documentation">
-<h1><span class="section-number">2.1.7. </span>Comments and Documentation<a class="headerlink" href="#comments-and-documentation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.7. </span>Comments and Documentation<a class="headerlink" href="#comments-and-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="example-1-redundant-comments">
-<h2><span class="section-number">2.1.7.1. </span>Example 1: Redundant comments<a class="headerlink" href="#example-1-redundant-comments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7.1. </span>Example 1: Redundant comments<a class="headerlink" href="#example-1-redundant-comments" title="Permalink to this headline">¶</a></h2>
 <p><img alt="" src="../../_images/catto.png" /></p>
 <p>Hat tip to <a class="reference external" href="https://aeturrell.github.io/coding-for-economists/code-best-practice.html#code-comments">Arthur Turrell</a>.</p>
 </div>
 <div class="section" id="example-2-excessive-comments">
-<h2><span class="section-number">2.1.7.2. </span>Example 2: Excessive comments<a class="headerlink" href="#example-2-excessive-comments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7.2. </span>Example 2: Excessive comments<a class="headerlink" href="#example-2-excessive-comments" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Elasticity = Percent Change in Quantity / Percent Change in Price</span>
 <span class="c1"># Elasticity = 0.4 / 0.2 = 2</span>
 <span class="c1"># See Shapiro (2005), The Economics of Potato Chips,</span>
@@ -826,7 +826,7 @@
 <p>So using comments makes it possible that your code becomes internally inconsistent; almost by definition, programmers have an interesting tendency towards a (typically smart) form of laziness!</p>
 </div>
 <div class="section" id="example-3-self-documenting-code">
-<h2><span class="section-number">2.1.7.3. </span>Example 3: Self-documenting code<a class="headerlink" href="#example-3-self-documenting-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7.3. </span>Example 3: Self-documenting code<a class="headerlink" href="#example-3-self-documenting-code" title="Permalink to this headline">¶</a></h2>
 <p>We can write the exact same code in a way that prevents that possible problem. Look at this version, which still documents the code just as well because it is <strong>self-documenting</strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># See Shapiro (2005), The Economics of Potato Chips,</span>
 <span class="c1"># Harvard University Mimeo, Table 2A.</span>
@@ -837,7 +837,7 @@
 </div>
 </div>
 <div class="section" id="how-to-write-self-documenting-code">
-<h2><span class="section-number">2.1.7.4. </span>How to write self-documenting code<a class="headerlink" href="#how-to-write-self-documenting-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.7.4. </span>How to write self-documenting code<a class="headerlink" href="#how-to-write-self-documenting-code" title="Permalink to this headline">¶</a></h2>
 <p>Making code easy to read and maintain is a guiding principle for experienced coders because we’ve all wasted so much time fixing code or simply trying to use code we wrote a few years ago. Self-documenting code makes this easy and saves a lot of headaches. That is why the aim for self-documentation underlies the logic behind the <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc">Good Data</span></a> page, the <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Directory</span></a> page, how we name files and functions, etc.</p>
 <p>A few more tips to help write more readable code:</p>
 <ul class="simple">
@@ -878,8 +878,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="10_Golden_5a.html" title="previous page"><span class="section-number">2.1.6. </span>Functions</a>
-    <a class='right-next' id="next-link" href="10_Golden_8.html" title="next page"><span class="section-number">2.1.8. </span>Writing good code</a>
+    <a class='left-prev' id="prev-link" href="10_Golden_5a.html" title="previous page"><span class="section-number">2.6. </span>Functions</a>
+    <a class='right-next' id="next-link" href="10_Golden_8.html" title="next page"><span class="section-number">2.8. </span>Writing good code</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1.5. Good Data is Normalized &#8212; LeDataSciFi-2022</title>
+    <title>2.5. Good Data is Normalized &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.1.6. Functions" href="10_Golden_5a.html" />
-    <link rel="prev" title="2.1.4. File references should work on any computer!" href="10_Golden_7.html" />
+    <link rel="next" title="2.6. Functions" href="10_Golden_5a.html" />
+    <link rel="prev" title="2.4. File references should work on any computer!" href="10_Golden_7.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -255,42 +255,42 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_2.html">
-     2.1.1. A case study of bad research
+     2.1. A case study of bad research
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_3.html">
-     2.1.2. The golden rules
+     2.2. The golden rules
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.1.3. Organizing your projects
+     2.3. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.1.4. Filepaths
+     2.4. Filepaths
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.1.5. Storing data smartly
+     2.5. Storing data smartly
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_5a.html">
-     2.1.6. Functions
+     2.6. Functions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_5b.html">
-     2.1.7. Writing good code comments
+     2.7. Writing good code comments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_8.html">
-     2.1.8. Writing good code
+     2.8. Writing good code
     </a>
    </li>
   </ul>
@@ -777,17 +777,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rules-for-storing-data">
-   2.1.5.1. Rules for storing data
+   2.5.1. Rules for storing data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#normalized-data-in-practice">
-   2.1.5.2. Normalized data in practice
+   2.5.2. Normalized data in practice
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-fixing-non-normalized-data">
-   2.1.5.3. Example: Fixing non-normalized data
+   2.5.3. Example: Fixing non-normalized data
   </a>
  </li>
 </ul>
@@ -802,7 +802,7 @@
               <div>
                 
   <div class="section" id="good-data-is-normalized">
-<h1><span class="section-number">2.1.5. </span>Good Data is Normalized<a class="headerlink" href="#good-data-is-normalized" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.5. </span>Good Data is Normalized<a class="headerlink" href="#good-data-is-normalized" title="Permalink to this headline">¶</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Normalized data means</p>
@@ -842,7 +842,7 @@
 </li>
 </ol>
 <div class="section" id="rules-for-storing-data">
-<h2><span class="section-number">2.1.5.1. </span>Rules for storing data<a class="headerlink" href="#rules-for-storing-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.1. </span>Rules for storing data<a class="headerlink" href="#rules-for-storing-data" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Rule: <strong>Keys should never be missing!</strong> (<strong>Rule 4.A</strong>) If one is, how can you say what that row is about?</p></li>
 <li><p>Rule: <strong>Keys should never be duplicated</strong>. If any keys are duplicated, there is a problem with your dataset or you misunderstand what the unit is and what variable(s) constitute the key.</p></li>
@@ -854,13 +854,13 @@
 <p>If you have variables about the county at many points in time (county GDP for each year), those should be in a different database (the county-year database).</p>
 </div>
 <div class="section" id="normalized-data-in-practice">
-<h2><span class="section-number">2.1.5.2. </span>Normalized data in practice<a class="headerlink" href="#normalized-data-in-practice" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.2. </span>Normalized data in practice<a class="headerlink" href="#normalized-data-in-practice" title="Permalink to this headline">¶</a></h2>
 <p>Try to create and store data that is normalized. But notice how <a class="reference internal" href="10_Golden_3.html"><span class="doc std std-doc">Golden rule 4.B</span></a> is phrased: “Keep data normalized as far into your code pipeline <em>as you can.”</em></p>
 <p>I doubt you will ever run a serious regression or analysis on completely normalized data. For example, asset pricing tests require the firm’s return that day (which is a variable whose unit is a firm-day) and the market return (which is a variable whose unit is a day).</p>
 <p>So at some point you will combine datasets with different unit levels. Do your best to delay that (<strong>4.B</strong>) until the beginning of the analysis.</p>
 </div>
 <div class="section" id="example-fixing-non-normalized-data">
-<h2><span class="section-number">2.1.5.3. </span>Example: Fixing non-normalized data<a class="headerlink" href="#example-fixing-non-normalized-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.3. </span>Example: Fixing non-normalized data<a class="headerlink" href="#example-fixing-non-normalized-data" title="Permalink to this headline">¶</a></h2>
 <p>So, as a little example, here is a bad firm-year dataset:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -938,8 +938,8 @@
 </ol>
 <p>To save this data in a normalized form, we need to save three datasets. Check out how I did that:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5ac61110-4245-4f78-9872-aa57c72d8028" name="f758dee5-f5f3-4e3b-86bc-d72aec7dd0e8" type="radio">
-</input><label class="tabbed-label" for="5ac61110-4245-4f78-9872-aa57c72d8028">
+<input checked="checked" id="d896af84-7ef9-4980-9e45-6deaefe07bfd" name="ce34657a-39f8-444b-89c2-aabafbfab9d0" type="radio">
+</input><label class="tabbed-label" for="d896af84-7ef9-4980-9e45-6deaefe07bfd">
 Firm-year variables</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -972,8 +972,8 @@ Firm-year variables</label><div class="tabbed-content docutils">
 </tbody>
 </table>
 </div>
-<input id="c2a2cd23-c622-41f4-a4a4-dcfd0242c6bb" name="f758dee5-f5f3-4e3b-86bc-d72aec7dd0e8" type="radio">
-</input><label class="tabbed-label" for="c2a2cd23-c622-41f4-a4a4-dcfd0242c6bb">
+<input id="6a4a32b7-5fe1-47b7-9d54-e548c898ea9d" name="ce34657a-39f8-444b-89c2-aabafbfab9d0" type="radio">
+</input><label class="tabbed-label" for="6a4a32b7-5fe1-47b7-9d54-e548c898ea9d">
 Firm-level variables</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -997,8 +997,8 @@ Firm-level variables</label><div class="tabbed-content docutils">
 </tbody>
 </table>
 </div>
-<input id="8aab7077-f54b-446c-ba32-146292123948" name="f758dee5-f5f3-4e3b-86bc-d72aec7dd0e8" type="radio">
-</input><label class="tabbed-label" for="8aab7077-f54b-446c-ba32-146292123948">
+<input id="d30bd469-4087-40c6-96a5-84f2d3d18de5" name="ce34657a-39f8-444b-89c2-aabafbfab9d0" type="radio">
+</input><label class="tabbed-label" for="d30bd469-4087-40c6-96a5-84f2d3d18de5">
 Industry-year variables</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1056,8 +1056,8 @@ Industry-year variables</label><div class="tabbed-content docutils">
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="10_Golden_7.html" title="previous page"><span class="section-number">2.1.4. </span>File references should work on any computer!</a>
-    <a class='right-next' id="next-link" href="10_Golden_5a.html" title="next page"><span class="section-number">2.1.6. </span>Functions</a>
+    <a class='left-prev' id="prev-link" href="10_Golden_7.html" title="previous page"><span class="section-number">2.4. </span>File references should work on any computer!</a>
+    <a class='right-next' id="next-link" href="10_Golden_5a.html" title="next page"><span class="section-number">2.6. </span>Functions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

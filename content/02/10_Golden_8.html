@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1.8. Writing good code &#8212; LeDataSciFi-2022</title>
+    <title>2.8. Writing good code &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,7 +57,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. Data Wrangling and Exploration" href="../03/00_Data_Wrangling_Intro.html" />
-    <link rel="prev" title="2.1.7. Comments and Documentation" href="10_Golden_5b.html" />
+    <link rel="prev" title="2.7. Comments and Documentation" href="10_Golden_5b.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -255,42 +255,42 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_2.html">
-     2.1.1. A case study of bad research
+     2.1. A case study of bad research
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_3.html">
-     2.1.2. The golden rules
+     2.2. The golden rules
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_6.html">
-     2.1.3. Organizing your projects
+     2.3. Organizing your projects
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_7.html">
-     2.1.4. Filepaths
+     2.4. Filepaths
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_4.html">
-     2.1.5. Storing data smartly
+     2.5. Storing data smartly
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_5a.html">
-     2.1.6. Functions
+     2.6. Functions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="10_Golden_5b.html">
-     2.1.7. Writing good code comments
+     2.7. Writing good code comments
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.1.8. Writing good code
+     2.8. Writing good code
     </a>
    </li>
   </ul>
@@ -777,32 +777,32 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#naming-variables-and-functions">
-   2.1.8.1. Naming variables and functions
+   2.8.1. Naming variables and functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-style-auto-formatting">
-   2.1.8.2. Code style + Auto-Formatting!
+   2.8.2. Code style + Auto-Formatting!
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#use-a-linter-coding-assistance">
-   2.1.8.3. Use a linter + coding assistance
+   2.8.3. Use a linter + coding assistance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dry-code">
-   2.1.8.4. DRY code
+   2.8.4. DRY code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#premature-optimization">
-   2.1.8.5. Premature optimization
+   2.8.5. Premature optimization
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#magic-numbers-are-bad">
-   2.1.8.6. Magic numbers are bad
+   2.8.6. Magic numbers are bad
   </a>
  </li>
 </ul>
@@ -817,14 +817,14 @@
               <div>
                 
   <div class="section" id="writing-good-code">
-<h1><span class="section-number">2.1.8. </span>Writing good code<a class="headerlink" href="#writing-good-code" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.8. </span>Writing good code<a class="headerlink" href="#writing-good-code" title="Permalink to this headline">¶</a></h1>
 <p>This is a short list of tips. <span class="xref myst">Also look at these tips</span> and <span class="xref myst">these tips for when you’re stuck</span>.</p>
 <div class="section" id="naming-variables-and-functions">
-<h2><span class="section-number">2.1.8.1. </span>Naming variables and functions<a class="headerlink" href="#naming-variables-and-functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8.1. </span>Naming variables and functions<a class="headerlink" href="#naming-variables-and-functions" title="Permalink to this headline">¶</a></h2>
 <p>I try to put verbs in the names of functions (<code class="docutils literal notranslate"><span class="pre">get_returns()</span></code>) and name dataframes after their unit-levels (<code class="docutils literal notranslate"><span class="pre">monthly_df</span></code>). Avoid ambiguous abbreviations.</p>
 </div>
 <div class="section" id="code-style-auto-formatting">
-<h2><span class="section-number">2.1.8.2. </span>Code style + Auto-Formatting!<a class="headerlink" href="#code-style-auto-formatting" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8.2. </span>Code style + Auto-Formatting!<a class="headerlink" href="#code-style-auto-formatting" title="Permalink to this headline">¶</a></h2>
 <p>There are many ways to achieve the same things in python. Python tends to be a very readable language compared to others. Still, the <em>style</em> of how you write the code can make python code easy to read or hard to read!</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -836,8 +836,8 @@
 <p>There are a few popular auto-formatters (black, yapf, and autopep8). In my <a class="reference external" href="../01/05_jupyterlab.html#my-jupyter-lab-set-up">JupyterLab set up</a>, I explain how I set up Black, the “uncompromising Python code formatter” which is very opinionated (“any color you’d like, as long as it is black”).</p>
 <p>Look at what Black does to this code:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="44ced9ae-680b-48e6-b275-9eb28514b444" name="e78a6635-106a-4ec8-8fae-5979ab44a243" type="radio">
-</input><label class="tabbed-label" for="44ced9ae-680b-48e6-b275-9eb28514b444">
+<input checked="checked" id="e7e08366-aba4-4fd0-9a30-d55df7ddc4b0" name="72f53be8-bab3-4e55-9a40-9099e98dd72e" type="radio">
+</input><label class="tabbed-label" for="e7e08366-aba4-4fd0-9a30-d55df7ddc4b0">
 Ugly Code I wrote</label><div class="tabbed-content docutils">
 <p>This function is too long to even read:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">very_important_function</span><span class="p">(</span><span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">variables</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">,</span> <span class="n">engine</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">header</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">debug</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
@@ -847,8 +847,8 @@ Ugly Code I wrote</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="a4e20f95-c064-460d-ba1d-7d38fcc65e38" name="e78a6635-106a-4ec8-8fae-5979ab44a243" type="radio">
-</input><label class="tabbed-label" for="a4e20f95-c064-460d-ba1d-7d38fcc65e38">
+<input id="2600a830-bb0d-4004-851d-860d69d3cd2e" name="72f53be8-bab3-4e55-9a40-9099e98dd72e" type="radio">
+</input><label class="tabbed-label" for="2600a830-bb0d-4004-851d-860d69d3cd2e">
 Black fixed it</label><div class="tabbed-content docutils">
 <p>I hit CTRL+SHIFT+F and this was the result:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">very_important_function</span><span class="p">(</span>
@@ -868,28 +868,28 @@ Black fixed it</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="use-a-linter-coding-assistance">
-<h2><span class="section-number">2.1.8.3. </span>Use a linter + coding assistance<a class="headerlink" href="#use-a-linter-coding-assistance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8.3. </span>Use a linter + coding assistance<a class="headerlink" href="#use-a-linter-coding-assistance" title="Permalink to this headline">¶</a></h2>
 <p>A linter is a programming tool to detect possible errors in your code and stylistic issues.</p>
 <p>See my <a class="reference external" href="../01/05_jupyterlab.html#my-jupyter-lab-set-up">JupyterLab set up</a>, for install instructions you can follow to install <a class="reference external" href="https://github.com/jupyter-lsp/jupyterlab-lsp"><code class="docutils literal notranslate"><span class="pre">Jupyterlab-lsp</span></code></a>. This extension provides code navigation + hover suggestions + linters + autocompletion + rename assistance.</p>
 </div>
 <div class="section" id="dry-code">
-<h2><span class="section-number">2.1.8.4. </span>DRY code<a class="headerlink" href="#dry-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8.4. </span>DRY code<a class="headerlink" href="#dry-code" title="Permalink to this headline">¶</a></h2>
 <p>Don’t Repeat Yourself. See the <a class="reference internal" href="10_Golden_5a.html"><span class="doc std std-doc">Functions</span></a> page for tips on how to use functions to reduce duplication.</p>
 </div>
 <div class="section" id="premature-optimization">
-<h2><span class="section-number">2.1.8.5. </span>Premature optimization<a class="headerlink" href="#premature-optimization" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8.5. </span>Premature optimization<a class="headerlink" href="#premature-optimization" title="Permalink to this headline">¶</a></h2>
 <p>In this class, you likely won’t get to the point where you try to optimize your code for speed. Our problem sets aren’t quite massive enough to need that. Some student projects might tempt students to optimize for speed.</p>
 <p>Don’t! Total time = your coding time (initial time, debug time, revising time) + computer time. Computer time is cheap. Yours is limited.</p>
 <p>First: Write clean, easy to use code that works.</p>
 <p>Only once your code is virtually complete should you even contemplate speed. And still, you’re probably optimizing too soon. (You haven’t yet realized that you need to completely reformulate the approach to the problem.)</p>
 </div>
 <div class="section" id="magic-numbers-are-bad">
-<h2><span class="section-number">2.1.8.6. </span>Magic numbers are bad<a class="headerlink" href="#magic-numbers-are-bad" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8.6. </span>Magic numbers are bad<a class="headerlink" href="#magic-numbers-are-bad" title="Permalink to this headline">¶</a></h2>
 <p>A magic number is a literal number or parameter value embedded in your code. Having numbers that act as in-line inputs and parameters can easily lead to errors and make modifying code very tough.</p>
 <p>Here is an example that tries to download and stock price data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="651c89eb-586f-46d0-a486-d8aea08a1a4e" name="7d80aef8-c74e-43f2-b118-43851da0bd66" type="radio">
-</input><label class="tabbed-label" for="651c89eb-586f-46d0-a486-d8aea08a1a4e">
+<input checked="checked" id="2f78145a-103e-4f69-b383-c13fb45d37e5" name="beff03b1-a279-42b0-9a3b-7726b76897ee" type="radio">
+</input><label class="tabbed-label" for="2f78145a-103e-4f69-b383-c13fb45d37e5">
 Bad</label><div class="tabbed-content docutils">
 <p>If I want to change the stocks included, I’ll need to change the list of stocks twice.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>  
@@ -906,8 +906,8 @@ Bad</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ce2a6554-9eb1-4fde-b759-2e21ef975b84" name="7d80aef8-c74e-43f2-b118-43851da0bd66" type="radio">
-</input><label class="tabbed-label" for="ce2a6554-9eb1-4fde-b759-2e21ef975b84">
+<input id="02f2e5a4-9d6a-416d-a379-744a8e8a427d" name="beff03b1-a279-42b0-9a3b-7726b76897ee" type="radio">
+</input><label class="tabbed-label" for="02f2e5a4-9d6a-416d-a379-744a8e8a427d">
 Good</label><div class="tabbed-content docutils">
 <p>Now I only need to change the variable <code class="docutils literal notranslate"><span class="pre">stocks</span></code> to alter the entire code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>  
@@ -957,7 +957,7 @@ Good</label><div class="tabbed-content docutils">
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="10_Golden_5b.html" title="previous page"><span class="section-number">2.1.7. </span>Comments and Documentation</a>
+    <a class='left-prev' id="prev-link" href="10_Golden_5b.html" title="previous page"><span class="section-number">2.7. </span>Comments and Documentation</a>
     <a class='right-next' id="next-link" href="../03/00_Data_Wrangling_Intro.html" title="next page"><span class="section-number">3. </span>Data Wrangling and Exploration</a>
 
     </div>
