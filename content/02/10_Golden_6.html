@@ -205,38 +205,43 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../01/03a_githubworkflow.html">
+     1.4. The Github Workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../01/04_Markdown.html">
-     1.4. Markdown basics
+     1.5. Markdown basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/05_jupyterlab.html">
-     1.5. Jupyter Lab Basics
+     1.6. Jupyter Lab Basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/06_python.html">
-     1.6. Python Basics
+     1.7. Python Basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/07_debugging.html">
-     1.7. Debugging
+     1.8. Debugging
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/07a_errors.html">
-     1.8. Errors
+     1.9. Errors
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/08_libraries.html">
-     1.9. Libraries/Packages
+     1.10. Libraries/Packages
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/09_gitignore.html">
-     1.10. Gitignore Files
+     1.11. Gitignore Files
     </a>
    </li>
   </ul>
@@ -819,7 +824,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># creates DataSample.csv from inputs/</span>
 
 <span class="k">def</span> <span class="nf">clean_slate</span><span class="p">():</span>
-    <span class="c1"># caution: as written, this deletes all files. </span>
+    <span class="c1"># caution: as written, this deletes all files in temp and output. </span>
     <span class="kn">import</span> <span class="nn">glob</span><span class="o">,</span> <span class="nn">os</span>
 
     <span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;temp/*&#39;</span><span class="p">)</span>
@@ -836,7 +841,7 @@
 <span class="n">execfile</span><span class="p">(</span><span class="n">export_data</span><span class="o">.</span><span class="n">py</span><span class="p">)</span> 
 </pre></div>
 </div>
-<p>It very quickly and plainly documents how to run the entire code in the “build” project (<strong>Rule 1.A and 1.B</strong>), and makes it easy to do so every time (<strong>Rule 2.B</strong>) before you push it back to the master repo on GitHub (<strong>Rule 2.A</strong>). <code class="docutils literal notranslate"><span class="pre">run_directory.py</span></code> is so simple, it is self-documenting (<strong>Rule 6.C</strong>).</p>
+<p>It very quickly and plainly documents how to run the entire code in the “build” project (<strong>Rule 1.A and 1.B</strong>), and makes it easy to do so every time (<strong>Rule 2.C</strong>) before you push it back to the master repo on GitHub (<strong>Rule 2.A</strong>). <code class="docutils literal notranslate"><span class="pre">run_directory.py</span></code> is so simple, it is self-documenting (<strong>Rule 6.C</strong>).</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="alts"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>

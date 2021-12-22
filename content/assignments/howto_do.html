@@ -205,38 +205,43 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../01/03a_githubworkflow.html">
+     1.4. The Github Workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../01/04_Markdown.html">
-     1.4. Markdown basics
+     1.5. Markdown basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/05_jupyterlab.html">
-     1.5. Jupyter Lab Basics
+     1.6. Jupyter Lab Basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/06_python.html">
-     1.6. Python Basics
+     1.7. Python Basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/07_debugging.html">
-     1.7. Debugging
+     1.8. Debugging
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/07a_errors.html">
-     1.8. Errors
+     1.9. Errors
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/08_libraries.html">
-     1.9. Libraries/Packages
+     1.10. Libraries/Packages
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/09_gitignore.html">
-     1.10. Gitignore Files
+     1.11. Gitignore Files
     </a>
    </li>
   </ul>
@@ -791,80 +796,11 @@
 </div>
 <div class="section" id="working-on-assignments-projects-taking-notes">
 <h2>Working on assignments / projects / taking notes<a class="headerlink" href="#working-on-assignments-projects-taking-notes" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../01/03a_githubworkflow.html"><span class="doc std std-doc">Use the Github workflow!</span></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Fetch early, commit frequently, push often!</strong></p>
 <p>This habit will help you avoid disasters, so that you get the positive features of Github without the headaches.</p>
-</div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-1. Make your coffee, open Github Desktop, and <strong>FETCH</strong> the project you’ll work on.<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<ol class="simple">
-<li><p class="card-text">Change the “current repository” to the assignment you want to work on (or project, or your notes repo, etc.)</p></li>
-<li><p class="card-text">Click “Fetch origin” to download any changes from the master repo on the Github servers. This is important, because if someone else changed the files while you were sleeping, you’ll get the most updated files to work on.</p></li>
-<li><p class="card-text">Start your work on your computer.</p></li>
-</ol>
-<p class="card-text"><img alt="" src="https://media.giphy.com/media/xUOrwpPFzqDh48XEek/giphy.gif" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p class="card-text">If you don’t “fetch” before you start, it’s becomes easier to change a file someone else changed differently, creating a conflict. When this happens, you have to resolve the conflicting files before moving on.</p>
-</div>
-</div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-2. <strong>“COMMIT” FREQUENTLY</strong> (say every 30 minutes or so, but depends on the team/task):<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<ul class="simple">
-<li><p class="card-text">Save the files you’re working on. (Just like you would while working on a Powerpoint or Word document.)</p></li>
-<li><p class="card-text">When you save the file, Github Desktop (GHD) will notice it has been changed.</p></li>
-<li><p class="card-text">Go to GDH. Notice that your file is listed as a “changed” file.</p></li>
-<li><p class="card-text"><strong>Describe those changes in the “Summary” and (optionally) “Description” boxes, and click the blue “Commit” button</strong>.</p></li>
-<li><p class="card-text">Try to do this every time you save your files! It will make rolling back changes easier.</p></li>
-<li><p class="card-text"><strong>Do this early and often</strong></p></li>
-</ul>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<p class="card-text"><img alt="" src="https://media.giphy.com/media/l4KhSYN6hQ7Y0FZS0/giphy.gif" /></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<p class="card-text"><img alt="" src="https://media.giphy.com/media/dxITs87fTAxTncZ6WL/giphy.gif" /></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-3. <strong>“PUSH” OFTEN, but probably less than you commit</strong> (say every 60-90 minutes or so, but depends on the team/task):<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<ul class="simple">
-<li><p class="card-text">Push your changes to the cloud by clicking the blue “push” button in GHD.</p></li>
-<li><p class="card-text">Now, you’ve got an up-to-date backup and teammates can see the changes and work with the latest files.</p></li>
-<li><p class="card-text">GHD will warn you if someone else made a change in the meantime. If this happens, click “fetch” to download what they did. If there is a conflict between your work and your teammate’s, you’ll have to resolve it.</p></li>
-</ul>
-<p class="card-text"><img alt="" src="https://i.imgflip.com/4m0jf6.jpg" /></p>
-</div>
-</details><div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><strong>I call these three steps our “GitHub workflow”.</strong></p>
 </div>
 </div>
 <div class="section" id="submitting-assignments">

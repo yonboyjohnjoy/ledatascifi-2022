@@ -205,38 +205,43 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../01/03a_githubworkflow.html">
+     1.4. The Github Workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../01/04_Markdown.html">
-     1.4. Markdown basics
+     1.5. Markdown basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/05_jupyterlab.html">
-     1.5. Jupyter Lab Basics
+     1.6. Jupyter Lab Basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/06_python.html">
-     1.6. Python Basics
+     1.7. Python Basics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/07_debugging.html">
-     1.7. Debugging
+     1.8. Debugging
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/07a_errors.html">
-     1.8. Errors
+     1.9. Errors
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/08_libraries.html">
-     1.9. Libraries/Packages
+     1.10. Libraries/Packages
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01/09_gitignore.html">
-     1.10. Gitignore Files
+     1.11. Gitignore Files
     </a>
    </li>
   </ul>
@@ -796,73 +801,73 @@
 <td class="text-align:left"><p>A. Automate everything that can be automated, don’t do point-and-click analysis!</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. Write a single script that executes all code from beginning to end.</p></td>
+<td class="text-align:left"><p>B. Write a single script that executes all code for the project from beginning to end. This script just calls the project’s code files in the right order.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>2. Version control</p></td>
 <td class="text-align:left"><p>A. Store code and data under version control.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>B. <strong>Before checking the directory back in, clear all outputs and temp files and then run the whole directory!</strong> (Check: Did it work right?)</p></td>
+<td class="text-align:left"><p>B. <a class="reference internal" href="../01/03a_githubworkflow.html"><span class="doc std std-doc">Use the Github workflow!</span></a></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>3.  <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Organizing folders</span></a></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>C. <strong>Before checking the directory back in, clear all outputs, delete temp files, and then run the whole directory to make sure the outputs reproduce!</strong> (Check: Did it work right?) <br> <br> <a class="reference external" href="../01/06_python.html?highlight=golden#clear-output-and-rerun-from-the-start">If the project uses notebook files, always look to see if the first executed code block has “[1]” next to it and that all the subsequent code blocks are numbered consecutively.</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>3.  <a class="reference internal" href="10_Golden_6.html"><span class="doc std std-doc">Organizing folders</span></a></p></td>
 <td class="text-align:left"><p>A. Separate  folders/directories and files by function</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Put input files into an input folder and outputs into a different folder</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>A + B = your folders and files will be largely self documenting</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Make directories portable - they should run on any computer, or if you move them to another place on your computer. See the next rule.</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>D <a class="reference internal" href="10_Golden_7.html"><span class="doc std std-doc"><strong>Use RELATIVE FILE PATHS, not absolute file paths</strong></span></a>  ⭐ ⭐</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>4. <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc">Data</span></a></p></td>
+<tr class="row-even"><td class="text-align:left"><p>4. <a class="reference internal" href="10_Golden_4.html"><span class="doc std std-doc">Data</span></a></p></td>
 <td class="text-align:left"><p>A. Store cleaned data in tables with unique, non-missing “keys”</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Keep data normalized as far into your code pipeline as you can</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>5. <a class="reference internal" href="10_Golden_5a.html"><span class="doc std std-doc">Functions</span></a></p></td>
+<tr class="row-even"><td class="text-align:left"><p>5. <a class="reference internal" href="10_Golden_5a.html"><span class="doc std std-doc">Functions</span></a></p></td>
 <td class="text-align:left"><p>A. Write functions to eliminate redundancy</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Write functions to improve clarity</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Otherwise, don’t write functions</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>D. <strong>Test your functions!</strong> Use small examples where you know the right answers, and try variations to see if the function breaks in some cases.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>6. <a class="reference internal" href="10_Golden_5b.html"><span class="doc std std-doc">Documentation and comments</span></a></p></td>
+<tr class="row-even"><td class="text-align:left"><p>6. <a class="reference internal" href="10_Golden_5b.html"><span class="doc std std-doc">Documentation and comments</span></a></p></td>
 <td class="text-align:left"><p>A. Is good… to a point</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Don’t write documentation you will not maintain</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Code is better off when it is self-documenting</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>7. <a class="reference internal" href="10_Golden_8.html"><span class="doc std std-doc">Writing code</span></a></p></td>
+<tr class="row-odd"><td class="text-align:left"><p>7. <a class="reference internal" href="10_Golden_8.html"><span class="doc std std-doc">Writing code</span></a></p></td>
 <td class="text-align:left"><p>A. Don’t use magic numbers, define once as variables and refer as needed</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>B. Write DRY code: Don’t Repeat Yourself! See rule 5.A.</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p></p></td>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>C. Premature optimization (for speed) is the root of all evil.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
 <td class="text-align:left"><p>D. Use self-documenting variable and function names.</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>8. Look at your data/objects</p></td>
-<td class="text-align:left"><p>As discussed <a class="reference external" href="../01/07_debugging.html#seriously-print-your-data-and-objects-often">here</a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p></p></td>
-<td class="text-align:left"><p>ABCD = Always Be Checking your Data!</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>8. Look at your data/objects</p></td>
+<td class="text-align:left"><p>As discussed <a class="reference external" href="../01/07_debugging.html#seriously-print-your-data-and-objects-often">here</a> and many other places. <br> <br> <strong>ABCD = Always Be Checking your Data!</strong></p></td>
 </tr>
 </tbody>
 </table>
