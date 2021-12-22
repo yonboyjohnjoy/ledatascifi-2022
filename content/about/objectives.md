@@ -1,5 +1,9 @@
 ## Objectives 
 
+```{tip}
+You can navigate between pages on this site by using the arrow keys on your keyboard.
+```
+
 ### Briefly 
 1.    _Use python to obtain, explore, groom, visualize, and analyze data_ &rightarrow;  **puts the world of big data at your fingertips**
 2.    _Make all of that reproducible, reusable, and shareable_ &rightarrow; **collobaration is mandatory in real-world projects**
