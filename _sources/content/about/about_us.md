@@ -36,8 +36,9 @@ Aka "Office Hours".
 
 ```{note}  
 **I suspect that the initial learning curve will be steep, so we have posted a lot of office hours. Around Valentines Day, we will reduce our explicit office hours. Remember, when you get stuck, _especially_ on installation and set up issues,**
+- look at the [help](help) page
 - post a question in our [classmates team](https://github.com/orgs/LeDataSciFi/teams/classmates-2022)
-- check out the resources in the [Resources and Help tab](resources).**
+- check out the [resources](resources) page and the [tips](tips) page
 
 **Office hour schedules are subject to change, so please check back!** 
 ```
