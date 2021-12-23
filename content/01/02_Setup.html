@@ -772,6 +772,25 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-1-6-on-video">
+   1.2.1. Steps 1-6 on video
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-7-setting-up-jupyterlab">
+   1.2.2. Step 7: Setting up JupyterLab
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -842,10 +861,60 @@
 </div>
 </li>
 <li><p>Optional, but recommended: Install a good text editor. <a class="reference external" href="https://atom.io/">Atom</a>, <a class="reference external" href="https://www.sublimetext.com/">Sublime</a>, or <a class="reference external" href="https://www.youtube.com/watch?v=jY0o1nkW0ow">Visual Studio (this link includes suggestions for extensions)</a> are the most popular according to prior students of this class.</p></li>
+<li><p><strong>Strongly</strong> recommended: <a class="reference external" href="#Step-7-Setting-up-JupyterLab">Add some superpowers to JupyterLab to make coding easier</a></p></li>
 </ol>
+<div class="section" id="steps-1-6-on-video">
+<h2><span class="section-number">1.2.1. </span>Steps 1-6 on video<a class="headerlink" href="#steps-1-6-on-video" title="Permalink to this headline">¶</a></h2>
 <p>I put together a video of me installing everything due to popular demand:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zKqkLEMmwBw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>Loading...</iframe>
 <p>If you have completed all the steps above, you are ready to go! If you got stuck on a step, message the RA or post on the classmates group. We will get you going quickly!</p>
+</div>
+<div class="section" id="step-7-setting-up-jupyterlab">
+<h2><span class="section-number">1.2.2. </span>Step 7: Setting up JupyterLab<a class="headerlink" href="#step-7-setting-up-jupyterlab" title="Permalink to this headline">¶</a></h2>
+<p>These extensions will give you spell checking, code hints, and automatic formatting for your code 😍.</p>
+<ol>
+<li><p>Run these in terminal (Mac) or Anaconda Powershell Prompt (Windows) one at a time:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install jupyterlab-spellchecker
+pip install jupyterlab_code_formatter
+pip install black
+pip install jupyterlab-lsp
+pip install python-lsp-server[all]
+pip install --upgrade lckr-jupyterlab-variableinspector 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mac users: To install the spellchecker, your TA had to install node.js in order to install the spell checker extension. MacOS users who also installed homebrew can install this in terminal via <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">node</span></code>.</p></li>
+<li><p>Windows users: The last <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> command often fails. <a class="reference external" href="https://github.com/lckr/jupyterlab-variableInspector/issues/183#issuecomment-806579896">Use this fix.</a></p></li>
+</ul>
+</li>
+<li><p>Now run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> in the terminal window to open Jupterlab.</p></li>
+<li><p>Click on settings, then Advanced Settings Editor. Click on the Keyboard Shortcuts menu. Then look to the right side of the screen: In the user preference box, add the text below. After you copy it in, save the user settings. (Either CTRL+S or using the the icon to the upper right of the user preference box.)</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{
+	&quot;shortcuts&quot;: [
+		{
+			&quot;command&quot;: &quot;jupyterlab_code_formatter:format&quot;,
+			&quot;keys&quot;: [
+				&quot;Ctrl Shift F&quot;
+			],
+			&quot;selector&quot;: &quot;.jp-Notebook.jp-mod-editMode&quot;
+		}
+	]
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mac users: You might want to use “Cmd” instead of “Ctrl”</p></li>
+</ul>
+</li>
+<li><p>Still in the Advanced Settings Editor, Click on the Code Completion menu. Then look to the right side of the screen: In the user preference box, add the text below. After you copy it in, save the user settings. (Either CTRL+S or using the the icon to the upper right of the user preference box.)</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{
+	&quot;continuousHinting&quot;: true,
+}	
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
