@@ -837,9 +837,9 @@
 </div>
 <div class="section" id="i-have-a-file-in-gitignore-but-it-s-still-on-the-remote-repo">
 <h2><span class="section-number">1.11.3. </span>I have a file in gitignore, but it’s still on the remote repo!<a class="headerlink" href="#i-have-a-file-in-gitignore-but-it-s-still-on-the-remote-repo" title="Permalink to this headline">¶</a></h2>
-<p>That’s because it was already on the remote repo when you added it to the gitignore; The gitignore file simply tells git to “not sync” those files any more. It doesn’t mean “delete these files from the remote repo”.</p>
+<p>That’s because it was already on the remote repo when you added it to the gitignore; <strong>The gitignore file simply tells git to “not sync” those files any more. It doesn’t mean “delete these files from the remote repo”.</strong></p>
 <p>There are a few ways to delete the extra files in the remote repo. The simplest: Go to the repo on <a class="reference external" href="http://Github.com">Github.com</a> and delete them individually.</p>
-<p>If you are comfortable running some git commands, you can do it programmatically. Open terminal/powershell, move the current directory to the root folder of your repo, and then run these commands in order:</p>
+<p>If you have lots of files you want to suddenly gitignore/delete and you are comfortable running some git commands, you can do it programmatically. Open terminal/powershell, <strong>move to the current directory to the root folder of your repo,</strong> and then run these commands in order:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gt</span> <span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">cached</span> <span class="o">.</span> 
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Removed all files that are in the .gitignore&#39;</span> 
