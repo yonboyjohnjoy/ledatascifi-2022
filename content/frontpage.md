@@ -1,5 +1,5 @@
 
-![](coverphoto/temp_cover.png)
+![](coverphoto/my_cover_skinny.png)
 
 ## Welcome to the Spring 2022 Edition of Data Science for Finance!
 
