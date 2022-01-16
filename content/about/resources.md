@@ -18,6 +18,7 @@ If you have any favorite resources you like, or found helpful, please let me kno
 - **Essential:** [datacamp.com](https://www.datacamp.com/) has many self guided lessons
 - Lessons 3 and 5 of the [official documentation](https://docs.python.org/3/tutorial/introduction.html)
 - [Dive Into Python](https://diveinto.org/python3/table-of-contents.html)
+- [www.pythoncheatsheet.org](www.pythoncheatsheet.org)
 - [This has to be the best list of Python resources on the internet](https://github.com/EbookFoundation/free-programming-books/blob/main/free-programming-books.md#python). 
 ```
 
