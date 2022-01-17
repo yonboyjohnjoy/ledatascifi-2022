@@ -1,5 +1,6 @@
 # The Github Workflow
 
+
 If you are
 1. Working on an assignment,
 2. Working on a project,
@@ -10,10 +11,11 @@ If you are
 ```{admonition} In summary:
 :class: tip
 
-**Fetch early, commit frequently, push often!**
+**Fetch first, commit frequently, push often!**
 
 This habit will help you avoid disasters, so that you get the positive features of Github without the headaches.
 ```
+_Being careful about these steps might seem pointless during solo projects, but I encourage you to practice these good habits now, so that when you do collaborative work, you're protected from mistakes._
 
 ## The workflow, explained
 
@@ -38,6 +40,9 @@ If you don't "fetch" your project before you start, it's becomes easier to chang
 ````
 
 ````{dropdown} 2. **"COMMIT" FREQUENTLY** (say every 30 minutes or so, but depends on the team/task): 
+
+A "commit" records changes to files in the repo. 
+
 - Save the files you're working on. (Just like you would while working on a Powerpoint or Word document.) 
 - When you save the file, Github Desktop (GHD) will notice it has been changed. 
 - Now go to GDH. Notice that your file is listed as a "changed" file. 
@@ -53,6 +58,9 @@ If you don't "fetch" your project before you start, it's becomes easier to chang
 ````
 
 ```{dropdown} 3. **"PUSH" OFTEN, but probably less than you commit** (say every 60-90 minutes or so, but depends on the team/task): 
+
+A "push" updates the remote 
+
 - Push your changes to the cloud by clicking the blue "push" button in GHD. 
 - Now, you've got an up-to-date backup and teammates can see the changes and work with the latest files.
 - GHD will warn you if someone else made a change in the meantime. If this happens, click "fetch" to download what they did. If there is a conflict between your work and your teammate's, you'll have to resolve it. 
