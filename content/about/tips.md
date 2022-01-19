@@ -25,7 +25,7 @@ I'm collecting some tips from around the site here. This is not comprehensive. I
 
 Fetch early, commit frequently, push often! &#11088; &#11088; &#11088;
 
-For more on this process, see [the github workflow](../assignments/howto_do.html#working-on-assignments-projects-taking-notes). &#11088; &#11088; &#11088;
+For more on this process, see [the github workflow](../01/03a_githubworkflow.html). &#11088; &#11088; &#11088;
 
 <!-- This follows the spirit of the [workflow recipe from lecture 1](https://ledatascifi.github.io/lectures-spr2020/01/01_Motivation_and_Getting_Started.html#***-THE-WORKFLOW-RECIPE--***):
 -->
