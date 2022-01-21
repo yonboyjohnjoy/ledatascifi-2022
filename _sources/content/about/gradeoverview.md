@@ -28,7 +28,7 @@ From most important to (just slightly) less important:
 
 ```{tabbed} Assignments (30%)
 About 7 assignments. Subject to some fiddling. 
-- Each assignment grade will come from an average of two peer reviews (which will be adjust if they have objective errors or large subjective ones)
+- Each assignment grade will come from an average of two peer reviews (which will be adjusted if they have objective errors or large subjective ones)
 - **Unless explicitly noted, all assignments must be completed individually.**
 - Changes to submissions after the deadline **will be ignored.**
 - Missed assignments will receive a zero. 
