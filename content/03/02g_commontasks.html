@@ -833,13 +833,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pipe">
-   3.2.7.4.
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .pipe()
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#using-non-pandas-functions-inside-chains">
+   3.2.7.4. Using non-pandas functions inside chains
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -877,7 +872,11 @@
                 
   <div class="section" id="common-tasks">
 <h1><span class="section-number">3.2.7. </span>Common tasks<a class="headerlink" href="#common-tasks" title="Permalink to this headline">¶</a></h1>
-<p>This page is kind of long. (It’s got a lot of useful info!) Use the page’s table of contents to the right to jump to what you’re looking for.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Yes, this page is kind of long. But that’s because it has a lot of useful info!</p>
+<p>Use the page’s table of contents to the right to jump to what you’re looking for.</p>
+</div>
 <div class="section" id="reshaping-data">
 <h2><span class="section-number">3.2.7.1. </span>Reshaping data<a class="headerlink" href="#reshaping-data" title="Permalink to this headline">¶</a></h2>
 <p>In the <a class="reference internal" href="02b_pandasVocab.html"><span class="doc std std-doc">shape of data</span></a> page, I explained the concept of wide vs. tall data with this example:</p>
@@ -1375,24 +1374,70 @@ Sort to firm-year: wide_year.stack().swaplevel().sort_index()
 <li><p><code class="docutils literal notranslate"><span class="pre">.assign(lev</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">(x['dltt']+x['dlc'])/x['at']</span>&#160; <span class="pre">)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">.groupby('industry').assign(avglev</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">x['lev'].mean()</span>&#160; <span class="pre">)</span></code></p></li>
 </ul>
-<p>What is that “lambda” and why is it there?  Well, when you get to the “assign” step, what you would do to reference a variable is type the dataframe name and the variable name.</p>
-<p><em>But often, the dataframe object doesn’t exist in memory yet and so it has no name.</em></p>
-<p>In the example above, <code class="docutils literal notranslate"><span class="pre">[df].groupby('industry').assign(avglev</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">x['lev'].mean()</span>&#160; <span class="pre">)</span></code>, pandas splits the dataframe into groups, within each group applies a function (here: the mean), and then returns a new dataframe with one observation for each group (the average leverage for the industry). Visually, this <strong>split-apply-combine</strong><a class="footnote-reference brackets" href="#ref" id="id1">1</a> process looks like this:</p>
+<p>Q1: What is that “lambda”?</p>
+<p>A1: A lambda function is an anonymous function that is usually one line and usually defined without a name. You write it like this:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="o">&lt;</span><span class="nb">list</span> <span class="n">the</span> <span class="nb">input</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">expression</span> <span class="n">that</span> <span class="n">uses</span> <span class="n">the</span> <span class="n">inputs</span> <span class="n">to</span> <span class="n">make</span> <span class="n">an</span> <span class="n">output</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Here, you can see how the lambda function takes inputs and creates output the same way a function does:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dumb_prog</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">10</span>     <span class="c1"># I added &quot;dumb_prog =&quot; to name the lambda function and use it</span>
+<span class="n">dumb_prog</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we could define a fnc to do the exact same thing</span>
+<span class="k">def</span> <span class="nf">dumb_prog</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="n">dumb_prog</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<p>Q2: Why is that lambda there?</p>
+<p>A2: We use lambdas when we need a function for a short period of time and when the name of the function doesn’t matter.</p>
+<!-- Let's go back to this bit of code: `.groupby('industry').assign(avglev = lambda x: x['lev'].mean()  )`
+
+When you get to the "assign" step, what you would do to reference a variable is type the dataframe's name and the variable's name. _But `df.groupby('industry')` is a different dataframe than `df`! And when the code starts to execute the `.assign` method, the `df.groupby('industry')` doesn't exist in memory yet and so it has no name!_  
+ -->
+<p>In the example above, <code class="docutils literal notranslate"><span class="pre">[df].groupby('industry').assign(avglev</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">x['lev'].mean()</span>&#160; <span class="pre">)</span></code>,</p>
+<ol class="simple">
+<li><p>groupby <strong>splits</strong> the dataframe into groups,</p></li>
+<li><p>then, within each group, it <strong>applies</strong> a function (here: the mean),</p></li>
+<li><p>and then returns a new dataframe with one observation for each group (the average leverage for the industry). Visually, this <strong>split-apply-combine</strong><a class="footnote-reference brackets" href="#ref" id="id1">1</a> process looks like this:</p></li>
+</ol>
 <p><img alt="" src="https://jakevdp.github.io/PythonDataScienceHandbook/figures/03.08-split-apply-combine.png" /></p>
-<p>So, the <code class="docutils literal notranslate"><span class="pre">.assign()</span></code> portion is working on these tiny pieces of the dataframe. Those pieces are dataframe objects that don’t have names!</p>
-<p><strong>So how do you refer to an unnamed dataframe object?</strong></p>
-<p>Answer: Lambda functions. When you type <code class="docutils literal notranslate"><span class="pre">&lt;some</span> <span class="pre">df</span> <span class="pre">object&gt;.assign(newVar</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">someFunc(x))</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> is the object (“some df object”) that assign is working on. Ta da!</p>
+<p>But notice! The <code class="docutils literal notranslate"><span class="pre">.assign()</span></code> portion is working on these tiny split up pieces of the dataframe created by <code class="docutils literal notranslate"><span class="pre">df.groupby('industry')</span></code>. Those pieces are dataframe objects that don’t have names!</p>
+<p><strong>So lambda functions let us refer to an unnamed dataframe objects!</strong> When you type <code class="docutils literal notranslate"><span class="pre">&lt;some</span> <span class="pre">df</span> <span class="pre">object,</span> <span class="pre">like</span> <span class="pre">df.groupby()&gt;.assign(newVar</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">someFunc(x))</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> is the object (“some df object”) that assign is working on. Ta da!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># common syntax within pandas</span>
 <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="o">&lt;</span><span class="n">newvarname</span><span class="o">&gt;</span> <span class="o">=</span> <span class="k">lambda</span> <span class="o">&lt;</span><span class="n">tempnameforpriorobj</span><span class="o">&gt;</span><span class="p">:</span>  <span class="o">&lt;</span><span class="n">do</span> <span class="n">stuff</span> <span class="n">to</span> <span class="n">tempnameforpriorobj</span><span class="o">&gt;</span>   <span class="p">)</span>       
 
 <span class="c1"># often, tempname is just &quot;x&quot; for short</span>
-<span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="o">&lt;</span><span class="n">newvarname</span><span class="o">&gt;</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">someFunc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">)</span>       
+<span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="o">&lt;</span><span class="n">newvarname</span><span class="o">&gt;</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">someFunc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">)</span>      
+
+<span class="c1"># example:</span>
+<span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">lev</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;dltt&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;dlc&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;at&#39;</span><span class="p">]</span> <span class="p">)</span>
 
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It turns out that lambda functions are very useful in python programming, and not just within pandas. But pandas is where we will use them most in this class.</p>
+<p>It turns out that lambda functions are very useful in python programming, and not just within pandas. For example, some functions take functions as inputs, like <a class="reference external" href="#printing-inside-of-chains">csnap()</a>, <code class="docutils literal notranslate"><span class="pre">map()</span></code>, and <code class="docutils literal notranslate"><span class="pre">filter()</span></code>, and lambda functions lets us give them custom functions quickly.</p>
+<p>But pandas is where we will use lambda functions most in this class.</p>
 </div>
 </div>
 <div class="section" id="transform-after-groupby">
@@ -1656,9 +1701,9 @@ Sort to firm-year: wide_year.stack().swaplevel().sort_index()
 </div></div></div>
 </div>
 </div>
-<div class="section" id="pipe">
-<h2><span class="section-number">3.2.7.4. </span><code class="docutils literal notranslate"><span class="pre">.pipe()</span></code><a class="headerlink" href="#pipe" title="Permalink to this headline">¶</a></h2>
-<p>One problem with chains on dataframes is that you can only use methods that work on the object (a dataframe) that is getting chained.</p>
+<div class="section" id="using-non-pandas-functions-inside-chains">
+<h2><span class="section-number">3.2.7.4. </span>Using non-pandas functions inside chains<a class="headerlink" href="#using-non-pandas-functions-inside-chains" title="Permalink to this headline">¶</a></h2>
+<p>One problem with writing chains on dataframes is that you can only use methods that work on the object (a dataframe) that is getting chained.</p>
 <p>So for example, you’ve formatted dataframe to plot. You can’t directly add a seaborn function to the chain: <em>Seaborn functions are methods of the package seaborn, not the dataframe.</em> (It’s <code class="docutils literal notranslate"><span class="pre">sns.lmplot</span></code>, not <code class="docutils literal notranslate"><span class="pre">df.lmplot</span></code>.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">.pipe()</span></code> allows you to hand a dataframe to functions that don’t work directly on dataframes.</p>
 <div class="admonition-the-syntax-of-pipe admonition">
@@ -1713,7 +1758,7 @@ Sort to firm-year: wide_year.stack().swaplevel().sort_index()
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>One thing about chains, is that sometimes it’s hard to know what’s going on within them without just commenting out all the code and running it bit-by-bit.</p>
-<p>This function will let you print messages from inside the chain, by exploiting the <code class="docutils literal notranslate"><span class="pre">.pipe()</span></code> function we just covered!</p>
+<p>This function, <code class="docutils literal notranslate"><span class="pre">csnap</span></code> (meaning “C”hain “SNAP”shot) will let you print messages from inside the chain, by exploiting the <code class="docutils literal notranslate"><span class="pre">.pipe()</span></code> function we just covered!</p>
 </div>
 <p><img alt="" src="https://media.giphy.com/media/Buy7YdhkyHBCM/source.gif" /></p>
 <p>Copy this into your code:</p>
@@ -1793,13 +1838,13 @@ Sort to firm-year: wide_year.stack().swaplevel().sort_index()
   </thead>
   <tbody>
     <tr>
-      <th>std</th>
-      <td>1.870829</td>
+      <th>max</th>
+      <td>6.0</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>25%</th>
-      <td>2.250000</td>
+      <th>min</th>
+      <td>1.0</td>
       <td>1</td>
     </tr>
   </tbody>

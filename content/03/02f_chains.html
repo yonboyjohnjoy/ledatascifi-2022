@@ -818,7 +818,11 @@
                 
   <div class="section" id="using-method-chains-to-create-more-readable-code">
 <h1><span class="section-number">3.2.6. </span>Using “method chains” to create more readable code<a class="headerlink" href="#using-method-chains-to-create-more-readable-code" title="Permalink to this headline">¶</a></h1>
-<p>This page is about “chaining,” which is a <em>technique</em> (as opposed to a function) I use when writing python code, to take advantage of this fact about python:</p>
+<div class="tip admonition">
+<p class="admonition-title">Suggested material</p>
+<p>This page is optional but suggested. It shows you <em>way</em> to write code. But this is useful because (A) it’s often easier to write and read and (B) I will use it in  class often.</p>
+</div>
+<p>This page is about “chaining,” which is a technique I use when writing python code, to take advantage of this fact about python:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="p">(</span> 
     <span class="c1"># anything between these parentheses</span>
     <span class="c1"># is interpreted as one line of code</span>
@@ -834,10 +838,10 @@
 <li><p>lessen the need to create and mentally track temporary variables</p></li>
 <li><p>are easy to debug: comment out operations that are failing until you fix them</p></li>
 <li><p>you can have comments <em>within</em> the chains (like the example above!)</p></li>
-<li><p>only temporarily modify the object, unless you name the object (like <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">(</span> <span class="pre">...</span> <span class="pre">)</span></code>)</p></li>
+<li><p>only temporarily modify the object, unless you name the resulting object (like <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">(</span> <span class="pre">df</span> <span class="pre">&lt;stuff&gt;</span> <span class="pre">...</span> <span class="pre">)</span></code>)</p></li>
 </ul>
-<div class="warning admonition">
-<p class="admonition-title">Let’s learn about chains via example.</p>
+<div class="note admonition">
+<p class="admonition-title">I think it’s easiest to learn about chains via example.</p>
 <p>The material chains on this page is within the “v1.+” tabs below.</p>
 </div>
 <hr class="docutils" />
@@ -887,10 +891,10 @@
 <li><p>save the dataset and then call a plot function</p></li>
 </ol>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cc624bd2-32bf-436b-9d0b-f702268dc9d0" name="25b7d5bf-7b4e-46c6-b254-7de43d3da3a8" type="radio">
-</input><label class="tabbed-label" for="cc624bd2-32bf-436b-9d0b-f702268dc9d0">
+<input checked="checked" id="50a7747c-b9c5-44df-b33d-506902d0f662" name="6f24aa9a-807c-453e-b07e-da503a96c0f3" type="radio">
+</input><label class="tabbed-label" for="50a7747c-b9c5-44df-b33d-506902d0f662">
 v0.1 Without chains</label><div class="tabbed-content docutils">
-<p>On one hand, this is only 4 lines of code. On the other hand, this is as readable as I could make it!</p>
+<p>On one hand, this is only “4” lines of code. On the other hand, this is as readable as I could make it!</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># STEP 1: restrict by name and only keep years after 2000</span>
 
 <span class="n">somenames</span> <span class="o">=</span> <span class="n">baby_names</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span> <span class="c1"># formating inside this () is just to make it clearer to a reader</span>
@@ -919,8 +923,8 @@ v0.1 Without chains</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="22857f26-b073-492e-8947-420560023f36" name="25b7d5bf-7b4e-46c6-b254-7de43d3da3a8" type="radio">
-</input><label class="tabbed-label" for="22857f26-b073-492e-8947-420560023f36">
+<input id="a7e93e70-1c91-47ee-9ca5-de7f4e780f37" name="6f24aa9a-807c-453e-b07e-da503a96c0f3" type="radio">
+</input><label class="tabbed-label" for="a7e93e70-1c91-47ee-9ca5-de7f4e780f37">
 v0.2 No chains but better</label><div class="tabbed-content docutils">
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -937,12 +941,12 @@ v0.2 No chains but better</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="00895b02-71df-4b3b-881a-7ab571509f79" name="25b7d5bf-7b4e-46c6-b254-7de43d3da3a8" type="radio">
-</input><label class="tabbed-label" for="00895b02-71df-4b3b-881a-7ab571509f79">
+<input id="44f3e7ae-9ced-4b41-b9a0-74eac3555a01" name="6f24aa9a-807c-453e-b07e-da503a96c0f3" type="radio">
+</input><label class="tabbed-label" for="44f3e7ae-9ced-4b41-b9a0-74eac3555a01">
 v1.0 - Using chains instead</label><div class="tabbed-content docutils">
 <p><strong>Method chaining:</strong> Call the object (<code class="docutils literal notranslate"><span class="pre">baby_names</span></code>) and then keep calling one method on it after another.</p>
 <ul class="simple">
-<li><p>Python will call the methods from left to right.</p></li>
+<li><p>Python will call the methods from left to right, top to bottom.</p></li>
 <li><p>There is no need to store the intermediate dataset (like <code class="docutils literal notranslate"><span class="pre">somenames</span></code> and <code class="docutils literal notranslate"><span class="pre">somenames_agg</span></code> above!)</p>
 <ul>
 <li><p>–&gt; Easier to read and write without “temp” objects all over the place</p></li>
@@ -960,15 +964,15 @@ v1.0 - Using chains instead</label><div class="tabbed-content docutils">
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>YUCK!
-The code below produces a plot identical to V1 and V2, <strong>but it is unreadable. Don’t try - I’m about to make this readable!</strong> Just <em>one more</em> iteration…</p>
+The code below is only 2 lines, and it produces a plot identical to V1 and V2, <strong>but it is unreadable. Don’t try - I’m about to make this readable!</strong> Just <em>one more</em> iteration…</p>
 </div>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">baby_names</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;name in [&quot;Sansa&quot;,&quot;Daenerys&quot;,&quot;Brienne&quot;,&quot;Cersei&quot;,&quot;Tyrion&quot;] &amp; year &gt;= 2000&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">])[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pipe</span><span class="p">((</span><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span> <span class="c1"># add a line for when the show debuted</span>
 </pre></div>
 </div>
 </div>
-<input id="d58f0e36-02a5-4be1-abf2-bf8fbbb56241" name="25b7d5bf-7b4e-46c6-b254-7de43d3da3a8" type="radio">
-</input><label class="tabbed-label" for="d58f0e36-02a5-4be1-abf2-bf8fbbb56241">
+<input id="f42f4bb8-a873-43c2-858d-9283e12912c7" name="6f24aa9a-807c-453e-b07e-da503a96c0f3" type="radio">
+</input><label class="tabbed-label" for="f42f4bb8-a873-43c2-858d-9283e12912c7">
 v1.1 Pretty Chains</label><div class="tabbed-content docutils">
 <p>To make this readable, we write a parentheses over multiple lines</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
@@ -1064,7 +1068,8 @@ v1.1 Pretty Chains</label><div class="tabbed-content docutils">
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>See the <a class="reference internal" href="02c_commonFcns.html"><span class="doc std std-doc">common functions</span></a> and <a class="reference internal" href="02g_commontasks.html"><span class="doc std std-doc">common tasks</span></a> pages for more methods you can use in chains and tricks to use within chains (pipe, lambda functions, etc.)!</p>
+<p>See the <a class="reference internal" href="02g_commontasks.html"><span class="doc std std-doc">common tasks</span></a> page for tricks you can use within chains (pipe, csnap, lambda functions)!</p>
+<p>See the <a class="reference internal" href="02c_commonFcns.html"><span class="doc std std-doc">common functions</span></a> page. Any method there that can be applied to a dataframe can be used within a chain.</p>
 </div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
