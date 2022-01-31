@@ -818,7 +818,7 @@
                 
   <div class="section" id="writing-good-code">
 <h1><span class="section-number">2.8. </span>Writing good code<a class="headerlink" href="#writing-good-code" title="Permalink to this headline">¶</a></h1>
-<p>This is a short list of tips. <span class="xref myst">Also look at these tips</span> and <span class="xref myst">these tips for when you’re stuck</span>.</p>
+<p>This is a short list of tips. <a class="reference internal" href="../about/tips.html"><span class="doc std std-doc">Also look at these tips</span></a> and <a class="reference internal" href="../about/help.html"><span class="doc std std-doc">these tips for when you’re stuck</span></a>.</p>
 <div class="section" id="naming-variables-and-functions">
 <h2><span class="section-number">2.8.1. </span>Naming variables and functions<a class="headerlink" href="#naming-variables-and-functions" title="Permalink to this headline">¶</a></h2>
 <p>I try to put verbs in the names of functions (<code class="docutils literal notranslate"><span class="pre">get_returns()</span></code>) and name dataframes after their unit-levels (<code class="docutils literal notranslate"><span class="pre">monthly_df</span></code>). Avoid ambiguous abbreviations.</p>
@@ -836,8 +836,8 @@
 <p>There are a few popular auto-formatters (black, yapf, and autopep8). In my <a class="reference external" href="../01/05_jupyterlab.html#my-jupyter-lab-set-up">JupyterLab set up</a>, I explain how I set up Black, the “uncompromising Python code formatter” which is very opinionated (“any color you’d like, as long as it is black”).</p>
 <p>Look at what Black does to this code:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="04d03a69-1f72-4d88-9921-5f38332b7c5d" name="f08f9541-948b-43b0-8716-185546a1d5d0" type="radio">
-</input><label class="tabbed-label" for="04d03a69-1f72-4d88-9921-5f38332b7c5d">
+<input checked="checked" id="516c6ec2-806e-49be-97d3-8132b314ff28" name="97c7833a-aa4a-4d18-bdd9-d33ce25d5661" type="radio">
+</input><label class="tabbed-label" for="516c6ec2-806e-49be-97d3-8132b314ff28">
 Ugly Code I wrote</label><div class="tabbed-content docutils">
 <p>This function is too long to even read:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">very_important_function</span><span class="p">(</span><span class="n">template</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">variables</span><span class="p">,</span> <span class="n">file</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">,</span> <span class="n">engine</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">header</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">debug</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
@@ -847,8 +847,8 @@ Ugly Code I wrote</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="9d82a0c4-03ce-4f1d-a408-027a7e6e2743" name="f08f9541-948b-43b0-8716-185546a1d5d0" type="radio">
-</input><label class="tabbed-label" for="9d82a0c4-03ce-4f1d-a408-027a7e6e2743">
+<input id="6c33a070-3c88-495e-9a05-b69516dac7cd" name="97c7833a-aa4a-4d18-bdd9-d33ce25d5661" type="radio">
+</input><label class="tabbed-label" for="6c33a070-3c88-495e-9a05-b69516dac7cd">
 Black fixed it</label><div class="tabbed-content docutils">
 <p>I hit CTRL+SHIFT+F and this was the result:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">very_important_function</span><span class="p">(</span>
@@ -888,8 +888,8 @@ Black fixed it</label><div class="tabbed-content docutils">
 <p>A magic number is a literal number or parameter value embedded in your code. Having numbers that act as in-line inputs and parameters can easily lead to errors and make modifying code very tough.</p>
 <p>Here is an example that tries to download and stock price data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="0099cff1-746f-4eae-aa2f-afe91dfb1af8" name="1179d6df-8d86-4a09-9f36-f73879f20917" type="radio">
-</input><label class="tabbed-label" for="0099cff1-746f-4eae-aa2f-afe91dfb1af8">
+<input checked="checked" id="d443e436-29d5-4fd4-830f-c74b9d605c97" name="0908bf6a-556a-405c-af92-6343243f6f51" type="radio">
+</input><label class="tabbed-label" for="d443e436-29d5-4fd4-830f-c74b9d605c97">
 Bad</label><div class="tabbed-content docutils">
 <p>If I want to change the stocks included, I’ll need to change the list of stocks twice.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>  
@@ -906,8 +906,8 @@ Bad</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="29555e8f-0e29-40f1-bf15-4993a65daeef" name="1179d6df-8d86-4a09-9f36-f73879f20917" type="radio">
-</input><label class="tabbed-label" for="29555e8f-0e29-40f1-bf15-4993a65daeef">
+<input id="89a76be2-7343-4264-bd94-7a380aa6f7d6" name="0908bf6a-556a-405c-af92-6343243f6f51" type="radio">
+</input><label class="tabbed-label" for="89a76be2-7343-4264-bd94-7a380aa6f7d6">
 Good</label><div class="tabbed-content docutils">
 <p>Now I only need to change the variable <code class="docutils literal notranslate"><span class="pre">stocks</span></code> to alter the entire code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span>  
