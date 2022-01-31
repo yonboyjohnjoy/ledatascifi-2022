@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 2 - Numpy, Pandas, Data EDA/Wrangling/Cleaning, Visualization &#8212; LeDataSciFi-2022</title>
+    <title>Module 4 - Prediction Models and Data Analysis &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -703,7 +703,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/handouts/Module 2 Notes.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/handouts/indev Module 4 Notes.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -723,10 +723,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/LeDataSciFi/ledatascifi-2022/issues/new?title=Issue%20on%20page%20%2Fhandouts/Module 2 Notes.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/LeDataSciFi/ledatascifi-2022/issues/new?title=Issue%20on%20page%20%2Fhandouts/indev Module 4 Notes.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/LeDataSciFi/ledatascifi-2022/edit/main/handouts/Module 2 Notes.ipynb"><button
+        <a class="edit-button" href="https://github.com/LeDataSciFi/ledatascifi-2022/edit/main/handouts/indev Module 4 Notes.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -746,7 +746,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/LeDataSciFi/ledatascifi-2022/main?urlpath=lab/tree/handouts/Module 2 Notes.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/LeDataSciFi/ledatascifi-2022/main?urlpath=lab/tree/handouts/indev Module 4 Notes.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -754,7 +754,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/LeDataSciFi/ledatascifi-2022/blob/main/handouts/Module 2 Notes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/LeDataSciFi/ledatascifi-2022/blob/main/handouts/indev Module 4 Notes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -779,23 +779,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numpy-notes">
-   Numpy Notes
+  <a class="reference internal nav-link" href="#modeling-notes">
+   Modeling Notes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pandas-notes">
-   Pandas Notes
+  <a class="reference internal nav-link" href="#regression-notes">
+   Regression Notes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-eda-wrangling-cleaning-notes">
-   Data/EDA/Wrangling/Cleaning Notes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualization-notes">
-   Visualization Notes
+  <a class="reference internal nav-link" href="#machine-learning-notes">
+   Machine Learning Notes
   </a>
  </li>
 </ul>
@@ -809,8 +804,8 @@
         
               <div>
                 
-  <div class="section" id="module-2-numpy-pandas-data-eda-wrangling-cleaning-visualization">
-<h1>Module 2 - Numpy, Pandas, Data EDA/Wrangling/Cleaning, Visualization<a class="headerlink" href="#module-2-numpy-pandas-data-eda-wrangling-cleaning-visualization" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-4-prediction-models-and-data-analysis">
+<h1>Module 4 - Prediction Models and Data Analysis<a class="headerlink" href="#module-4-prediction-models-and-data-analysis" title="Permalink to this headline">¶</a></h1>
 <p><em>My suggested use for this file is as an extra tab you keep open on the right side of your JupyterLab screen, and treat it like a notepad you’d use in a classroom. The left half of the screen will be good for files that have involved coding that should be stand alone files.</em></p>
 <div class="section" id="skills-and-concepts-to-learn-in-this-module">
 <h2>Skills AND CONCEPTS to learn in this Module<a class="headerlink" href="#skills-and-concepts-to-learn-in-this-module" title="Permalink to this headline">¶</a></h2>
@@ -818,62 +813,32 @@
 <p>Below are the key skills and concepts I want you to learn in this module in <em>roughly</em> the order we will cover them.</p>
 <p><em>**Note: This list is the key stuff, but not everything. We are scraping the surface **</em></p>
 <ul class="simple">
-<li><p>[ ] Numpy</p>
+<li><p>[ ] Modeling</p>
 <ul>
-<li><p>[ ] work on numerical operations on large arrays of numbers</p></li>
-<li><p>[ ] produce reproducible random numbers</p></li>
-<li><p>[ ] integrate Numpy functions on Pandas objects</p></li>
+<li><p>[ ] explore the modeling process</p></li>
+<li><p>[ ] determine appropriate models to use based on modeling objectives</p></li>
 </ul>
 </li>
-<li><p>[ ] Pandas</p>
+<li><p>[ ] Regression</p>
 <ul>
-<li><p>[ ] impose data into dataframes</p></li>
-<li><p>[ ] differentiate between “wide” and “tall” data</p></li>
-<li><p>[ ] loading and saving data</p></li>
-<li><p>[ ] manipulate and reshape data within dataframes</p></li>
-<li><p>[ ] perform numerical and statistical operations on dataframes</p></li>
+<li><p>[ ] learn basic notation and terminilogy for regression models</p></li>
+<li><p>[ ] measure goodness of fit on a regression</p></li>
+<li><p>[ ] interpret mechanical meanings of coefficients for different variable types</p></li>
+<li><p>[ ] understand statistical significance</p></li>
+<li><p>[ ] fit a regression with <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> and/or <code class="docutils literal notranslate"><span class="pre">sklearn</span></code></p></li>
 </ul>
 </li>
-<li><p>[ ] Data EDA/Wrangling/Cleaning</p>
+<li><p>[ ] <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> and Machine Learning</p>
 <ul>
-<li><p>[ ] understand Golden Rules for Exploratory Data Analysis (EDA)</p></li>
-<li><p>[ ] look for possible issues in data and methods to fix</p></li>
-<li><p>[ ] merging dataframes together</p></li>
-<li><p>[ ] dealing with outliers and/or missing data</p></li>
-</ul>
-</li>
-<li><p>[ ] Visualization</p>
-<ul>
-<li><p>[ ] create effective visualizations and models for data</p></li>
-<li><p>[ ] determine what plots to use based on data characteristics</p></li>
-<li><p>[ ] syntax for creating and customizing plots</p></li>
-<li><p>[ ] performing EDA on visualizations</p></li>
+<li><p>[ ] understand objectives and development of machine learning models</p></li>
+<li><p>[ ] evaluate models using “scoring metrics”</p></li>
+<li><p>[ ] understand mechanics of fitting models and best practices for machine learning models</p></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="numpy-notes">
-<h2>Numpy Notes<a class="headerlink" href="#numpy-notes" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span> <span class="p">(</span><span class="n">including</span> <span class="n">common</span> <span class="n">functions</span><span class="o">/</span><span class="n">methods</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="pandas-notes">
-<h2>Pandas Notes<a class="headerlink" href="#pandas-notes" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span> <span class="p">(</span><span class="n">including</span> <span class="n">common</span> <span class="n">functions</span><span class="o">/</span><span class="n">methods</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="data-eda-wrangling-cleaning-notes">
-<h2>Data/EDA/Wrangling/Cleaning Notes<a class="headerlink" href="#data-eda-wrangling-cleaning-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="modeling-notes">
+<h2>Modeling Notes<a class="headerlink" href="#modeling-notes" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span>
@@ -882,8 +847,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="visualization-notes">
-<h2>Visualization Notes<a class="headerlink" href="#visualization-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="regression-notes">
+<h2>Regression Notes<a class="headerlink" href="#regression-notes" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="machine-learning-notes">
+<h2>Machine Learning Notes<a class="headerlink" href="#machine-learning-notes" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 4 - Prediction Models and Data Analysis &#8212; LeDataSciFi-2022</title>
+    <title>Startup &#8212; LeDataSciFi-2022</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -703,7 +703,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/handouts/Module 4 Notes.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/handouts/Python exercises.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -723,10 +723,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/LeDataSciFi/ledatascifi-2022/issues/new?title=Issue%20on%20page%20%2Fhandouts/Module 4 Notes.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/LeDataSciFi/ledatascifi-2022/issues/new?title=Issue%20on%20page%20%2Fhandouts/Python exercises.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/LeDataSciFi/ledatascifi-2022/edit/main/handouts/Module 4 Notes.ipynb"><button
+        <a class="edit-button" href="https://github.com/LeDataSciFi/ledatascifi-2022/edit/main/handouts/Python exercises.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -746,7 +746,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/LeDataSciFi/ledatascifi-2022/main?urlpath=lab/tree/handouts/Module 4 Notes.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/LeDataSciFi/ledatascifi-2022/main?urlpath=lab/tree/handouts/Python exercises.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -754,7 +754,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/LeDataSciFi/ledatascifi-2022/blob/main/handouts/Module 4 Notes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/LeDataSciFi/ledatascifi-2022/blob/main/handouts/Python exercises.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -774,23 +774,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#skills-and-concepts-to-learn-in-this-module">
-   Skills AND CONCEPTS to learn in this Module
+  <a class="reference internal nav-link" href="#as-you-solve-the-questions-below">
+   As you solve the questions below:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modeling-notes">
-   Modeling Notes
+  <a class="reference internal nav-link" href="#python-essentials">
+   Python essentials
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regression-notes">
-   Regression Notes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#machine-learning-notes">
-   Machine Learning Notes
+  <a class="reference internal nav-link" href="#exercises-try-pair-share">
+   Exercises (try, pair, share)
   </a>
  </li>
 </ul>
@@ -804,64 +799,76 @@
         
               <div>
                 
-  <div class="section" id="module-4-prediction-models-and-data-analysis">
-<h1>Module 4 - Prediction Models and Data Analysis<a class="headerlink" href="#module-4-prediction-models-and-data-analysis" title="Permalink to this headline">¶</a></h1>
-<p><em>My suggested use for this file is as an extra tab you keep open on the right side of your JupyterLab screen, and treat it like a notepad you’d use in a classroom. The left half of the screen will be good for files that have involved coding that should be stand alone files.</em></p>
-<div class="section" id="skills-and-concepts-to-learn-in-this-module">
-<h2>Skills AND CONCEPTS to learn in this Module<a class="headerlink" href="#skills-and-concepts-to-learn-in-this-module" title="Permalink to this headline">¶</a></h2>
-<p>You can find the tasks for this module [on the dashboard page].</p>
-<p>Below are the key skills and concepts I want you to learn in this module in <em>roughly</em> the order we will cover them.</p>
-<p><em>**Note: This list is the key stuff, but not everything. We are scraping the surface **</em></p>
+  <div class="section" id="startup">
+<h1>Startup<a class="headerlink" href="#startup" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>Don’t forget to fetch your class notes repo AND the textbook repo.</p></li>
+<li><p>Copy these files from the textbook repo into your class notes/exercises folder:</p>
 <ul class="simple">
-<li><p>[ ] Modeling</p>
-<ul>
-<li><p>[ ] explore the modeling process</p></li>
-<li><p>[ ] determine appropriate models to use based on modeling objectives</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ledatascifi-2022/handouts/Python</span> <span class="pre">exercises.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ledatascifi-2022/content/01/06_python.ipynb</span></code></p></li>
 </ul>
 </li>
-<li><p>[ ] Regression</p>
-<ul>
-<li><p>[ ] learn basic notation and terminilogy for regression models</p></li>
-<li><p>[ ] measure goodness of fit on a regression</p></li>
-<li><p>[ ] interpret mechanical meanings of coefficients for different variable types</p></li>
-<li><p>[ ] understand statistical significance</p></li>
-<li><p>[ ] fit a regression with <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> and/or <code class="docutils literal notranslate"><span class="pre">sklearn</span></code></p></li>
-</ul>
-</li>
-<li><p>[ ] <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> and Machine Learning</p>
-<ul>
-<li><p>[ ] understand objectives and development of machine learning models</p></li>
-<li><p>[ ] evaluate models using “scoring metrics”</p></li>
-<li><p>[ ] understand mechanics of fitting models and best practices for machine learning models</p></li>
-</ul>
-</li>
+<li><p>Suggested: Open this exercise file on one side of your Jupyterlab screen and the two files above on the other side of your screen.</p></li>
+</ol>
+<div class="section" id="as-you-solve-the-questions-below">
+<h2>As you solve the questions below:<a class="headerlink" href="#as-you-solve-the-questions-below" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>use comments to take notes about code you’re writing as you figure things out</p></li>
+<li><p>take big picture notes in the module 1 notes file</p></li>
 </ul>
 </div>
-<div class="section" id="modeling-notes">
-<h2>Modeling Notes<a class="headerlink" href="#modeling-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python-essentials">
+<h2>Python essentials<a class="headerlink" href="#python-essentials" title="Permalink to this headline">¶</a></h2>
+<p>Loosely covers the <a class="reference external" href="https://ledatascifi.github.io/ledatascifi-2022/content/01/06_python.html#python-essentials">python essentials in 1.7.2</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is guided discussion AND practice,</span>
+<span class="c1"># follow along!</span>
+
+<span class="c1"># start running code from the textbook here</span>
+<span class="c1"># add as many new code cells as you want </span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="regression-notes">
-<h2>Regression Notes<a class="headerlink" href="#regression-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercises-try-pair-share">
+<h2>Exercises (try, pair, share)<a class="headerlink" href="#exercises-try-pair-share" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Say hi to the person next to you</p></li>
+<li><p><a class="reference external" href="https://github.com/orgs/LeDataSciFi/teams/classmates-2022/discussions/3">Try to guess each other’s lie</a></p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="machine-learning-notes">
-<h2>Machine Learning Notes<a class="headerlink" href="#machine-learning-notes" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
+<p>Write code that does the following with  the vector <code class="docutils literal notranslate"><span class="pre">L</span></code>. Discuss with the person next to you as needed:</p>
+<ol class="simple">
+<li><p>Returns the length.</p></li>
+<li><p>Returns the largest element.</p></li>
+<li><p>Returns the smallest element.</p></li>
+<li><p>Returns the total of the vector.</p></li>
+<li><p>Returns the first element. See <a class="reference external" href="https://stackoverflow.com/questions/509211/understanding-slice-notation?rq=1">this awesome answer</a> to learn about “slicing” lists in Python. If that link is dead: <a class="reference external" href="https://stackoverflow.com/questions/509211/understanding-slice-notation?rq=1">https://stackoverflow.com/questions/509211/understanding-slice-notation?rq=1</a></p></li>
+<li><p>Returns the last element.</p></li>
+<li><p>Returns the first 2 elements.</p></li>
+<li><p>Returns the last 2 elements.</p></li>
+<li><p>Returns the odd numbered elements (i.e. [8,6,7].</p></li>
+<li><p>Clear your output and restart the kernel, then rerun your code.</p></li>
+</ol>
+<div class="cell tag_popout docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span> <span class="n">your</span> <span class="n">notes</span> <span class="n">here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>       <span class="c1"># this is false, obviously,</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>        <span class="c1"># so this never runs and </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am not here.&#39;</span><span class="p">)</span> <span class="c1"># this doesn&#39;t print</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;starting new block&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>       <span class="c1"># this is false, obviously,</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>        <span class="c1"># so this never runs and </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am here&#39;</span><span class="p">)</span> <span class="c1"># this does print</span>
 </pre></div>
 </div>
 </div>
