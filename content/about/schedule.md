@@ -7,6 +7,7 @@ Key links:
 - [Main discussion board for classmates team](https://github.com/orgs/LeDataSciFi/teams/classmates-2022)
 - [Submitting questions, answers, and misc before class so we can discuss it in class](https://forms.gle/jB6ok11k5Ehid7ap6)
 - [Coursesite](https://coursesite.lehigh.edu/course/view.php?id=236371) is where you **start your assignments** 
+- [**NEW: Easy access to slides**](https://donbowen.github.io/slides-2022/)
 ```
 
 ```{warning}    
