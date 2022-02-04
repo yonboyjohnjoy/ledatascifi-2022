@@ -827,9 +827,15 @@
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">You got new data - fun! But before you go speeding off into analysis, first you must learn some basic facts about the data.</p>
+<p class="card-text">You got new data - fun! But before you go speeding off into analysis, first you must learn some basic facts about the data. Reading the dataset’s documentation is 10/10 a great idea (sadly though many datasets have bad documentation).</p>
 <p class="card-text">You should <strong>always, always, always</strong> open your datasets up to physically (digitally?) look at them<a class="footnote-reference brackets" href="#member" id="id1">1</a> and then also generate summary statistics. Here are <em>some</em> basic outputs you should examine carefully.</p>
 <ol class="simple">
+<li><p class="card-text">What is the unit of observation in this dataset?</p>
+<ul class="simple">
+<li><p class="card-text">The “unit levels” in databases we will look at are often increments of time (e.g. monthly or yearly), the type of entity (e.g. firm, person, state, country, industry), and also combinations of entity type and time.</p></li>
+<li><p class="card-text">E.g. “firm” level, “firm-year” level</p></li>
+</ul>
+</li>
 <li><p class="card-text">Print the first and last five rows: <code class="docutils literal notranslate"><span class="pre">df.head()</span></code> and <code class="docutils literal notranslate"><span class="pre">df.tail()</span></code></p></li>
 <li><p class="card-text">What is the shape (# rows and variables) of the data? <code class="docutils literal notranslate"><span class="pre">df.shape</span></code></p></li>
 <li><p class="card-text">Print the column names</p></li>
