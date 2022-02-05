@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -849,33 +851,39 @@
 <div class="section" id="the-regression-model-and-terminology">
 <h2><span class="section-number">5.2.1.1. </span>The regression “model” and terminology<a class="headerlink" href="#the-regression-model-and-terminology" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you want to describe the relationship between two variables, y and X. You might model that relationship as a straight line:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[ 
 y=a+\beta x
-$$</p>
-<p>But that line can’t exactly fit all the points of data, so you need to account for the discrepancies, and so we add a “error term” or “disturbance” denoted by $u$</p>
-<p>$$
+\]</div>
+<p>But that line can’t exactly fit all the points of data, so you need to account for the discrepancies, and so we add a “error term” or “disturbance” denoted by <span class="math notranslate nohighlight">\(u\)</span></p>
+<div class="math notranslate nohighlight">
+\[ 
 y=a+\beta x+u
-$$</p>
-<p>Now, we want to estimate $a$ and $\beta$ to best “fit” the data. Imagine you pick/estimate $\hat{a}$ and $\hat{\beta}$  to fit the data. If you apply that to all the X data points like $\hat{a} + \hat{\beta}x$ , then you get a <strong>predicted value for $y$</strong>:</p>
-<p>$$
+\]</div>
+<p>Now, we want to estimate <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> to best “fit” the data. Imagine you pick/estimate <span class="math notranslate nohighlight">\(\hat{a}\)</span> and <span class="math notranslate nohighlight">\(\hat{\beta}\)</span>  to fit the data. If you apply that to all the X data points like <span class="math notranslate nohighlight">\(\hat{a} + \hat{\beta}x\)</span> , then you get a <strong>predicted value for <span class="math notranslate nohighlight">\(y\)</span></strong>:</p>
+<div class="math notranslate nohighlight">
+\[ 
 \hat{y} = \hat{a} + \hat{\beta}x
-$$</p>
-<p>We call $\hat{y}$ the “fitted values” or the “predicted values” of y. And the difference between each actual $y$ and the predicted $\hat{y}$ is called the <strong>residual</strong> or <strong>error</strong>:</p>
-<p>$$
-y-\hat{y} = \hat{u} = \text{“residual” aka “error”}
-$$</p>
-<p>You can see all this visually in this graph, where I’ve plotted some X and y variable, and decided to see how well a line with  $\hat{\alpha}=8$ and $\hat{\beta}=1.5$ fit it:</p>
+\]</div>
+<p>We call <span class="math notranslate nohighlight">\(\hat{y}\)</span> the “fitted values” or the “predicted values” of y. And the difference between each actual <span class="math notranslate nohighlight">\(y\)</span> and the predicted <span class="math notranslate nohighlight">\(\hat{y}\)</span> is called the <strong>residual</strong> or <strong>error</strong>:</p>
+<div class="math notranslate nohighlight">
+\[ 
+y-\hat{y} = \hat{u} = \text{&quot;residual&quot; aka &quot;error&quot;}
+\]</div>
+<p>You can see all this visually in this graph, where I’ve plotted some X and y variable, and decided to see how well a line with  <span class="math notranslate nohighlight">\(\hat{\alpha}=8\)</span> and <span class="math notranslate nohighlight">\(\hat{\beta}=1.5\)</span> fit it:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../../_images/02a_basics_2_0.png" src="../../_images/02a_basics_2_0.png" />
 </div>
 </div>
-<p>So after you pick an $\hat{a}$ and $\hat{\beta}$, you compute the vertical distance between the fitted line and every point.</p>
+<p>So after you pick an <span class="math notranslate nohighlight">\(\hat{a}\)</span> and <span class="math notranslate nohighlight">\(\hat{\beta}\)</span>, you compute the vertical distance between the fitted line and every point.</p>
 <p>The goal of estimation (any estimation, including regression) is to make these errors as “small” as possible. Regression is aka’ed as “Ordinary Least Squares” which as it sounds, takes those errors, squares them, adds those up, and minimizes the sum</p>
-<p>$$ \min \sum(y-\hat{y})^2 $$</p>
-<p>and we can substitute $\hat{y}$ in to that and get:</p>
-<p>$$ \min \sum(y-\hat{a} + \hat{\beta}x)  $$</p>
-<p>By solving this problem, you’re in essence “plotting” a bunch of these lines (with corresponding slopes and intercepts), and each time, you get the error for each datapoint ($\hat{u}$), and choosing the line that fits the data the best.</p>
+<div class="math notranslate nohighlight">
+\[ \min \sum(y-\hat{y})^2 \]</div>
+<p>and we can substitute <span class="math notranslate nohighlight">\(\hat{y}\)</span> in to that and get:</p>
+<div class="math notranslate nohighlight">
+\[ \min \sum(y-\hat{a} + \hat{\beta}x)  \]</div>
+<p>By solving this problem, you’re in essence “plotting” a bunch of these lines (with corresponding slopes and intercepts), and each time, you get the error for each datapoint (<span class="math notranslate nohighlight">\(\hat{u}\)</span>), and choosing the line that fits the data the best.</p>
 <p>So, to combine this with the <a class="reference internal" href="01b_model_process.html"><span class="doc std std-doc">“Modeling process” page</span></a>, regression follows the same steps as any estimation:</p>
 <ol class="simple">
 <li><p>Select a model. <em>In a regression, the model is a line (if you only have 1 X variable) or a hyperplane (if you have many X variables).</em></p></li>

@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -871,7 +873,7 @@
 <p>If you have a classification problem (the “binary variable” rows in the table above), you have to think about your problem. <a class="reference external" href="https://www.textbook.ds100.org/ch/24/classification_sensitivity_specificity.html">I REALLY like the discussion on this page from DS100.</a></p>
 <ul class="simple">
 <li><p>In medical tests more broadly, false negatives are really bad - if someone has cancer, don’t tell them they are cancer free. Thus, medical tests tend to minimize false negatives.</p></li>
-<li><p>Minimizing false negatives is the same as maximizing the true positives, aka the “sensitivity” of a test, since $FNR=1-TPR$. Better covid tests have higher specificity, because if someone has covid, we want to know that so we can require a quarantine.</p></li>
+<li><p>Minimizing false negatives is the same as maximizing the true positives, aka the “sensitivity” of a test, since <span class="math notranslate nohighlight">\(FNR=1-TPR\)</span>. Better covid tests have higher specificity, because if someone has covid, we want to know that so we can require a quarantine.</p></li>
 <li><p>In the legal field, false positives (imprisoning an innocent person) are considered worse than false negatives.</p></li>
 <li><p>Identifying terrorists? You might want to maximize the detection rate (“recall”). Of course, simply saying “everyone is a terrorist” is guaranteed to generate a recall rate of 100%! But this rule would have a precision of about 0%! So you also should think about “precision” too. Maybe F1 is the metric for you.</p></li>
 </ul>

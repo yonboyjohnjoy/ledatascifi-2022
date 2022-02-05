@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -840,8 +842,8 @@
 <p>We want to develop a model that performs well in the real world. To do that,</p>
 <ol class="simple">
 <li><p>Create a holdout sample.</p></li>
-<li><p>“Train” many models on a portion of the training sample, and use each to predict $y$ on the remaining/unused part of the training sample.</p></li>
-<li><p>Repeat step 2 $k$ times, to see how consistently accurate each model is.</p></li>
+<li><p>“Train” many models on a portion of the training sample, and use each to predict <span class="math notranslate nohighlight">\(y\)</span> on the remaining/unused part of the training sample.</p></li>
+<li><p>Repeat step 2 <span class="math notranslate nohighlight">\(k\)</span> times, to see how consistently accurate each model is.</p></li>
 <li><p>Pick your preferred model.</p></li>
 <li><p>One time only: Apply your preferred model to the holdout sample to see if it performs as well.</p></li>
 </ol>
@@ -880,7 +882,7 @@
 <p>It would be nice to have more validation samples, wouldn’t it?!</p>
 <p>Great idea: <strong>K-Fold Cross-Validation.</strong></p>
 </div>
-<p><strong>K-Fold Cross-Validation:</strong>  Take the training data (85% of the original sample) and split it up into a training and validation sample, fit the model on the smaller training sample, and test it on the validation sample. Then repeat this by dividing the data into a different training/validation split. And repeat this $k$ times to get $k$ validation samples.</p>
+<p><strong>K-Fold Cross-Validation:</strong>  Take the training data (85% of the original sample) and split it up into a training and validation sample, fit the model on the smaller training sample, and test it on the validation sample. Then repeat this by dividing the data into a different training/validation split. And repeat this <span class="math notranslate nohighlight">\(k\)</span> times to get <span class="math notranslate nohighlight">\(k\)</span> validation samples.</p>
 <p>Here, it looks like this:</p>
 <p><img alt="From DS100" src="../../_images/feature_5_fold_cv.jpg" /></p>
 </div>
@@ -893,7 +895,7 @@
 <li><p>Split the “training set” up into a smaller “training” set and a “validation set”.</p></li>
 <li><p>Estimate the model on the smaller training set. The error of the model on this is the “training error”.</p></li>
 <li><p>Apply the model to the validation set to calculate the “validation error”.</p></li>
-<li><p>Repeat these “training-validation” steps $k$ times to get the average validation error.</p></li>
+<li><p>Repeat these “training-validation” steps <span class="math notranslate nohighlight">\(k\)</span> times to get the average validation error.</p></li>
 <li><p>Repeat these steps on each candidate model you are considering.</p></li>
 <li><p>The model that has the lowest average validation error is your model.</p></li>
 </ol>

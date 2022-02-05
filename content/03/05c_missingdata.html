@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -840,7 +842,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">dropna</span></code> - might not be explicitly needed, some functions ignore NaNs, but some don’t. I tend to drop only as needed for a given estimation, and only temporarily.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replace</span></code> - some datasets use a certain number to indicate missing data (i.e. -99). Convert these to NaN with this function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interpolate</span></code> - e.g. use values in surrounding time periods to fill in gaps</p></li>
-<li><p>Deduce. Suppose PPE this year is missing. $PPE_t = PPE_{t-1} + CAPX_t - DP_t $</p></li>
+<li><p>Deduce. Suppose PPE this year is missing. <span class="math notranslate nohighlight">\(PPE_t = PPE_{t-1} + CAPX_t - DP_t \)</span></p></li>
 </ul>
 </div>
 <div class="section" id="practice">

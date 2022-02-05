@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -882,7 +884,7 @@
 </ul>
 </li>
 <li><p>With both modules: You can view the results visually</p></li>
-<li><p>With both modules: You can get the coefficients, t-stats, R$^2$, Adj R$^2$, predicted values ($\hat{y}$), and residuals ($\hat{u}$)</p></li>
+<li><p>With both modules: You can get the coefficients, t-stats, R<span class="math notranslate nohighlight">\(^2\)</span>, Adj R<span class="math notranslate nohighlight">\(^2\)</span>, predicted values (<span class="math notranslate nohighlight">\(\hat{y}\)</span>), and residuals (<span class="math notranslate nohighlight">\(\hat{u}\)</span>)</p></li>
 </ol>
 <p>Let’s get our hands dirty quickly by loading some data.</p>
 <div class="cell docutils container">
@@ -999,7 +1001,7 @@ dtype: float64
 </div>
 <p><strong>WOW!</strong> This isn’t just more convenient (1 line is less than 3), I like this because</p>
 <ol class="simple">
-<li><p>You can set up the model (the equation) more naturally. Notice that I didn’t set up the y and X variables as explicit variables. Simply tell that $y=a+b<em>X+c</em>Z$ by writing out <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">X</span> <span class="pre">+</span> <span class="pre">Z</span></code></p></li>
+<li><p>You can set up the model (the equation) more naturally. Notice that I didn’t set up the y and X variables as explicit variables. Simply tell that <span class="math notranslate nohighlight">\(y=a+b*X+c*Z\)</span> by writing out <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">X</span> <span class="pre">+</span> <span class="pre">Z</span></code></p></li>
 <li><p>It allows you to <strong>EASILY</strong> include categorical variables (see below)</p></li>
 <li><p>It allows you to <strong>EASILY</strong> include interaction effects (see below)</p></li>
 </ol>
@@ -1104,7 +1106,7 @@ COEFS: [0.         1.68193567]
 </div>
 <div class="section" id="plotting-the-regression-fit">
 <h2><span class="section-number">5.2.2.5. </span>Plotting the regression fit<a class="headerlink" href="#plotting-the-regression-fit" title="Permalink to this headline">¶</a></h2>
-<p>Once you save the predicted values ($\hat{y}$), it’s easy to add it to a plot:</p>
+<p>Once you save the predicted values (<span class="math notranslate nohighlight">\(\hat{y}\)</span>), it’s easy to add it to a plot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1133,18 +1135,20 @@ COEFS: [0.         1.68193567]
 <div class="section" id="including-dummy-variables">
 <h2><span class="section-number">5.2.2.6. </span>Including dummy variables<a class="headerlink" href="#including-dummy-variables" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you started by estimating the price of diamonds as a function of carats</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \log(\text{price})=a+\beta_0 \log(\text{carat}) +u
-$$</p>
+\]</div>
 <p>but you realize it will be different for ideal cut diamonds. That is, a 1 carat diamond might cost $1,000, but if it’s ideal, it’s an extra $500 dollars.</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \log(\text{price})=
-\begin{cases}
-a+\beta_0 \log(\text{carat}) + \beta_1 +u, &amp; \text{if ideal cut}  \
-a+\beta_0 \log(\text{carat}) +u, &amp; \text{otherwise}
-\end{cases}
-$$</p>
-<p>Notice that $\beta_0$ in this model are the same for ideal and non-ideal.</p>
+    \begin{cases}
+      a+\beta_0 \log(\text{carat}) + \beta_1 +u, &amp; \text{if ideal cut}  \\
+      a+\beta_0 \log(\text{carat}) +u, &amp; \text{otherwise}
+    \end{cases} 
+\end{split}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(\beta_0\)</span> in this model are the same for ideal and non-ideal.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Here is how you run this test: You just add the dummy variable as a new variable in the formula!</strong></p>
@@ -1192,16 +1196,17 @@ Notes:
 <div class="section" id="including-categorical-variables">
 <h2><span class="section-number">5.2.2.7. </span>Including categorical variables<a class="headerlink" href="#including-categorical-variables" title="Permalink to this headline">¶</a></h2>
 <p>Dummy variables take on two values (on/off, True/False, 0/1). Categorical variables can take on many levels. “Industry” and “State” are typical categorical variables in finance applications.</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \log(\text{price})=
-\begin{cases}
-a+\beta_0 \log(\text{carat}) + \beta_1 +u, &amp; \text{if premium cut}  \
-a+\beta_0 \log(\text{carat}) + \beta_2 +u, &amp; \text{if very good cut}  \
-a+\beta_0 \log(\text{carat}) + \beta_3 +u, &amp; \text{if good cut}  \
-a+\beta_0 \log(\text{carat}) + \beta_4 +u, &amp; \text{if fair cut}  \
-a+\beta_0 \log(\text{carat}) +u, &amp; \text{otherwise (i.e. ideal)}
-\end{cases}
-$$</p>
+    \begin{cases}
+      a+\beta_0 \log(\text{carat}) + \beta_1 +u, &amp; \text{if premium cut}  \\
+      a+\beta_0 \log(\text{carat}) + \beta_2 +u, &amp; \text{if very good cut}  \\
+      a+\beta_0 \log(\text{carat}) + \beta_3 +u, &amp; \text{if good cut}  \\
+      a+\beta_0 \log(\text{carat}) + \beta_4 +u, &amp; \text{if fair cut}  \\
+      a+\beta_0 \log(\text{carat}) +u, &amp; \text{otherwise (i.e. ideal)}
+    \end{cases} 
+\end{split}\]</div>
 <p><code class="docutils literal notranslate"><span class="pre">sm_ols</span></code> also processes categorical variables easily!</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1213,7 +1218,7 @@ $$</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>WARNING 2: You don’t create a dummy variable for all the categories! As long as you include a constant in the regression ($a$), one of the categories is covered by the constant. Above, “ideal” is captured by the intercept.</p>
+<p>WARNING 2: You don’t create a dummy variable for all the categories! As long as you include a constant in the regression (<span class="math notranslate nohighlight">\(a\)</span>), one of the categories is covered by the constant. Above, “ideal” is captured by the intercept.</p>
 <p>And if you look at the results of the next regression, the “ideal” cut level doesn’t have a coefficient. <strong>Statsmodels</strong> automatically drops one of the categories when you use the formula approach. Nice!!!</p>
 <p>But if you manually set up the regression in statsmodels or sklearn, you have to drop one level yourself!!!</p>
 </div>
@@ -1293,17 +1298,20 @@ Notes:
 </div>
 </div>
 <p>Those two different lines above are estimated by</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \log(\text{price})= a+ \beta_0 \log(\text{carat}) + \beta_1 \text{Ideal} + \beta_2\log(\text{carat})\cdot \text{Ideal}
-$$</p>
-<p>If you plug in 1 for $ideal$, you get the line for ideal diamonds as</p>
-<p>$$
-\log(\text{price})= a+ \beta_1 +(\beta_0 + \beta_2) \log(\text{carat})
-$$</p>
-<p>If you plug in 0 for $ideal$, you get the line for fair diamonds as</p>
-<p>$$
-\log(\text{price})= a+ \beta_0 \log(\text{carat})
-$$</p>
+\]</div>
+<p>If you plug in 1 for <span class="math notranslate nohighlight">\(ideal\)</span>, you get the line for ideal diamonds as</p>
+<div class="math notranslate nohighlight">
+\[
+\log(\text{price})= a+ \beta_1 +(\beta_0 + \beta_2) \log(\text{carat}) 
+\]</div>
+<p>If you plug in 0 for <span class="math notranslate nohighlight">\(ideal\)</span>, you get the line for fair diamonds as</p>
+<div class="math notranslate nohighlight">
+\[
+\log(\text{price})= a+ \beta_0 \log(\text{carat}) 
+\]</div>
 <p>So, by including that interaction term, you get that the slope on carats is different for Ideal than Fair diamonds.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

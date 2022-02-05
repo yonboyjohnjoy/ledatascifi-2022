@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -885,8 +887,8 @@
 </div>
 <p><strong>Step 5: Apply the model to new data. Either:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;modelname&gt;.predict(X_test)</span></code> will predict what $y$ should be using $X_test$, and is used in <a class="reference internal" href="03e_whichModel.html"><span class="doc std std-doc">supervised learning</span></a> tasks</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;modelname&gt;.transform(X_test)</span></code> will change $X_test$ using the model, and is common with preprocessing and <a class="reference internal" href="03e_whichModel.html"><span class="doc std std-doc">unsupervised learning</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;modelname&gt;.predict(X_test)</span></code> will predict what <span class="math notranslate nohighlight">\(y\)</span> should be using <span class="math notranslate nohighlight">\(X_test\)</span>, and is used in <a class="reference internal" href="03e_whichModel.html"><span class="doc std std-doc">supervised learning</span></a> tasks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;modelname&gt;.transform(X_test)</span></code> will change <span class="math notranslate nohighlight">\(X_test\)</span> using the model, and is common with preprocessing and <a class="reference internal" href="03e_whichModel.html"><span class="doc std std-doc">unsupervised learning</span></a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -817,9 +819,10 @@
 <p style="font-size:2em"> The bias-variance tradeoff </p> 
 <p>A model will create predictions, and those predictions will be wrong to some degree when we generalize outside our initial data.</p>
 <p>It turns out we can decompose the expected error of <em>a model</em> like this<a class="footnote-reference brackets" href="#biasform" id="id1">1</a></p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E[\text{model error risk}] = \text{model bias}^2+\text{model variance}+\text{noise}
-$$</p>
+\]</div>
 <p><strong>“Model bias”</strong></p>
 <ul class="simple">
 <li><p>Def: Is errors stemming from the model’s assumptions in how it predicts the outcome variable. (It is the opposite of model accuracy.)</p></li>
@@ -852,8 +855,8 @@ $$</p>
 </div></blockquote>
 <p>I like these two graphs to see all of this discussion visually:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b266a6d2-b218-4a5c-964e-287c4fbd97cd" name="dc284aed-ffbe-40ee-b1e9-18017de5a2c3" type="radio">
-</input><label class="tabbed-label" for="b266a6d2-b218-4a5c-964e-287c4fbd97cd">
+<input checked="checked" id="ca6d2d2f-4a49-4459-9ece-24a457c6b2a5" name="92e3ae93-99d2-4673-a38a-585ee7e8bb3a" type="radio">
+</input><label class="tabbed-label" for="ca6d2d2f-4a49-4459-9ece-24a457c6b2a5">
 The classic bias-variance tradeoff</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Models that are too simple are said to be <strong>“underfit”</strong> (take steps to reduce bias)</p></li>
@@ -861,8 +864,8 @@ The classic bias-variance tradeoff</label><div class="tabbed-content docutils">
 </ul>
 <a class="reference internal image-reference" href="../../_images/bias_modeling_bias_var_plot.png"><img alt="bias_var" src="../../_images/bias_modeling_bias_var_plot.png" style="width: 500px;" /></a>
 </div>
-<input id="f12bbb09-1590-46a6-a090-1f7dcb042f5e" name="dc284aed-ffbe-40ee-b1e9-18017de5a2c3" type="radio">
-</input><label class="tabbed-label" for="f12bbb09-1590-46a6-a090-1f7dcb042f5e">
+<input id="582045eb-6bd9-4329-9501-209178d520e9" name="92e3ae93-99d2-4673-a38a-585ee7e8bb3a" type="radio">
+</input><label class="tabbed-label" for="582045eb-6bd9-4329-9501-209178d520e9">
 Optimizing model performance via complexity</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Models that are too simple perform poorly (low scores, high bias)</p></li>

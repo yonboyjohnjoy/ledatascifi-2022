@@ -47,6 +47,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -834,9 +836,10 @@
   <div class="section" id="statistical-significance">
 <h1><span class="section-number">5.2.5. </span>Statistical significance<a class="headerlink" href="#statistical-significance" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="02b_mechanics.html#including-interaction-terms">Previously,</a> we estimated</p>
-<p>$$
-\log(\text{price})= 8.2+ 1.53 <em>\log(\text{carat}) + 0.33</em> \text{Ideal} + 0.18* \log(\text{carat})\cdot \text{Ideal}
-$$</p>
+<div class="math notranslate nohighlight">
+\[
+\log(\text{price})= 8.2+ 1.53 *\log(\text{carat}) + 0.33* \text{Ideal} + 0.18* \log(\text{carat})\cdot \text{Ideal}
+\]</div>
 <p>Those coefficients are <em>estimates</em>, not gospel. There is some uncertainty about what the “true” value should be.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -942,7 +945,7 @@ $$</p>
 <td class="text-align:left"><p>The standard error of the coefficient estimate</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>“t”</p></td>
-<td class="text-align:left"><p>The <em><strong>“t-stat”</strong></em> = $\beta$ divided by its standard error</p></td>
+<td class="text-align:left"><p>The <em><strong>“t-stat”</strong></em> = <span class="math notranslate nohighlight">\(\beta\)</span> divided by its standard error</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>“P&gt;t”</p></td>
 <td class="text-align:left"><p>The <em><strong>“p-value”</strong></em> is the probability that the coefficient is different than zero by random chance.</p></td>

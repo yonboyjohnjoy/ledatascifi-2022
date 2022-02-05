@@ -47,6 +47,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -955,11 +957,11 @@
 <p>Ambitious, but fun; This class in miniature!</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
-<p>Where  $V$ is the NPV of your education, $B$ is biz/econ skills, and $T$ is the technical skills covered in this class:</p>
+<p>Where  <span class="math notranslate nohighlight">\(V\)</span> is the NPV of your education, <span class="math notranslate nohighlight">\(B\)</span> is biz/econ skills, and <span class="math notranslate nohighlight">\(T\)</span> is the technical skills covered in this class:</p>
 <ol class="simple">
-<li><p>$\delta V/\delta B &gt; 0$ (good choice in your major!)</p></li>
-<li><p>$\delta V/\delta T &gt; 0$, and $\delta T$ is achievable</p></li>
-<li><p>$\delta^2 V/\delta T \delta B &gt; 0$ is important but overlooked</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta V/\delta B &gt; 0\)</span> (good choice in your major!)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta V/\delta T &gt; 0\)</span>, and <span class="math notranslate nohighlight">\(\delta T\)</span> is achievable</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta^2 V/\delta T \delta B &gt; 0\)</span> is important but overlooked</p></li>
 </ol>
 <p>On #2: Who has estimated beta for a stock in FIN323, FIN328, or FIN335?</p>
 <p>On #3: Let’s play a game! <em>(Unmute your mics now)</em></p>
@@ -1024,9 +1026,9 @@
 <h2>Good valuation wasn’t a good enough tool<a class="headerlink" href="#good-valuation-wasn-t-a-good-enough-tool" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://twitter.com/macrocephalopod/status/1455887352371597312?lang=en">Let’s define a model, and let Zillow’s valuation be 2x better than homeowners:</a></p>
 <ol class="simple">
-<li><p>True value of a house is $v$, with $v \sim U[250,000, 2,500,000]$</p></li>
-<li><p>Owner’s guess $v*(1+e_o)$, with $e_o \sim N(0,10%)$</p></li>
-<li><p>Zillow’s algo predicts $v*(1+e_z)$, with $e_z \sim N(0,5%)$</p></li>
+<li><p>True value of a house is <span class="math notranslate nohighlight">\(v\)</span>, with <span class="math notranslate nohighlight">\(v \sim U[250,000, 2,500,000]\)</span></p></li>
+<li><p>Owner’s guess <span class="math notranslate nohighlight">\(v*(1+e_o)\)</span>, with <span class="math notranslate nohighlight">\(e_o \sim N(0,10\%)\)</span></p></li>
+<li><p>Zillow’s algo predicts <span class="math notranslate nohighlight">\(v*(1+e_z)\)</span>, with <span class="math notranslate nohighlight">\(e_z \sim N(0,5\%)\)</span></p></li>
 <li><p>Because of winner’s curse and the transaction cost owners face moving, Zillow is only able to buy houses when it offers more than 20% above what the owner thinks the house is worth. <strong>Talk about is adverse selection.</strong></p></li>
 <li><p>If Zillow buys the house, they subsequently sells the house at the true value.</p></li>
 </ol>
@@ -1054,9 +1056,9 @@
 <h2>What do we learn?<a class="headerlink" href="#what-do-we-learn" title="Permalink to this headline">¶</a></h2>
 <p>Recall, my three initial assertions:</p>
 <ol class="simple">
-<li><p>$\delta V/\delta B &gt; 0$ (good choice in your major!)</p></li>
-<li><p>$\delta V/\delta T &gt; 0$, and $\delta T$ is achievable</p></li>
-<li><p><mark> $\delta^2 V/\delta T \delta B &gt; 0$ is important but overlooked </mark></p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta V/\delta B &gt; 0\)</span> (good choice in your major!)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta V/\delta T &gt; 0\)</span>, and <span class="math notranslate nohighlight">\(\delta T\)</span> is achievable</p></li>
+<li><p><mark> <span class="math notranslate nohighlight">\(\delta^2 V/\delta T \delta B &gt; 0\)</span> is important but overlooked </mark></p></li>
 </ol>
 <p>The Zillow case study illustrates the last one.</p>
 <p>The Zillow team got obsessed with the technical skills and how good their pricing model could be. A little attention to the business forces could have saved them a lot of money!</p>
@@ -1064,8 +1066,8 @@
 <div class="section" id="the-goal-in-this-class-is-to-both">
 <h2>The goal in this class is to both<a class="headerlink" href="#the-goal-in-this-class-is-to-both" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>add some powerful skills to the bottom of your resume ($T \uparrow$)</p></li>
-<li><p>think about how business settings impact the use of those skills ($T*B \uparrow$)</p></li>
+<li><p>add some powerful skills to the bottom of your resume (<span class="math notranslate nohighlight">\(T \uparrow\)</span>)</p></li>
+<li><p>think about how business settings impact the use of those skills (<span class="math notranslate nohighlight">\(T*B \uparrow\)</span>)</p></li>
 </ol>
 <p>So that you get the good jobs, but avoid losing $381m!</p>
 </div>
@@ -1104,7 +1106,7 @@ us states</p>
 <li><p>Course oriented towards skills in Objectives</p></li>
 <li><p>Structure (read it)</p>
 <ul>
-<li><p>$E(Outcomes) = f(work)$, but lots of support</p></li>
+<li><p><span class="math notranslate nohighlight">\(E(Outcomes) = f(work)\)</span>, but lots of support</p></li>
 <li><p><a class="reference external" href="https://ledatascifi.github.io/ledatascifi-2022/content/about/help.html">15 minute rule + help</a></p></li>
 <li><p>Announcements via on GitHub classmates team only! Coursesite is only for sharing private links and office hours.</p></li>
 </ul>
