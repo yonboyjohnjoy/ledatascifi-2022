@@ -47,8 +47,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -1289,9 +1287,9 @@ The returns don’t even have to be firms! They can be any asset. (Portfolios, m
 </div>
 <div class="section" id="get-the-factor-returns">
 <h2>Get the factor returns<a class="headerlink" href="#get-the-factor-returns" title="Permalink to this headline">¶</a></h2>
-<p>Above, we got the asset returns, <span class="math notranslate nohighlight">\(r_i\)</span>.</p>
-<p>To estimate <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> in <span class="math notranslate nohighlight">\(r_i-r_f = \alpha + \beta (r_m-r_f)\)</span>, we need <span class="math notranslate nohighlight">\((r_m-r_f)\)</span> and <span class="math notranslate nohighlight">\(r_f\)</span>. Let’s download those now.</p>
-<p>Note: <span class="math notranslate nohighlight">\((r_m-r_f)\)</span> is the excess return on the market, which is <em>one</em> “factor”. Modern asset pricing typically uses 5 factors in tests.</p>
+<p>Above, we got the asset returns, $r_i$.</p>
+<p>To estimate $\alpha$ and $\beta$ in $r_i-r_f = \alpha + \beta (r_m-r_f)$, we need $(r_m-r_f)$ and $r_f$. Let’s download those now.</p>
+<p>Note: $(r_m-r_f)$ is the excess return on the market, which is <em>one</em> “factor”. Modern asset pricing typically uses 5 factors in tests.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We need (r_mkt - rf), and rf</span>

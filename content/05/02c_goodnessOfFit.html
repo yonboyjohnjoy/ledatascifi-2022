@@ -47,8 +47,6 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -810,12 +808,12 @@
   <li>You can measure the goodness of fit on a regression</li>
 </ol> 
 <div class="admonition-r-2-and-adjusted-r-2 admonition">
-<p class="admonition-title">R<span class="math notranslate nohighlight">\(^2\)</span> and Adjusted R<span class="math notranslate nohighlight">\(^2\)</span></p>
+<p class="admonition-title">R$^2$ and Adjusted R$^2$</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R^2 = 1-SSE/TSS\)</span> = The fraction of variation in y that a model <strong>can</strong> explain, and always between 0 and 1.</p></li>
-<li><p>Adding extra variables to a model can not reduce R<span class="math notranslate nohighlight">\(^2\)</span> <em>even if the variables are random</em></p></li>
-<li><p>Adjusted R<span class="math notranslate nohighlight">\(^2\)</span> adjusts R<span class="math notranslate nohighlight">\(^2\)</span> by penalizing based on the number of variables in X. It can actually be negative.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sm_ols(&lt;model</span> <span class="pre">and</span> <span class="pre">data&gt;).fit().summary()</span></code> automatically reports R<span class="math notranslate nohighlight">\(^2\)</span> and Adjusted R<span class="math notranslate nohighlight">\(^2\)</span></p></li>
+<li><p>$R^2 = 1-SSE/TSS$ = The fraction of variation in y that a model <strong>can</strong> explain, and always between 0 and 1.</p></li>
+<li><p>Adding extra variables to a model can not reduce R$^2$ <em>even if the variables are random</em></p></li>
+<li><p>Adjusted R$^2$ adjusts R$^2$ by penalizing based on the number of variables in X. It can actually be negative.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sm_ols(&lt;model</span> <span class="pre">and</span> <span class="pre">data&gt;).fit().summary()</span></code> automatically reports R$^2$ and Adjusted R$^2$</p></li>
 </ul>
 </div>
 <p>A key goal of just about any model is describing the data. In other words, how well does the model explain the data?</p>
@@ -899,17 +897,17 @@
 <img alt="../../_images/02c_goodnessOfFit_4_0.png" src="../../_images/02c_goodnessOfFit_4_0.png" />
 </div>
 </div>
-<p>The way we can capture that statistically is by computing R<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<p>The way we can capture that statistically is by computing R$^2$.</p>
 <ul class="simple">
-<li><p>Step 1: The total sum of squares: TSS <span class="math notranslate nohighlight">\(= \sum_i (y_i - \bar{y}_i)^2\)</span> captures the total amount of variation in <span class="math notranslate nohighlight">\(y\)</span> around its mean <span class="math notranslate nohighlight">\(\bar{y}\)</span>. We’d like to explain as much of this as possible.</p></li>
-<li><p>Step 2:  The sum of squared errors: SSE <span class="math notranslate nohighlight">\(= \sum_i (y_i - \hat{y}_i)^2\)</span> captures the total amount of errors in the predictions. We’d like this to be as close to zero.</p></li>
-<li><p>Step 3: <span class="math notranslate nohighlight">\(SSE/TSS\)</span> = The fraction of variation in y that a model <strong>can’t</strong> explain</p></li>
+<li><p>Step 1: The total sum of squares: TSS $= \sum_i (y_i - \bar{y}_i)^2$ captures the total amount of variation in $y$ around its mean $\bar{y}$. We’d like to explain as much of this as possible.</p></li>
+<li><p>Step 2:  The sum of squared errors: SSE $= \sum_i (y_i - \hat{y}_i)^2$ captures the total amount of errors in the predictions. We’d like this to be as close to zero.</p></li>
+<li><p>Step 3: $SSE/TSS$ = The fraction of variation in y that a model <strong>can’t</strong> explain</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(R^2 = 1-SSE/TSS\)</span> = The fraction of variation in y that a model <strong>can</strong> explain</p>
+<p>$R^2 = 1-SSE/TSS$ = The fraction of variation in y that a model <strong>can</strong> explain</p>
 </div>
-<p>Statsmodels reports R<span class="math notranslate nohighlight">\(^2\)</span> and Adjusted R<span class="math notranslate nohighlight">\(^2\)</span>  by default with <code class="docutils literal notranslate"><span class="pre">.summary()</span></code>.</p>
+<p>Statsmodels reports R$^2$ and Adjusted R$^2$  by default with <code class="docutils literal notranslate"><span class="pre">.summary()</span></code>.</p>
 <p>Let’s confirm that Model 1 &gt; Model 2, and that Blue &gt; Orange:</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">

@@ -47,8 +47,6 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -865,8 +863,8 @@
 <h2><span class="section-number">5.1.2.1. </span>What type of question are you asking?<a class="headerlink" href="#what-type-of-question-are-you-asking" title="Permalink to this headline">¶</a></h2>
 <p>Most analyses fall into one of two camps, based on the type of question:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e06d1a5a-a594-4027-ac40-199197d9c549" name="89a4d91f-f620-45e2-9937-69fb35948069" type="radio">
-</input><label class="tabbed-label" for="e06d1a5a-a594-4027-ac40-199197d9c549">
+<input checked="checked" id="fb2c3b0a-a64a-4a7b-a263-8cc5f2d54509" name="32211693-ea56-44e7-97f3-e3bbb9d4934c" type="radio">
+</input><label class="tabbed-label" for="fb2c3b0a-a64a-4a7b-a263-8cc5f2d54509">
 1. <strong>Questions about RELATIONSHIPS between variables</strong></label><div class="tabbed-content docutils">
 <p>Example: Do airline closures affect how VCs monitor portfolio companies?</p>
 <ul class="simple">
@@ -876,8 +874,8 @@
 </ul>
 <p>Model: You’ll probably start with regression or logit</p>
 </div>
-<input id="45e3605e-c1de-4cbf-8265-699b45d1c894" name="89a4d91f-f620-45e2-9937-69fb35948069" type="radio">
-</input><label class="tabbed-label" for="45e3605e-c1de-4cbf-8265-699b45d1c894">
+<input id="661fcca0-4d8d-44f6-af14-bdc0f4c76f50" name="32211693-ea56-44e7-97f3-e3bbb9d4934c" type="radio">
+</input><label class="tabbed-label" for="661fcca0-4d8d-44f6-af14-bdc0f4c76f50">
 1. 2. <strong>Questions about PREDICTING some outcome variable</strong></label><div class="tabbed-content docutils">
 <p>Example: Which loans will default?</p>
 <ul class="simple">
@@ -891,17 +889,17 @@
 <h2><span class="section-number">5.1.2.2. </span>Why should I think about the type of question?<a class="headerlink" href="#why-should-i-think-about-the-type-of-question" title="Permalink to this headline">¶</a></h2>
 <p>The type of question is a good thing to fix in your head, because it dictates what you care about when you pick and estimate your models.</p>
 <ol class="simple">
-<li><p>Suppose you have two variables, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
-<li><p>You run a regression on it. That regression models the data as <span class="math notranslate nohighlight">\(y = m+\beta*X\)</span>.</p></li>
-<li><p>The regression produces an estimate for m and <span class="math notranslate nohighlight">\(\beta\)</span>, and I’ll call the estimates versions <span class="math notranslate nohighlight">\(\hat{m}\)</span> and <span class="math notranslate nohighlight">\(\hat{\beta}\)</span>. (I add the hats to denote that these are estimates, and because choosing weird notation to confuse undergrads is in all faculty contracts.)</p></li>
-<li><p>You can also use the estimates to create predicted values for y, which I’ll call <span class="math notranslate nohighlight">\(\hat{y}\)</span> and the formula to get them is <span class="math notranslate nohighlight">\(\hat{y}=\hat{m}+\hat{\beta}*X\)</span>. That is, you take all the <em><strong>real</strong></em> values of X, and multiply by <span class="math notranslate nohighlight">\(\hat{\beta}\)</span>, and then add <span class="math notranslate nohighlight">\(\hat{m}\)</span>.</p></li>
+<li><p>Suppose you have two variables, $y$ and $X$.</p></li>
+<li><p>You run a regression on it. That regression models the data as $y = m+\beta*X$.</p></li>
+<li><p>The regression produces an estimate for m and $\beta$, and I’ll call the estimates versions $\hat{m}$ and $\hat{\beta}$. (I add the hats to denote that these are estimates, and because choosing weird notation to confuse undergrads is in all faculty contracts.)</p></li>
+<li><p>You can also use the estimates to create predicted values for y, which I’ll call $\hat{y}$ and the formula to get them is $\hat{y}=\hat{m}+\hat{\beta}*X$. That is, you take all the <em><strong>real</strong></em> values of X, and multiply by $\hat{\beta}$, and then add $\hat{m}$.</p></li>
 </ol>
-<p>So, do you care about <span class="math notranslate nohighlight">\(\hat{\beta}\)</span>, or <span class="math notranslate nohighlight">\(\hat{y}\)</span>? It depends on the type of your question!</p>
+<p>So, do you care about $\hat{\beta}$, or $\hat{y}$? It depends on the type of your question!</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul class="simple">
-<li><p>Relationship questions are <span class="math notranslate nohighlight">\(\hat{\beta}\)</span> questions</p></li>
-<li><p>Prediction questions are <span class="math notranslate nohighlight">\(\hat{y}\)</span> questions</p></li>
+<li><p>Relationship questions are $\hat{\beta}$ questions</p></li>
+<li><p>Prediction questions are $\hat{y}$ questions</p></li>
 </ul>
 </div>
 </div>
@@ -911,9 +909,9 @@
 <p class="admonition-title"><strong>A model is an idealized representation of a system</strong></p>
 <p>For example:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(E=mc^2\)</span></p></li>
-<li><p>Financing policies: <span class="math notranslate nohighlight">\(investment = MarginalQ\)</span></p></li>
-<li><p>Asset prices: <span class="math notranslate nohighlight">\(r = \beta * MKT\)</span></p></li>
+<li><p>$E=mc^2$</p></li>
+<li><p>Financing policies: $investment = MarginalQ$</p></li>
+<li><p>Asset prices: $r = \beta * MKT$</p></li>
 </ul>
 <p>Famous take by George Box: “All models are wrong, but some are useful”</p>
 </div>
@@ -938,8 +936,8 @@
 <td class="text-align:left"><p>More complex models are often favored (understanding how predictions are made is less important than accuracy</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Example</p></td>
-<td class="text-align:left"><p>Linear regression: <span class="math notranslate nohighlight">\(final grade = b + m * midterm grade\)</span></p></td>
-<td class="text-align:left"><p>Nearest neighbor model: <span class="math notranslate nohighlight">\(final grade = nearest neighbor(midterm grade)\)</span></p></td>
+<td class="text-align:left"><p>Linear regression: $final grade = b + m * midterm grade$</p></td>
+<td class="text-align:left"><p>Nearest neighbor model: $final grade = nearest neighbor(midterm grade)$</p></td>
 </tr>
 </tbody>
 </table>

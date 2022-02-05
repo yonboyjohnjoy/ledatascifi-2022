@@ -47,8 +47,6 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -861,15 +859,14 @@
 </ol> 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Regressions of y on <span class="math notranslate nohighlight">\(N\)</span> different variables takes the form</p>
-<div class="math notranslate nohighlight">
-\[
-y = a+b_1*X_1+b_2*X_2+...+b_N*X_N+u
-\]</div>
-<p>The <em>generic</em> interpretation of any of the <span class="math notranslate nohighlight">\(b\)</span> coefficients is a sentence in three parts:</p>
+<p>Regressions of y on $N$ different variables takes the form</p>
+<p>$$
+y = a+b_1<em>X_1+b_2</em>X_2+…+b_N*X_N+u
+$$</p>
+<p>The <em>generic</em> interpretation of any of the $b$ coefficients is a sentence in three parts:</p>
 <ol class="simple">
-<li><p>“A <strong>1 unit increase</strong> in <span class="math notranslate nohighlight">\(X_i\)</span>…</p></li>
-<li><p>…<strong>is associated</strong> with a <span class="math notranslate nohighlight">\(b_i\)</span> change in <span class="math notranslate nohighlight">\(y\)</span>,…</p></li>
+<li><p>“A <strong>1 unit increase</strong> in $X_i$…</p></li>
+<li><p>…<strong>is associated</strong> with a $b_i$ change in $y$,…</p></li>
 <li><p><strong>holding all other X constant</strong>.”</p></li>
 </ol>
 </div>
@@ -878,21 +875,21 @@ y = a+b_1*X_1+b_2*X_2+...+b_N*X_N+u
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>If the model is………………</p></th>
-<th class="text-align:left head"><p>then <span class="math notranslate nohighlight">\(\beta\)</span> means (approx. in log cases)</p></th>
+<th class="text-align:left head"><p>then $\beta$ means (approx. in log cases)</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(y=a+\beta X\)</span></p></td>
-<td class="text-align:left"><p>If <span class="math notranslate nohighlight">\(X \uparrow \)</span> 1 unit, then <span class="math notranslate nohighlight">\(y \uparrow\)</span> by <span class="math notranslate nohighlight">\(\beta\)</span> units</p></td>
+<tr class="row-even"><td class="text-align:left"><p>$y=a+\beta X$</p></td>
+<td class="text-align:left"><p>If $X \uparrow $ 1 unit, then $y \uparrow$ by $\beta$ units</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\log y=a+\beta X\)</span></p></td>
-<td class="text-align:left"><p>If <span class="math notranslate nohighlight">\(X \uparrow \)</span> 1 unit, then <span class="math notranslate nohighlight">\(y \uparrow\)</span> by about <span class="math notranslate nohighlight">\(100*\beta\)</span>%. <br> <em>(Exact: <span class="math notranslate nohighlight">\(100*(\exp(\beta)-1)\)</span>)</em></p></td>
+<tr class="row-odd"><td class="text-align:left"><p>$\log y=a+\beta X$</p></td>
+<td class="text-align:left"><p>If $X \uparrow $ 1 unit, then $y \uparrow$ by about $100*\beta$%. <br> <em>(Exact: $100*(\exp(\beta)-1)$)</em></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(y=a+\beta \log X\)</span></p></td>
-<td class="text-align:left"><p>If <span class="math notranslate nohighlight">\(X \uparrow \)</span> 1%, then <span class="math notranslate nohighlight">\(y \uparrow\)</span> by about <span class="math notranslate nohighlight">\(\beta / 100\)</span> units</p></td>
+<tr class="row-even"><td class="text-align:left"><p>$y=a+\beta \log X$</p></td>
+<td class="text-align:left"><p>If $X \uparrow $ 1%, then $y \uparrow$ by about $\beta / 100$ units</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\log y=a+\beta \log X\)</span></p></td>
-<td class="text-align:left"><p>If <span class="math notranslate nohighlight">\(X \uparrow \)</span> 1%, then <span class="math notranslate nohighlight">\(y \uparrow\)</span> by <span class="math notranslate nohighlight">\(\beta\)</span>%</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>$\log y=a+\beta \log X$</p></td>
+<td class="text-align:left"><p>If $X \uparrow $ 1%, then $y \uparrow$ by $\beta$%</p></td>
 </tr>
 </tbody>
 </table>
@@ -908,27 +905,27 @@ y = a+b_1*X_1+b_2*X_2+...+b_N*X_N+u
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>If the model is………………</p></th>
-<th class="text-align:left head"><p>then <span class="math notranslate nohighlight">\(\beta\)</span> means</p></th>
+<th class="text-align:left head"><p>then $\beta$ means</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(y=a+\beta X\)</span></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(y\)</span> is <span class="math notranslate nohighlight">\(\beta\)</span> units higher for cases when <span class="math notranslate nohighlight">\(X=1\)</span> than when <span class="math notranslate nohighlight">\(X=0\)</span>.</p></td>
+<tr class="row-even"><td class="text-align:left"><p>$y=a+\beta X$</p></td>
+<td class="text-align:left"><p>$y$ is $\beta$ units higher for cases when $X=1$ than when $X=0$.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\log y=a+\beta X\)</span></p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(y\)</span> is about <span class="math notranslate nohighlight">\(100*\beta\)</span> % higher for cases when <span class="math notranslate nohighlight">\(X=1\)</span> than when <span class="math notranslate nohighlight">\(X=0\)</span>.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>$\log y=a+\beta X$</p></td>
+<td class="text-align:left"><p>$y$ is about $100*\beta$ % higher for cases when $X=1$ than when $X=0$.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="if-x-is-a-categorical-variable">
 <h2><span class="section-number">5.2.4.3. </span>If X is a categorical variable<a class="headerlink" href="#if-x-is-a-categorical-variable" title="Permalink to this headline">¶</a></h2>
-<p>Suppose X has three categories, and let’s just call them 0, 1, and 2. To run this regression, first create two variables: <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span>, which are binary variables indicating if an observation’s value of X equals the subscript. So:</p>
+<p>Suppose X has three categories, and let’s just call them 0, 1, and 2. To run this regression, first create two variables: $X_1$ and $X_2$, which are binary variables indicating if an observation’s value of X equals the subscript. So:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>If X (original variable) is</p></th>
-<th class="text-align:left head"><p>Then <span class="math notranslate nohighlight">\(X_1=\)</span></p></th>
-<th class="text-align:left head"><p>and <span class="math notranslate nohighlight">\(X_2=\)</span></p></th>
+<th class="text-align:left head"><p>Then $X_1=$</p></th>
+<th class="text-align:left head"><p>and $X_2=$</p></th>
 </tr>
 </thead>
 <tbody>
@@ -946,76 +943,74 @@ y = a+b_1*X_1+b_2*X_2+...+b_N*X_N+u
 </tr>
 </tbody>
 </table>
-<p>Then, we run a regression of <span class="math notranslate nohighlight">\(y\)</span> on <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span>. The way we interpret the coefficients is:</p>
+<p>Then, we run a regression of $y$ on $X_1$ and $X_2$. The way we interpret the coefficients is:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>If the model is………………</p></th>
-<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(a\)</span> means</p></th>
-<th class="text-align:left head"><p>then <span class="math notranslate nohighlight">\(\beta_1\)</span> means</p></th>
-<th class="text-align:left head"><p>then <span class="math notranslate nohighlight">\(\beta_2\)</span> means</p></th>
+<th class="text-align:left head"><p>$a$ means</p></th>
+<th class="text-align:left head"><p>then $\beta_1$ means</p></th>
+<th class="text-align:left head"><p>then $\beta_2$ means</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(y=a+\beta_1 X_1 +\beta_2 X_2\)</span></p></td>
-<td class="text-align:left"><p>the average value of <span class="math notranslate nohighlight">\(y\)</span> is <span class="math notranslate nohighlight">\(a\)</span> for group 0 (because <span class="math notranslate nohighlight">\(X_1=X_2=0\)</span> if <span class="math notranslate nohighlight">\(X=0\)</span>)</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(y\)</span> is <span class="math notranslate nohighlight">\(\beta_1\)</span> units higher on average for cases when <span class="math notranslate nohighlight">\(X=1\)</span> than when <span class="math notranslate nohighlight">\(X=0\)</span>.</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(y\)</span> is <span class="math notranslate nohighlight">\(\beta_2\)</span> units higher on average for cases when <span class="math notranslate nohighlight">\(X=2\)</span> than when <span class="math notranslate nohighlight">\(X=0\)</span>.</p></td>
+<tr class="row-even"><td class="text-align:left"><p>$y=a+\beta_1 X_1 +\beta_2 X_2$</p></td>
+<td class="text-align:left"><p>the average value of $y$ is $a$ for group 0 (because $X_1=X_2=0$ if $X=0$)</p></td>
+<td class="text-align:left"><p>$y$ is $\beta_1$ units higher on average for cases when $X=1$ than when $X=0$.</p></td>
+<td class="text-align:left"><p>$y$ is $\beta_2$ units higher on average for cases when $X=2$ than when $X=0$.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\log y=a+\beta_1 X_1 +\beta_2 X_2\)</span></p></td>
-<td class="text-align:left"><p>the average value of <span class="math notranslate nohighlight">\(\log y\)</span> is <span class="math notranslate nohighlight">\(a\)</span> for group 0 (because <span class="math notranslate nohighlight">\(X_1=X_2=0\)</span> if <span class="math notranslate nohighlight">\(X=0\)</span>)</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(y\)</span> is about <span class="math notranslate nohighlight">\(100*\beta_1\)</span> % higher on average for cases when <span class="math notranslate nohighlight">\(X=1\)</span> than when <span class="math notranslate nohighlight">\(X=0\)</span>.</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(y\)</span> is about <span class="math notranslate nohighlight">\(100*\beta_2\)</span> % higher on average for cases when <span class="math notranslate nohighlight">\(X=2\)</span> than when <span class="math notranslate nohighlight">\(X=0\)</span>.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>$\log y=a+\beta_1 X_1 +\beta_2 X_2$</p></td>
+<td class="text-align:left"><p>the average value of $\log y$ is $a$ for group 0 (because $X_1=X_2=0$ if $X=0$)</p></td>
+<td class="text-align:left"><p>$y$ is about $100*\beta_1$ % higher on average for cases when $X=1$ than when $X=0$.</p></td>
+<td class="text-align:left"><p>$y$ is about $100*\beta_2$ % higher on average for cases when $X=2$ than when $X=0$.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The interpretation of <span class="math notranslate nohighlight">\(\beta_{oneLevelOfACategoricalVariable}\)</span> is the same as a binary variable (use the table above depending on if the model is using y or <span class="math notranslate nohighlight">\(\log y\)</span>), <strong>except that the it is capturing the jump from the “omitted group” (X=0 above) to whichever level that particular <span class="math notranslate nohighlight">\(\beta\)</span> captures.</strong></p>
+<p>The interpretation of $\beta_{oneLevelOfACategoricalVariable}$ is the same as a binary variable (use the table above depending on if the model is using y or $\log y$), <strong>except that the it is capturing the jump from the “omitted group” (X=0 above) to whichever level that particular $\beta$ captures.</strong></p>
 </div>
 <hr class="docutils" />
 <p>Students often get confused by this at first, so let’s do an example.</p>
 <p>Suppose we model the price of a diamond as function of its cut and nothing else. <a class="reference external" href="02b_mechanics.html#including-categorical-variables">This is close to what we did previously</a>. This ends up looking like</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$
 \log(\text{price})=
-    \begin{cases}
-      a, &amp; \text{if cut is Ideal} \\
-      a +\beta_{Premium}, &amp; \text{if cut is Premium} \\
-      a +\beta_{Very Good}, &amp; \text{if cut is Very Good} \\
-      a +\beta_{Good}, &amp; \text{if cut is Good} \\
-      a +\beta_{Fair}, &amp; \text{if cut is Fair} 
-          \end{cases} 
-\end{split}\]</div>
+\begin{cases}
+a, &amp; \text{if cut is Ideal} \
+a +\beta_{Premium}, &amp; \text{if cut is Premium} \
+a +\beta_{Very Good}, &amp; \text{if cut is Very Good} \
+a +\beta_{Good}, &amp; \text{if cut is Good} \
+a +\beta_{Fair}, &amp; \text{if cut is Fair}
+\end{cases}
+$$</p>
 <p>To do this, you take the cut variable (<code class="docutils literal notranslate"><span class="pre">cut={Fair,Good,Very</span> <span class="pre">Good,Premium,Ideal}</span></code>) and create a dummy variable for “Fair”, a dummy vairable for “Good”, a dummy variable for “Very Good”, and a dummy variable for “Premium”. (But not for “Ideal”!) The “statsmodels formula” approach to specifying the regression does this step automatically for you!</p>
 <p>So now, your model can be rewritten in one line and used in a regression as</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \log(\text{price}) = a + \beta_{Premium}*X_{Premium} + \beta_{Very Good}*X_{Very Good} + \beta_{Good}*X_{Good} + \beta_{Fair}*X_{Fair} + u
-\]</div>
+$$</p>
 <p>And we interpret these like this:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(\beta\)</span>…..</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>$\beta$…..</p></th>
 <th class="text-align:left head"><p>means</p></th>
 <th class="text-align:left head"><p>or</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\beta_{Premium}\)</span></p></td>
-<td class="text-align:left"><p>The average log(price) for Premium diamonds is <span class="math notranslate nohighlight">\(100*\beta_{Premium}\)</span>% higher than Ideal diamonds.</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(avg_{Premium}-avg_{Ideal}\)</span></p></td>
+<tr class="row-even"><td class="text-align:left"><p>$\beta_{Premium}$</p></td>
+<td class="text-align:left"><p>The average log(price) for Premium diamonds is $100*\beta_{Premium}$% higher than Ideal diamonds.</p></td>
+<td class="text-align:left"><p>$avg_{Premium}-avg_{Ideal}$</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\beta_{Very Good}\)</span></p></td>
-<td class="text-align:left"><p>The average log(price) for Very Good diamonds is <span class="math notranslate nohighlight">\(100*\beta_{Very Good}\)</span>% higher than Ideal diamonds.</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(avg_{Very Good}-avg_{Ideal}\)</span></p></td>
+<tr class="row-odd"><td class="text-align:left"><p>$\beta_{Very Good}$</p></td>
+<td class="text-align:left"><p>The average log(price) for Very Good diamonds is $100*\beta_{Very Good}$% higher than Ideal diamonds.</p></td>
+<td class="text-align:left"><p>$avg_{Very Good}-avg_{Ideal}$</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\beta_{Good}\)</span></p></td>
-<td class="text-align:left"><p>The average log(price) for Good diamonds is <span class="math notranslate nohighlight">\(100*\beta_{Good}\)</span>% higher than Ideal diamonds.</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(avg_{Good}-avg_{Ideal}\)</span></p></td>
+<tr class="row-even"><td class="text-align:left"><p>$\beta_{Good}$</p></td>
+<td class="text-align:left"><p>The average log(price) for Good diamonds is $100*\beta_{Good}$% higher than Ideal diamonds.</p></td>
+<td class="text-align:left"><p>$avg_{Good}-avg_{Ideal}$</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\beta_{Fair}\)</span></p></td>
-<td class="text-align:left"><p>The average log(price) for Fair diamonds is <span class="math notranslate nohighlight">\(100*\beta_{Fair}\)</span>% higher than Ideal diamonds.</p></td>
-<td class="text-align:left"><p><span class="math notranslate nohighlight">\(avg_{Fair}-avg_{Ideal}\)</span></p></td>
+<tr class="row-odd"><td class="text-align:left"><p>$\beta_{Fair}$</p></td>
+<td class="text-align:left"><p>The average log(price) for Fair diamonds is $100*\beta_{Fair}$% higher than Ideal diamonds.</p></td>
+<td class="text-align:left"><p>$avg_{Fair}-avg_{Ideal}$</p></td>
 </tr>
 </tbody>
 </table>
@@ -1061,9 +1056,9 @@ dtype: float64
 </div>
 </div>
 </div>
-<p><strong>THE MAIN THING TO REMEMBER IS THAT <span class="math notranslate nohighlight">\(\beta_{value}\)</span> COMPARES THAT <span class="math notranslate nohighlight">\(value\)</span> TO THE <em>OMITTED</em> CATEGORY!</strong></p>
-<p>So, <span class="math notranslate nohighlight">\(\beta_{Good}=0.199\)</span> implies that “Good” cut diamonds are about 20% more expensive than “Ideal” diamonds. (Weird?)</p>
-<p>If we add <span class="math notranslate nohighlight">\(\alpha\)</span> (the average log price of “Ideal” diamonds) to <span class="math notranslate nohighlight">\(\beta_{Good}\)</span>, we get <span class="math notranslate nohighlight">\(\beta_{Good}+\alpha=0.199+7.637=7.83\)</span>. This should be the average log price of “Good” diamonds.</p>
+<p><strong>THE MAIN THING TO REMEMBER IS THAT $\beta_{value}$ COMPARES THAT $value$ TO THE <em>OMITTED</em> CATEGORY!</strong></p>
+<p>So, $\beta_{Good}=0.199$ implies that “Good” cut diamonds are about 20% more expensive than “Ideal” diamonds. (Weird?)</p>
+<p>If we add $\alpha$ (the average log price of “Ideal” diamonds) to $\beta_{Good}$, we get $\beta_{Good}+\alpha=0.199+7.637=7.83$. This should be the average log price of “Good” diamonds.</p>
 <p>Let’s check:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1087,10 +1082,9 @@ Name: lprice, dtype: float64
 <div class="section" id="if-x-is-an-interaction-term">
 <h2><span class="section-number">5.2.4.4. </span>If X is an interaction term<a class="headerlink" href="#if-x-is-an-interaction-term" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="02b_mechanics.html#including-interaction-terms">Previously,</a> we estimated</p>
-<div class="math notranslate nohighlight">
-\[
-\log(\text{price})= 8.2+ 1.53 *\log(\text{carat}) + 0.33* \text{Ideal} + 0.18* \log(\text{carat})\cdot \text{Ideal}
-\]</div>
+<p>$$
+\log(\text{price})= 8.2+ 1.53 <em>\log(\text{carat}) + 0.33</em> \text{Ideal} + 0.18* \log(\text{carat})\cdot \text{Ideal}
+$$</p>
 <p>There are two natural questions:</p>
 <ol class="simple">
 <li><p>What is the impact of X on y? (Specifically, <em>what is the total impact of diamond size on price?</em>)</p></li>
@@ -1098,32 +1092,32 @@ Name: lprice, dtype: float64
 </ol>
 <p><strong>To find the answer to Q1, to figure out the relationship of X on y, take the derivative of X w.r.t. y:</strong></p>
 <ul class="simple">
-<li><p>Relationship of size on price: <span class="math notranslate nohighlight">\(1.53 + 0.18*Ideal\)</span>.</p>
+<li><p>Relationship of size on price: $1.53 + 0.18*Ideal$.</p>
 <ul>
 <li><p>A 1% increase in size is associate with a 1.53% higher price <strong>for non ideal diamonds</strong></p></li>
 <li><p>A 1% increase in size is associate with a 1.71% higher price <strong>for ideal diamonds</strong></p></li>
 </ul>
 </li>
-<li><p>Relationship of cut on price: <span class="math notranslate nohighlight">\(0.33 + 0.18*log(carat)\)</span>. The average</p>
+<li><p>Relationship of cut on price: $0.33 + 0.18*log(carat)$. The average</p>
 <ul>
-<li><p>For 1 carat diamonds (<span class="math notranslate nohighlight">\(log(1)=0\)</span>), ideal diamonds are 33% more expensive than non-ideal diamonds</p></li>
-<li><p>For 2 carat diamonds (<span class="math notranslate nohighlight">\(log(2)=0.693\)</span>), ideal diamonds are 45% more expensive than non-ideal diamonds</p></li>
+<li><p>For 1 carat diamonds ($log(1)=0$), ideal diamonds are 33% more expensive than non-ideal diamonds</p></li>
+<li><p>For 2 carat diamonds ($log(2)=0.693$), ideal diamonds are 45% more expensive than non-ideal diamonds</p></li>
 </ul>
 </li>
 </ul>
-<p><strong>Q2: How do you interpret <span class="math notranslate nohighlight">\(\beta_2=0.18\)</span>? I recommend revisiting that link above too, but I’ll summarize as:</strong></p>
+<p><strong>Q2: How do you interpret $\beta_2=0.18$? I recommend revisiting that link above too, but I’ll summarize as:</strong></p>
 <ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\beta_2 \neq 0\)</span> implies that the relationship between <strong>carat size</strong> and price is different for ideal and non-ideal diamonds.</p>
+<li><p>$\beta_2 \neq 0$ implies that the relationship between <strong>carat size</strong> and price is different for ideal and non-ideal diamonds.</p>
 <ul class="simple">
-<li><p>Mathematically: <span class="math notranslate nohighlight">\(1\% \uparrow\)</span> in carat <span class="math notranslate nohighlight">\(\rightarrow\)</span> price increases by 1.53% for non-ideal but 1.71% for ideal</p></li>
-<li><p>Graphically, the difference in the slope of those carat-price relationships for ideal/non-ideal diamonds is <span class="math notranslate nohighlight">\(\beta_2\)</span></p></li>
+<li><p>Mathematically: $1% \uparrow$ in carat $\rightarrow$ price increases by 1.53% for non-ideal but 1.71% for ideal</p></li>
+<li><p>Graphically, the difference in the slope of those carat-price relationships for ideal/non-ideal diamonds is $\beta_2$</p></li>
 <li><p><em>Economically, you might say that the value of a larger ring is even more valuable for better cut diamonds</em></p></li>
 </ul>
 </li>
-<li><p><span class="math notranslate nohighlight">\(\beta_2 \neq 0\)</span> implies that the relationship between <strong>cut quality</strong> and price is different for diamonds of different sizes.</p>
+<li><p>$\beta_2 \neq 0$ implies that the relationship between <strong>cut quality</strong> and price is different for diamonds of different sizes.</p>
 <ul class="simple">
 <li><p>Mathematically: 1 carat diamonds that are ideal are 33% more expensive than non-ideal diamonds, but 2 carat ideal diamonds are 45% more expensive than non-deal diamonds</p></li>
-<li><p>Graphically, the difference in the slope of those cut quality-price relationships for small/large diamonds is <span class="math notranslate nohighlight">\(\beta_2\)</span></p></li>
+<li><p>Graphically, the difference in the slope of those cut quality-price relationships for small/large diamonds is $\beta_2$</p></li>
 <li><p><em>Economically, you might say that the value of a better cut is even more valuable forlarger diamonds</em></p></li>
 </ul>
 </li>
@@ -1135,43 +1129,41 @@ Name: lprice, dtype: float64
 <p class="admonition-title">Tip</p>
 <ol class="simple">
 <li><p>Always keep the “holding all other controls constant” mantra in mind!</p></li>
-<li><p>In reality, independent variables in X often move together. So the marginal effect of X (i.e. <span class="math notranslate nohighlight">\(\beta\)</span>) is <strong>not</strong> the same as the total effect of X.</p></li>
+<li><p>In reality, independent variables in X often move together. So the marginal effect of X (i.e. $\beta$) is <strong>not</strong> the same as the total effect of X.</p></li>
 </ol>
 </div>
 <p>If you have many control variables (up to N controls):</p>
-<div class="math notranslate nohighlight">
-\[
-y = a +\beta_0 X_0 + \beta_1 X_1+ ...+\beta_N X_N+ u
-\]</div>
-<p><span class="math notranslate nohighlight">\(\beta_1\)</span> estimates the expected change in Y for a 1 unit increase in <span class="math notranslate nohighlight">\(X_1\)</span> (as we covered above), <strong>holding all other controls constant!</strong></p>
-<p>As an illustration, if Y = number of tackles by a football player in a year, <span class="math notranslate nohighlight">\(W\)</span> is weight, and <span class="math notranslate nohighlight">\(H\)</span> is height, suppose we estimate that</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
+y = a +\beta_0 X_0 + \beta_1 X_1+ …+\beta_N X_N+ u
+$$</p>
+<p>$\beta_1$ estimates the expected change in Y for a 1 unit increase in $X_1$ (as we covered above), <strong>holding all other controls constant!</strong></p>
+<p>As an illustration, if Y = number of tackles by a football player in a year, $W$ is weight, and $H$ is height, suppose we estimate that</p>
+<p>$$
 y = a +\hat{0.5} W + \hat{-0.1} H
-\]</div>
-<p>How do you interpret <span class="math notranslate nohighlight">\(\hat{\beta_1} &lt; 0 \)</span> on H?</p>
+$$</p>
+<p>How do you interpret $\hat{\beta_1} &lt; 0 $ on H?</p>
 <p>This regression implies that, for a given weight (holding weight fixed), taller players average fewer tackles. In other words, skinny football players get fewer tackles.</p>
 <p><strong>Also remember that predictors often change together!</strong></p>
 <p>For example, taller players are likely to be heavier. So if a 1 inch increase typically comes with a weight gain, the <em>total impact</em> of height on tackles (i.e. <em>not</em> holding all other factors constant) will include the estimated impact of weight.</p>
 </div>
 <div class="section" id="if-other-categorical-controls-are-included">
 <h2><span class="section-number">5.2.4.6. </span>If other categorical controls are included<a class="headerlink" href="#if-other-categorical-controls-are-included" title="Permalink to this headline">¶</a></h2>
-<p>Suppose you estimate <span class="math notranslate nohighlight">\(profits=a+b*investment+c*X+u\)</span>, and you want to focus on <span class="math notranslate nohighlight">\(b\)</span> to capture how investments translate to profits. You’ve added some control variables X, but you’re still worried that this regression will get the relationship wrong, because different industries have different profit margins for reasons that have nothing to do with investment levels.</p>
-<p>In other words, you want to “control for industry”. So you estimate <span class="math notranslate nohighlight">\(profits=a+b*investment+c*X+d*C(gsector)+u\)</span>, by including the firm’s industry as a categorical control.</p>
+<p>Suppose you estimate $profits=a+b<em>investment+c</em>X+u$, and you want to focus on $b$ to capture how investments translate to profits. You’ve added some control variables X, but you’re still worried that this regression will get the relationship wrong, because different industries have different profit margins for reasons that have nothing to do with investment levels.</p>
+<p>In other words, you want to “control for industry”. So you estimate $profits=a+b<em>investment+c</em>X+d*C(gsector)+u$, by including the firm’s industry as a categorical control.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>This is often called including “industry <strong>fixed effects</strong> “.</p>
 </div>
-<p>What does <span class="math notranslate nohighlight">\(b\)</span> mean now? Well, the lessons above apply: It is the relationship between investment and profits, but now we capture the average profit level (across all firms in an industry over all years of our sample). So we are holding the industry profit level (again, over the whole time period of analysis) fixed.</p>
+<p>What does $b$ mean now? Well, the lessons above apply: It is the relationship between investment and profits, but now we capture the average profit level (across all firms in an industry over all years of our sample). So we are holding the industry profit level (again, over the whole time period of analysis) fixed.</p>
 <blockquote class="epigraph">
-<div><p>Intuitively, you can think of <span class="math notranslate nohighlight">\(b\)</span> in this model as “comparing firms in the same industry” or “controlling for industry factors”.</p>
+<div><p>Intuitively, you can think of $b$ in this model as “comparing firms in the same industry” or “controlling for industry factors”.</p>
 </div></blockquote>
 <p>This should go a decent way to  solving  your worry above.</p>
 <hr class="docutils" />
-<p>Similarly, you might be worried that some years are at high points in the business cycle, and these years have concurrently high investment and profits simly because of the business cycle. This would cause <span class="math notranslate nohighlight">\(b\)</span> to be positive <em>even if investment does not lead to profits.</em></p>
-<p>So you might estimate <span class="math notranslate nohighlight">\(profits=a+b*investment+c*X+d*C(year)+u\)</span>. This is often referred to as “year fixed effects”, and it means that your estimate of <span class="math notranslate nohighlight">\(b\)</span> removes the impact of years, and presumably, the business cycle.</p>
+<p>Similarly, you might be worried that some years are at high points in the business cycle, and these years have concurrently high investment and profits simly because of the business cycle. This would cause $b$ to be positive <em>even if investment does not lead to profits.</em></p>
+<p>So you might estimate $profits=a+b<em>investment+c</em>X+d*C(year)+u$. This is often referred to as “year fixed effects”, and it means that your estimate of $b$ removes the impact of years, and presumably, the business cycle.</p>
 <blockquote class="epigraph">
-<div><p>Intuitively, you can think of <span class="math notranslate nohighlight">\(b\)</span> in this model as “comparing firms in the same year” or “controlling for time trends in profits”.</p>
+<div><p>Intuitively, you can think of $b$ in this model as “comparing firms in the same year” or “controlling for time trends in profits”.</p>
 </div></blockquote>
 <hr class="docutils" />
 <p>Here is an example to see how categorical controls can interact with “normal” continuous variables.</p>
@@ -1221,19 +1213,19 @@ Notes:
 </div>
 <div class="section" id="comparing-the-size-of-two-coefficients">
 <h2><span class="section-number">5.2.4.7. </span>Comparing the size of two coefficients<a class="headerlink" href="#comparing-the-size-of-two-coefficients" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="02b_mechanics.html#our-first-regression-with-statsmodels">Earlier</a>, we estimated that <span class="math notranslate nohighlight">\(\log price = \hat{8.41} + \hat{1.69} \log carat + \hat{0.10} ideal\)</span>.</p>
+<p><a class="reference external" href="02b_mechanics.html#our-first-regression-with-statsmodels">Earlier</a>, we estimated that $\log price = \hat{8.41} + \hat{1.69} \log carat + \hat{0.10} ideal$.</p>
 <p>So… I have questions:</p>
 <ol class="simple">
-<li><p>Does that mean that the size of the diamond (<span class="math notranslate nohighlight">\(\log carat\)</span>) has a 17 times larger impact than the cut (<span class="math notranslate nohighlight">\(ideal\)</span>) in terms of price impact?</p></li>
+<li><p>Does that mean that the size of the diamond ($\log carat$) has a 17 times larger impact than the cut ($ideal$) in terms of price impact?</p></li>
 <li><p>How do we compare those magnitudes?</p></li>
 <li><p>More generally, how do we compare the magnitudes of any 2 control variables?</p></li>
 </ol>
 <p>To which, I’d say that how “big” a coefficient is depends on the variable!</p>
 <ul class="simple">
-<li><p>For some variables, an increase of 1 unit is common (e.g. our <span class="math notranslate nohighlight">\(ideal\)</span> dummy is one 40% of the time)</p></li>
-<li><p>For some variables, an increase of 1 unit is rare (e.g. <span class="math notranslate nohighlight">\(cash/assets\)</span>)</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(\rightarrow\)</span> the meaning of the coefficient’s magnitude <em>depends on the corresponding variable’s variation!</em></strong></p></li>
-<li><p><span class="math notranslate nohighlight">\(\rightarrow\)</span> so change variables so that a “1 unit increase” implies the same amount of movement</p></li>
+<li><p>For some variables, an increase of 1 unit is common (e.g. our $ideal$ dummy is one 40% of the time)</p></li>
+<li><p>For some variables, an increase of 1 unit is rare (e.g. $cash/assets$)</p></li>
+<li><p><strong>$\rightarrow$ the meaning of the coefficient’s magnitude <em>depends on the corresponding variable’s variation!</em></strong></p></li>
+<li><p>$\rightarrow$ so change variables so that a “1 unit increase” implies the same amount of movement</p></li>
 </ul>
 <div class="admonition-a-great-trick-for-comparing-cofficient-size admonition">
 <p class="admonition-title">A great trick for comparing cofficient size</p>
@@ -1282,7 +1274,7 @@ dtype: float64
 </div>
 </div>
 </div>
-<p><strong>So a 1 standard deviation increase in <span class="math notranslate nohighlight">\(\log carat\)</span> is associated with a 0.98% increase in price. Compared to <span class="math notranslate nohighlight">\(ideal\)</span>, we can say that a reasonable variation in carat size is associated with a price increase about 10 times larger than the impact of cut, not 17 times larger.</strong></p>
+<p><strong>So a 1 standard deviation increase in $\log carat$ is associated with a 0.98% increase in price. Compared to $ideal$, we can say that a reasonable variation in carat size is associated with a price increase about 10 times larger than the impact of cut, not 17 times larger.</strong></p>
 <p>Also, notice that the new coefficent (0.98) is about 58% of the original coefficient (1.69).</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1291,14 +1283,13 @@ dtype: float64
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">A: Because the standard deviation of <span class="math notranslate nohighlight">\(\log carat\)</span> is 0.58!</p>
-<p class="card-text">This works because, if “<span class="math notranslate nohighlight">\(std\)</span>” stands for the standard deviation of <span class="math notranslate nohighlight">\(\log carat\)</span> each of these steps is valid and doesn’t change the estimation:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\log price &amp; = \hat{8.41} + \hat{1.69} \log carat + \hat{0.10} ideal \\
-           &amp; = \hat{8.41} + \hat{1.69} \frac{std}{std} \log carat + \hat{0.10} ideal \\
-           &amp; = \hat{8.41} + (\hat{1.69}*std) \frac{\log carat}{std}  + \hat{0.10} ideal 
-\end{split}\]</div>
+<p class="card-text">A: Because the standard deviation of $\log carat$ is 0.58!</p>
+<p class="card-text">This works because, if “$std$” stands for the standard deviation of $\log carat$ each of these steps is valid and doesn’t change the estimation:</p>
+<p class="card-text">$$
+\log price &amp; = \hat{8.41} + \hat{1.69} \log carat + \hat{0.10} ideal \
+&amp; = \hat{8.41} + \hat{1.69} \frac{std}{std} \log carat + \hat{0.10} ideal \
+&amp; = \hat{8.41} + (\hat{1.69}*std) \frac{\log carat}{std}  + \hat{0.10} ideal
+$$</p>
 <p class="card-text">So what that last line shows is that if we divide the variable by its standard deviation, the coefficient will change by an offsetting amount.</p>
 <p class="card-text">If a variable has a small standard deviation (e.g. 0.10), dividing the variable by 0.10 before running the regression will reduce the coefficient by 90%.</p>
 </div>
