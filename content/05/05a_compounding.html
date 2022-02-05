@@ -834,14 +834,14 @@
 <p>Let <span class="math notranslate nohighlight">\(r_t = (P_t+D_t)/P_{t-1}\)</span> be the simple return for a single period with dividends included.</p>
 <p>Let <span class="math notranslate nohighlight">\(R_t = (1+r_t)\)</span> be the <strong>gross</strong> (thus, the capital “R”) return for a single period.</p>
 <p>The <strong>gross return</strong> for a number of periods is</p>
-<p>\begin{equation}
+<p>\begin{equation*}
 R[0,T] = \prod_{t=1}^T R_t
-\end{equation}</p>
+\end{equation*}</p>
 <p>and the <strong>simple return</strong> for the same set of periods is simply the above minus 1.</p>
-<p>\begin{align}
+<p>\begin{align*}
 r[0,T] = &amp; R[0,T] - 1  \
 = &amp; (\prod_{t=1}^T R_t) - 1
-\end{align}</p>
+\end{align*}</p>
 <p>We can compute this in pandas pretty easily:</p>
 </div>
 <div class="section" id="the-code">
@@ -897,11 +897,11 @@ r[0,T] = &amp; R[0,T] - 1  \
 <p>But you can add log returns across time to get the correctly compounded total log return: <span class="math notranslate nohighlight">\(ln(1+r_{[0,1]}) +ln(1+r_{[1,2]}) = ln(1+ r_{[0,2]})\)</span></p>
 </div>
 <p>This makes it easy to compound returns in large datasets another way than what I showed above. Taking advantage of the fact that <span class="math notranslate nohighlight">\(e(ln(x))=x\)</span> (in the second line) and <span class="math notranslate nohighlight">\(e^a*e^b*e^c=e^{a+b+c}\)</span> in the third line, we can rewrite <span class="math notranslate nohighlight">\(R[0,T]\)</span> as:</p>
-<p>\begin{align}
+<p>\begin{align*}
 R[0,T] = &amp; \prod_{t=1}^T R_t \
 = &amp; \prod_{t=1}^T ( e(ln( R_t))        ) \
 = &amp; e(\sum_{t=1}^T ln(R_t))
-\end{align}</p>
+\end{align*}</p>
 <p>The last line shows that to compound returns, you can sum the log returns. Then to convert the compounded log return back to a simple return, just exponentiate and substract 1.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
