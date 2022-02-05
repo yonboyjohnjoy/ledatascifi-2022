@@ -660,12 +660,36 @@
     <i class="fas fa-chevron-down">
     </i>
    </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../05/05a_finapps.html">
+     5.5. Finance Applications
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../05/05a_compounding.html">
+       5.5.1. Compounding returns
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../05/05b_capm.html">
+       5.5.2. Estimating CAPM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../05/05c_factorloadings.html">
+       5.5.3. Estimating better models
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../05/05_thefuture.html">
+  <a class="reference internal" href="../05/06_thefuture.html">
    6. The Future
   </a>
  </li>
@@ -840,8 +864,8 @@
 </div>
 <p>Data can be logically stored in many ways. Let’s start by showing one dataset, and three ways it can be stored.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d7632670-de85-41f4-9839-4bc9c0568a25" name="e362eb7d-b1e3-4a13-8568-533390463fd4" type="radio">
-</input><label class="tabbed-label" for="d7632670-de85-41f4-9839-4bc9c0568a25">
+<input checked="checked" id="128f7fa9-4599-4dae-bedc-12d645c14e8d" name="0e2c36ed-5f7f-402d-828c-7847d6bd00e9" type="radio">
+</input><label class="tabbed-label" for="128f7fa9-4599-4dae-bedc-12d645c14e8d">
 “Long” Data</label><div class="tabbed-content docutils">
 <p>Here is a <strong>long dataset.</strong> The “key” or “index” is the <em><strong>combination</strong> of year and firm.</em> This is what I’d refer to as a “firm-year” dataset.</p>
 <table class="colwidths-auto table">
@@ -896,8 +920,8 @@
 </tbody>
 </table>
 </div>
-<input id="af7322d8-23e9-4e16-b111-ad47fdf2a0c7" name="e362eb7d-b1e3-4a13-8568-533390463fd4" type="radio">
-</input><label class="tabbed-label" for="af7322d8-23e9-4e16-b111-ad47fdf2a0c7">
+<input id="46ee8dfd-0997-4ca9-b31b-815dc9d1e94f" name="0e2c36ed-5f7f-402d-828c-7847d6bd00e9" type="radio">
+</input><label class="tabbed-label" for="46ee8dfd-0997-4ca9-b31b-815dc9d1e94f">
 Same data, but “Wide”</label><div class="tabbed-content docutils">
 <p>This is the exact same data, but stored as a <strong>wide dataset.</strong> Now, the “key” or “index” is <strong>just</strong> the <em>year</em>, and each variable is duplicated for each firm. So there is a Sales variable for GM, and a Sales variable for Ford.</p>
 <table class="colwidths-auto table">
@@ -943,8 +967,8 @@ Same data, but “Wide”</label><div class="tabbed-content docutils">
 <p>A similar case can occur for the row names/numbers. If there is one level of the row name, that’s the Index. If there are multiple levels, it is called a MultiIndex.</p>
 </div>
 </div>
-<input id="efc672ac-0662-4f4c-912c-ebd6bd4ec94b" name="e362eb7d-b1e3-4a13-8568-533390463fd4" type="radio">
-</input><label class="tabbed-label" for="efc672ac-0662-4f4c-912c-ebd6bd4ec94b">
+<input id="f32a2cac-ec31-4fa0-9197-2ee3f46394d3" name="0e2c36ed-5f7f-402d-828c-7847d6bd00e9" type="radio">
+</input><label class="tabbed-label" for="f32a2cac-ec31-4fa0-9197-2ee3f46394d3">
 Same data, but differently “Wide”</label><div class="tabbed-content docutils">
 <p>Now, the “key” or “index” is just the <em>firm</em>, and each variable is duplicated for each year. So there is a Sales variable for 2000, and a Sales variable for 2001.</p>
 <table class="colwidths-auto table">
