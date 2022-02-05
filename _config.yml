@@ -35,7 +35,6 @@ parse:
     - amsmath
     - colon_fence
     - dollarmath
-#     - linkify
     - substitution
     - tasklist
     
