@@ -29,6 +29,12 @@ execute:
 #  stderr_output             : show  # One of 'show', 'remove', 'remove-warn', 'warn', 'error', 'severe'  
 
 #######################################################################################
+# Parse and render settings
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+
+#######################################################################################
 # HTML-specific settings
 html:
   favicon                   : ""  # A path to a favicon image
