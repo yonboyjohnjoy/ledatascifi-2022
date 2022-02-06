@@ -195,10 +195,23 @@
         title: "Optimizing a Model"            
       - file: "content/05/04h_putting_together"
         title: "Many Models" 
+    - file: "content/05/05a_finapps"        
+      sections:        
+      - file: "content/05/05a_compounding"
+        title: "Compounding returns" 
+      - file: "content/05/05b_capm"
+        title: "Estimating CAPM" 
+      - file: "content/05/05c_factorloadings"
+        title: "Estimating better models" 
+        
 # import smattering? (from below)
 # gradient booksting from L24 2020
 
-  - file: "content/05/05_thefuture"
+  - file: "content/05/06_thefuture"
+  
+  
+  
+  
 
 # #########################################################
 

@@ -1,11 +1,12 @@
 ###############################################################
 #
-# Don't use me! I'm... INSUFFICIENT. I was developed as an 
-# illustration of EDA lessons in the 2021 iteration. Want a 
-# higher grade version of me? Maybe something SUFFICIENT?
-#
-# Then try pandas-profiling: https://github.com/pandas-profiling/pandas-profiling
-#
+# This function is... INSUFFICIENT. It was developed as an 
+# illustration of EDA lessons in the 2021 class. It's quick and 
+# works well. 
+# 
+# Want a  higher grade version of me? Then try pandas-profiling: 
+# https://github.com/pandas-profiling/pandas-profiling
+# 
 ###############################################################
 
 
