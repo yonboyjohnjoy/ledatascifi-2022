@@ -13,15 +13,24 @@ If you have any favorite resources you like, or found helpful, please let me kno
 - [Coding best practices, and project management](https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml)
 ```
 
-```{dropdown} Python
+````{dropdown} Python
+```{note}
+If you use any of these and LIKE or DISLIKE them, please let me know so I can guide future students to resources.
+```
+
 - **Essential:** [A whirlwind tour of python](https://github.com/jakevdp/WhirlwindTourOfPython)
 - **Essential:** [datacamp.com](https://www.datacamp.com/) has many self guided lessons
 - Lessons 3 - 5 of the [official tutoral](https://docs.python.org/3/tutorial/introduction.html)
 - [The official documentation](https://docs.python.org/3/)
 - [Dive Into Python](https://diveinto.org/python3/table-of-contents.html)
 - [www.pythoncheatsheet.org](https://www.pythoncheatsheet.org)
-- [This has to be the best list of Python resources on the internet](https://github.com/EbookFoundation/free-programming-books/blob/main/free-programming-books.md#python). 
-```
+- [The best compilation of coding resources on the web](https://ebookfoundation.github.io/free-programming-books/), including:
+  - [free python books](https://ebookfoundation.github.io/free-programming-books/books/free-programming-books-langs.html#python), 
+  - [free interactive tutorials](https://ebookfoundation.github.io/free-programming-books/more/free-programming-interactive-tutorials-en.html#python), 
+  - [free courses](https://ebookfoundation.github.io/free-programming-books/courses/free-courses-en.html#python)
+  - [cheatsheets](https://ebookfoundation.github.io/free-programming-books/more/free-programming-cheatsheets.html#python)
+
+````
 
 ```{dropdown} Data Science 
 - **Essential:** [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook)
