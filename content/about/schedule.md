@@ -4,9 +4,8 @@
 I recommend bookmarking this page as your go-to when you visit the site!
 
 Key links:
-- [Main discussion board for classmates team](https://github.com/orgs/LeDataSciFi/teams/classmates-2022)
-- [Submitting questions, answers, and misc before class so we can discuss it in class](https://forms.gle/jB6ok11k5Ehid7ap6)
-- [Coursesite](https://coursesite.lehigh.edu/course/view.php?id=236371) is where you **start your assignments** 
+- [Class announcements, assignment links, and discussion board](https://github.com/orgs/LeDataSciFi/teams/classmates-2022)
+- [If you want me to cover something in the next class, submit your questions here](https://forms.gle/jB6ok11k5Ehid7ap6)
 - [**NEW: Easy access to slides**](https://donbowen.github.io/slides-2022/)
 ```
 
@@ -14,7 +13,6 @@ Key links:
 **To get class announcements, you must get on the Github org's "classmates" team!**
 
 (They will NOT be made on Coursesite.)
-
 ```
 
 ## Upcoming
