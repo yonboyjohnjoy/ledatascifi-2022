@@ -8,6 +8,8 @@ def winsorizer_with_missing(df,low_=.01,hi_=.99,cols=None):
     hi_ : float, optional (default = 0.99)
         What to winsorize the right tail of each variable to.
         Set to 0.95 for 5% winsorizing, or .99 for 1% winsorizing.
+    cols : list, required
+        What columns to winsorize
 
     Returns
     -------
@@ -17,10 +19,7 @@ def winsorizer_with_missing(df,low_=.01,hi_=.99,cols=None):
     -------    
     Winsorize columns of a dataframe. It ignores missing values, which 
     is usually what you want. 
-    
-    WARNING: If you don't specify the columns, all columns will get winsorized!
-    This is rarely what is desired!
-    
+        
     TIP: Put this function in your codebook to reuse easily.
 
     TIP/WARNING: This is a new function and hasn't been subject to much scrutiny.
@@ -37,7 +36,8 @@ def winsorizer_with_missing(df,low_=.01,hi_=.99,cols=None):
     
     '''
     if not cols: # if no cols provides, winsorize all columns
-        cols=df.columns
+        print("You didn't tell me what columns to winsorize!")
+        errrrorororororororor # this will cause a break (this is not good coding practice, but works, lolz)
         
     df[cols] = df[cols].clip(lower=df[cols].quantile(low_),
                              upper=df[cols].quantile(hi_),
