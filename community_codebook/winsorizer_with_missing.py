@@ -35,7 +35,7 @@ def winsorizer_with_missing(df,low_=.01,hi_=.99,cols=None):
     the cutoffs). 
     
     '''
-    if not cols: # if no cols provides, winsorize all columns
+    if not cols: # if no cols provides, stop, and force an error in the code
         print("You didn't tell me what columns to winsorize!")
         errrrorororororororor # this will cause a break (this is not good coding practice, but works, lolz)
         
