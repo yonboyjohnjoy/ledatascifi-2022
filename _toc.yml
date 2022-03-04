@@ -148,7 +148,7 @@
       sections:
       - file: "content/04/02a_Python Strings"
       - file: "content/04/02b_regex"
-      - file: "content/04/02c_developing a regex"
+      - file: "content/04/02c_developing_a_regex"
       - file: "content/04/02d_RegexApplication"
 # now that they can scrape, a new world opens up: https://sec-edgar-downloader.readthedocs.io/en/latest/#quick-start        
 
