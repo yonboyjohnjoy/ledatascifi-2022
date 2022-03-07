@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>L12_intro_to_text slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>L13_parsing_a_10k slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -14101,256 +14101,159 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Teaching notes:</p>
-<p>These slides are used at the end of L12, in the last 10 minutes or so.</p>
 
 </div>
 </div>
 </aside><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Working-with-strings-/-intro-to-NLP">Working with strings / intro to NLP<a class="anchor-link" href="#Working-with-strings-/-intro-to-NLP">&#182;</a></h1>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Where we are</li>
-<li>Where we are going</li>
-<li>But why go there?</li>
-<li>Ok, I'm convinced, let's learn that...</li>
-</ul>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Where-were-we...">Where were we...<a class="anchor-link" href="#Where-were-we...">&#182;</a></h2><ol>
-<li><strong>download_text_files.ipynb</strong><ol>
-<li>where am i going to put the files? create folders.</li>
-<li>get a sample of firms         </li>
-<li>download 10ks (don't push all these files to github! --&gt; gitignore!)</li>
+<h2 id="Where-were-we...">Where were we...<a class="anchor-link" href="#Where-were-we...">&#182;</a></h2><ul>
+<li>download_text_files.ipynb</li>
+<li><strong>measure_risk.ipynb</strong><ol>
+<li>create empty data, or load the sp500 wiki table</li>
+<li>for each firm: <ol>
+<li>find and open 10-K file  </li>
+<li>define/measure risk vars</li>
+<li>add to dataset</li>
 </ol>
 </li>
-<li>measure_risk.ipynb</li>
-<li>analysis_report.ipynb</li>
+<li>save dataset    </li>
 </ol>
+</li>
+<li>analysis.ipynb</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Where-are-we-going-next?">Where are we going next?<a class="anchor-link" href="#Where-are-we-going-next?">&#182;</a></h2><p>The main challenge: How can we "create a risk variable"?</p>
+<h2 id="Today">Today<a class="anchor-link" href="#Today">&#182;</a></h2><p>Three goals involving the measure_risk.ipynb file:</p>
 <ol>
-<li>download_text_files.ipynb</li>
-<li><strong>measure_risk.ipynb</strong><ol>
-<li>create empty data, or load the sp500 wiki table</li>
-<li>for each firm: open 10-K, define/measure risk vars, add to dataset</li>
-<li>save dataset    </li>
-</ol>
-</li>
-<li>analysis.ipynb</li>
+<li><strong>Once we measure exposure, how do we add that to the dataset?</strong></li>
+<li>How can we measure exposure: NLP with our eyes (for one firm)</li>
+<li>Translating that to code</li>
 </ol>
 
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h2><ul>
-<li>We have access to text/html files discussing the firms. </li>
-<li>Those discussions are in a basic python object type called a string. </li>
-</ul>
-<div class="highlight"><pre><span></span><span class="s1">&#39;I am a short string. Hello!&#39;</span>
-</pre></div>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Once-we-measure-exposure,-how-do-we-add-that-to-the-dataset?">Once we measure exposure, how do we add that to the dataset?<a class="anchor-link" href="#Once-we-measure-exposure,-how-do-we-add-that-to-the-dataset?">&#182;</a></h2><p>Demos:</p>
 <ul>
-<li>So you'll need to have a sense of working with strings.</li>
-<li><em><strong>ONE</strong></em> way to search strings: "regular expression" aka "regex" <ul>
-<li>flexible and powerful</li>
-<li>somewhat costly (but I've worked to minimize the pain!)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I know what you're thinking: "Strings... pass"</p>
-<p><img src="https://media.giphy.com/media/3o85xGr7NxBC4eGTte/giphy.gif" alt=""></p>
-<p>But...</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data-=-power">Data = power<a class="anchor-link" href="#Data-=-power">&#182;</a></h2><ul>
-<li>New personal computers usually have 1TB+ of hard drive space</li>
-<li>As of 2017, IBM estimated 2.5 MILLION TERABYTES of data were created everyday</li>
-<li>Now: probably at least a billion additional regular internet users<ul>
-<li>Posts, texts, likes, searches, emails, location data</li>
-<li>2020: 40 ZETTABYTES of web data (1ZB = 1billion TB = #stars are in the observable universe)</li>
-<li>80% of that is unstructured text data</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt=""></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://media.giphy.com/media/SDogLD4FOZMM8/giphy.gif" alt=""></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Figuring-out-how-to-put-structure-on-that-text-data-is-POWERFUL.">Figuring out how to put structure on that text data is POWERFUL.<a class="anchor-link" href="#Figuring-out-how-to-put-structure-on-that-text-data-is-POWERFUL.">&#182;</a></h2><ul>
-<li>Google is one example</li>
-<li>One common task: identifying topics in unstructured text (does the document discuss topic X?)</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="The-%23BigPicture-of-this-module:">The #BigPicture of this module:<a class="anchor-link" href="#The-%23BigPicture-of-this-module:">&#182;</a></h2><p><strong>We will write 3 seemingly "too simple" files</strong> (and call these the midterm)</p>
-<p>Yet, these files are most of the foundation for very powerful analysis! What you'll finish with is code that is easy to adapt and extend! Or listable on your resume:</p>
-<ul>
-<li>Building a spider to assemble "big data"</li>
-<li>Leveraging "natural language processing" to make risk assessments on a "large corpus"</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It's exciting! My <a href="https://www.google.com/search?q=head+canon">head canon</a> for your futures is a three-act play...</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>... (bare with me) ...</p>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="When-we're-done,-your-next-interview-be-like">When we're done, your next interview be like<a class="anchor-link" href="#When-we're-done,-your-next-interview-be-like">&#182;</a></h2>
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://media.giphy.com/media/pP659YwGhWDTi/giphy.gif" alt=""></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="They-will-be-like">They will be like<a class="anchor-link" href="#They-will-be-like">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://media.giphy.com/media/2Ga8aj2mbUFK8/giphy.gif" alt=""></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="And-you'll-be-like...">And you'll be like...<a class="anchor-link" href="#And-you'll-be-like...">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://media.giphy.com/media/gTURHJs4e2Ies/giphy.gif" alt=""></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="FIN">FIN<a class="anchor-link" href="#FIN">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The scary thing is that this was originally longer.</p>
-<hr>
-<p>Alt act 3: <a href="https://giphy.com/gifs/swag-money-make-it-rain-2u11zpzwyMTy8">https://giphy.com/gifs/swag-money-make-it-rain-2u11zpzwyMTy8</a></p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Ok,-back-to-(current)-reality:">Ok, back to (current) reality:<a class="anchor-link" href="#Ok,-back-to-(current)-reality:">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The main challenge: How can we "create a risk variable"?</p>
-<ol>
-<li>download_text_files.ipynb</li>
-<li><strong>measure_risk.ipynb</strong><ol>
-<li>create empty data, or load the sp500 wiki table</li>
-<li>for each firm:
- 2b. open 10-K, <strong>define/measure risk vars,</strong> add to dataset</li>
-<li>save dataset    </li>
-</ol>
-</li>
-<li>analysis.ipynb</li>
-</ol>
-<p>That bolded step will require us to programmatically search the document. So...</p>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Next-class">Next class<a class="anchor-link" href="#Next-class">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="https://images-cdn.9gag.com/photo/aWgByLZ_700b.jpg" alt=""></p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Just-kidding...">Just kidding...<a class="anchor-link" href="#Just-kidding...">&#182;</a></h2>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><a href="https://youtu.be/ATXbJjuZqbc?t=312">Next time,</a> <em><strong>just enough</strong></em> background on strings and regex to help you use this function better </li>
-<li>Practice/understanding using near_regex </li>
-<li>Discuss conceptual issues with <code>measure_risk.py</code></li>
-<li>Loading and cleaning HTML documents so they are nice strings</li>
-</ul>
-<h3 id="Student-demos">Student demos<a class="anchor-link" href="#Student-demos">&#182;</a></h3><ul>
-<li>Task: Will be a continuation of something from today</li>
 <li>920am: Sherzod (@Sherzod-Esanov) and Jack (@jdean53)</li>
 <li>1045am: Theo (@Theo-Faucher) and Harrison (@SNEDDONH)</li>
 </ul>
 
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2><ul>
-<li>Do you feel the power of data flowing through you?</li>
-<li>Introduced one way to harness it (regex searches)</li>
+<h2 id="Today">Today<a class="anchor-link" href="#Today">&#182;</a></h2><p>Three goals involving the measure_risk.ipynb file:</p>
+<ol>
+<li>Once we measure exposure, how do we add that to the dataset?</li>
+<li><strong>How can we measure exposure: NLP with our eyes (for one firm)</strong></li>
+<li>Translating that to code</li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="NLP-(with-our-eyes)">NLP (with our eyes)<a class="anchor-link" href="#NLP-(with-our-eyes)">&#182;</a></h2><ol>
+<li>Let's look at the 2020 10-K for TSLA (which you have/can easily download now!)</li>
+<li><strong>Group discussion/CYA:</strong> Let's decide if this document discusses topic TBD?<ol>
+<li>Class brainstorm: Pick topics to look for</li>
+<li>Group work: See if 10-K discusses our topics</li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Questions">Questions<a class="anchor-link" href="#Questions">&#182;</a></h4><ul>
+<li>Main Q: how can we translate the way we (humans) looked for that risk in the document into steps/rules a computer can follow? (<strong>Next slide</strong>)</li>
+<li><em>Secondary Q: how can we try to encode the "size" of exposure?  (E.g. no/small/large exposure)</em></li>
 </ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Finding-(context-specific)-topics-in-a-document">Finding (context-specific) topics in a document<a class="anchor-link" href="#Finding-(context-specific)-topics-in-a-document">&#182;</a></h2><p>In that exercise, we looked for context-specific topics, meaning: is a topic is being discussed in a particular way.</p>
+<ul>
+<li>Not supply chain risks overall, but those specifically due to input requirements</li>
+<li>Not "risk" writ large, but risks relating to the environment</li>
+<li>Not China writ large, but import competition originating in China</li>
+</ul>
+<p>How could you ask a computer to look for context-specific topics?</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Ask it to look for specific "Bi-grams" (or a list of bi-grams)</li>
+<li>Two words within a certain distance (or a list of words)</li>
+</ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong><a href="https://github.com/LeDataSciFi/ledatascifi-2022/blob/main/community_codebook/near_regex.py">near_regex()</a> is an implementation of "two words within (some) distance"</strong></p>
+<ul>
+<li>seemingly simple fcn, but <ol>
+<li>lets us explore foundational NLP issues and concepts </li>
+<li>you will use near_regex() on your midterms</li>
+<li>it's WAAAAAY better than writing your own regex (famously awful)</li>
+</ol>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Today">Today<a class="anchor-link" href="#Today">&#182;</a></h2><p>Three goals involving the measure_risk.ipynb file:</p>
+<ol>
+<li>Once we measure exposure, how do we add that to the dataset?</li>
+<li>How can we measure exposure: NLP with our eyes (for one firm)</li>
+<li><strong>Translating that to code</strong></li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Remaining-goals:">Remaining goals:<a class="anchor-link" href="#Remaining-goals:">&#182;</a></h2><ol>
+<li>In python, open the TSLA 10-K file (and put into string variable)</li>
+<li>Process the HTML before any doing any NLP use <code>NEAR_regex</code></li>
+<li>First attempts to use NEAR_regex</li>
+</ol>
+<p>(No more slides, living coding from here on.)</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="News">News<a class="anchor-link" href="#News">&#182;</a></h2><ul>
+<li>Canceling office hours this Friday - conference, ask Julio</li>
+<li>Wednesday, continuing with near_REGEX a bit</li>
+</ul>
+<h3 id="Student-demos">Student demos<a class="anchor-link" href="#Student-demos">&#182;</a></h3><ul>
+<li>Task: TBD, will be a continuation of something from today</li>
+<li>Class 1: Yang (@yal521) and Harry (@hsh423) </li>
+<li>Class 2: Austen (@arj221), Colin (@ColinGrimm), and Eric (@etstieber)</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2><p>We have essentially covered all the new skills needed for the midterm. There is obviously additional stuff left to figure out, but it's all solvable with your existing skills.</p>
+<p>Don't wait to start on the midterm!</p>
 <p><img src="https://media.giphy.com/media/H7x1H0veAJlo4/giphy.gif" alt=""></p>
 
 </div>

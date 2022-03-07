@@ -14101,7 +14101,7 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Teaching notes:</p>
-<p>These slides are used</p>
+<p>These slides are used at the end of L12, in the last 10 minutes or so.</p>
 
 </div>
 </div>
@@ -14303,69 +14303,16 @@ div.jp-OutputPrompt {
 <li><strong>measure_risk.ipynb</strong><ol>
 <li>create empty data, or load the sp500 wiki table</li>
 <li>for each firm:
- 2b. open 10-K, define/measure risk vars, add to dataset</li>
+ 2b. open 10-K, <strong>define/measure risk vars,</strong> add to dataset</li>
 <li>save dataset    </li>
 </ol>
 </li>
 <li>analysis.ipynb</li>
 </ol>
+<p>That bolded step will require us to programmatically search the document. So...</p>
 
 </div>
 </div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="NLP-(with-our-eyes)">NLP (with our eyes)<a class="anchor-link" href="#NLP-(with-our-eyes)">&#182;</a></h2><ol>
-<li>I'll open the <a href="https://www.sec.gov/Archives/edgar/data/1318605/000156459019003165/0001564590-19-003165.txt">2019 TSLA 10-K</a></li>
-<li><strong>Group discussion/CYA:</strong> Let's decide if this document discusses topic TBD?</li>
-</ol>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Questions:</strong></p>
-<ul>
-<li>Main Q: how can we translate the way we (humans) looked for that risk in the document into steps/rules a computer can follow?</li>
-<li>Secondary Q: how can we try to encode the "size" of exposure?  (E.g. no/small/large exposure)  </li>
-</ul>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Finding-(context-specific)-topics-in-a-document">Finding (context-specific) topics in a document<a class="anchor-link" href="#Finding-(context-specific)-topics-in-a-document">&#182;</a></h2><p>In that exercise, we looked for context-specific topics, meaning: is a topic is being discussed in a particular way.</p>
-<ul>
-<li>Not supply chain risks overall, but those specifically due to input requirements</li>
-<li>Not "risk" writ large, but risks relating to the environment</li>
-<li>Not China writ large, but import competition originating in China</li>
-</ul>
-<p>How could you ask a computer to look for context-specific topics?</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Ask it to look for specific "Bi-grams" (or a list of bi-grams)</li>
-<li>Two words within a certain distance (or a list of words)</li>
-</ul>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><a href="https://github.com/LeDataSciFi/ledatascifi-2022/blob/main/community_codebook/near_regex.py">near_regex()</a> is an implementation of "two words within (some) distance"</strong></p>
-<ul>
-<li>seemingly simple fcn, but <ol>
-<li>lets us explore foundational NLP issues and concepts </li>
-<li>you will use near_regex() on your midterms</li>
-<li>it's WAAAAAY better than writing your own regex (famously awful)</li>
-</ol>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Next-class">Next class<a class="anchor-link" href="#Next-class">&#182;</a></h2>
@@ -14379,7 +14326,12 @@ div.jp-OutputPrompt {
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Just-kidding...">Just kidding...<a class="anchor-link" href="#Just-kidding...">&#182;</a></h2><ul>
+<h2 id="Just-kidding...">Just kidding...<a class="anchor-link" href="#Just-kidding...">&#182;</a></h2>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
 <li><a href="https://youtu.be/ATXbJjuZqbc?t=312">Next time,</a> <em><strong>just enough</strong></em> background on strings and regex to help you use this function better </li>
 <li>Practice/understanding using near_regex </li>
 <li>Discuss conceptual issues with <code>measure_risk.py</code></li>
@@ -14392,7 +14344,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2><ul>
