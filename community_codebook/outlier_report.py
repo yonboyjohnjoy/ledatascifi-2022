@@ -49,12 +49,15 @@ def outlier_report(df,vars_to_examine=None,color='red',thres=4,
     )
     
     if no_print == False:
+        
+        fdict = { c:('{:,.2f}' if c != 'count' else  '{:,.0f}') for c in _tab.columns   }
+
         display(_tab
-             .style.format('{:,.2f}')
-                   .format({"count": '{:,.0f}'})           
+             .style.format(fdict)
                    .apply(highlight_extreme, 
                           subset=['mean', 'std', 'min', '1%', '5%', '25%', '50%', '75%', '95%','99%', 'max', 'max_z_abs'])
         ) 
+
     
     if return_df == True:
         return _tab
