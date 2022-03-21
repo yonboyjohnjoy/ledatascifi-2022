@@ -1,9 +1,11 @@
 #  **Full instructions for the proposals**
 
-In the project repo, modify the README as a group. Use the template below.
+In the project repo, create a file called "proposal.md". It should cover two big things:
 
-1. The research question should be precise (NOT VAGUE), the hypothesis clear, and the metrics well defined.  
-1. The necessary data should be realistically acquirable over our time frame. There are a lot of data resources [on the website](about/resources.html#resources-tutorials-and-data), including FRED, [ourworldindata.com](ourworldindata.com), and SEC's EDGAR. 
+1. The research question. It should be precise (NOT VAGUE), the hypothesis clear, and the metrics well defined.  
+1. The necessary data. This should be realistically acquirable over our time frame. There are a lot of data resources [on the website](about/resources.html#resources-tutorials-and-data), including FRED, [ourworldindata.com](ourworldindata.com), and SEC's EDGAR. 
+
+The template below is just a template. You can adapt it. For example, sell me on the idea and why it's both interesting and feasible. 
 
 
 > # Research Proposal: < Title >
@@ -13,11 +15,11 @@ In the project repo, modify the README as a group. Use the template below.
 > ## Research Question
 >
 > This section should cover:
-> 1. What do we want to know or what problems are we trying to solve? As in ASGN 5, you should list (1) the "bigger" question/debate/problem you're interested in, and also (2) the specific research question(s) you'll actually try to answer. 
+> 1. What do we want to know or what problems are we trying to solve? As in the midterm, you should list (1) the "bigger" question/debate/problem you're interested in, and also (2) the specific research question(s) you'll actually try to answer. 
 >   - The research question will be smaller in scope than the big picture question. But the answer to your specific research question should _shed light_ on the bigger question (although it likely won't conclusively answer it).
 >   - The answer to your specific research question should _shed light_ on the bigger question (although it likely won't conclusively answer it).
-> 2. What are our hypotheses?
-> 3. What are our metrics of success? 
+> 2. If your project is about relationships, what are the hypotheses you're testing?
+> 3. If your project is about prediction, what is your metrics of success? [(What are you maximizing?)](https://ledatascifi.github.io/ledatascifi-2022/content/05/03d_whatToMax.html) Can you find a baseline from prior work to give you a ball park to aim for?
 >
 > ## Necessary Data
 >
